@@ -16,7 +16,7 @@
   # Al salir hacia otro sitio solo se comparte el dominio, no la dirección completa.
   Referrer-Policy: strict-origin-when-cross-origin
   # Desactiva funciones del navegador que la web no usa.
-  Permissions-Policy: accelerometer=(), autoplay=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), browsing-topics=()
+  Permissions-Policy: accelerometer=(), autoplay=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
   # Aísla la pestaña de otras ventanas y evita que otros sitios incrusten nuestros archivos.
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin

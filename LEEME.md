@@ -19,7 +19,8 @@ WEB/
 
 ## 1. Editar la página
 
-- **Textos**: están en `public/index.html`.
+- **Textos**: la página de inicio está en `public/index.html` y cada proyecto tiene su propia página en
+  `public/proyectos/<nombre>/index.html` (por ejemplo <https://fdpsoftware.org/proyectos/sigma-mro/>).
 - **Correo**: `contacto@fdpsoftware.org` (sección de contacto y pie de página).
 - **WhatsApp**: +58 412-0846332 (`https://wa.me/584120846332`), en contacto, pie de página y botón flotante.
 - **Imágenes**: reemplaza el archivo en `public/img/` con el mismo nombre. Úsalas siempre en HD: a su
@@ -54,6 +55,16 @@ Cada diapositiva de la portada tiene su propio enlace, útil para compartir:
 - `https://fdpsoftware.org/#slide-3` → Escenarios 3D
 - `https://fdpsoftware.org/#slide-4` → Simuladores de tiro
 - `https://fdpsoftware.org/#tiro` → sección de simuladores de tiro
+
+Y cada proyecto tiene su página propia, ideal para enviar por WhatsApp (se ve con su propia imagen de vista previa):
+
+- `https://fdpsoftware.org/proyectos/sigma-mro/`
+- `https://fdpsoftware.org/proyectos/aeroescuela/`
+- `https://fdpsoftware.org/proyectos/simuladores-de-tiro/`
+- `https://fdpsoftware.org/proyectos/entrenamiento-tactico/`
+- `https://fdpsoftware.org/proyectos/escenarios-3d/`
+- `https://fdpsoftware.org/proyectos/control-aereo/`
+- `https://fdpsoftware.org/proyectos/apps-moviles/`
 
 ## 4. Correo contacto@fdpsoftware.org (gratis)
 

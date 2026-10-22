@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escenarios 3D de Venezuela en Unreal Engine 5 | FDP Software</title>
+  <meta name="description" content="Proceso automatizado que convierte OpenStreetMap, relieve satelital e imágenes Sentinel-2 en escenarios 3D realistas de Caracas en Unreal Engine 5, para videojuegos y simuladores.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://fdpsoftware.org/proyectos/escenarios-3d/">
+  <meta name="theme-color" content="#0b0d1a">
+
+  <!-- Vista previa al compartir en redes (WhatsApp, Facebook, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FDP Software">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:url" content="https://fdpsoftware.org/proyectos/escenarios-3d/">
+  <meta property="og:title" content="Escenarios 3D de Venezuela en Unreal Engine 5 | FDP Software">
+  <meta property="og:description" content="Proceso automatizado que convierte OpenStreetMap, relieve satelital e imágenes Sentinel-2 en escenarios 3D realistas de Caracas en Unreal Engine 5, para videojuegos y simuladores.">
+  <meta property="og:image" content="https://fdpsoftware.org/img/og/escenarios-3d.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Escenarios 3D de Venezuela, de FDP Software">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Escenarios 3D de Venezuela en Unreal Engine 5 | FDP Software">
+  <meta name="twitter:description" content="Proceso automatizado que convierte OpenStreetMap, relieve satelital e imágenes Sentinel-2 en escenarios 3D realistas de Caracas en Unreal Engine 5, para videojuegos y simuladores.">
+  <meta name="twitter:image" content="https://fdpsoftware.org/img/og/escenarios-3d.jpg">
+
+  <!-- Datos del proyecto para Google (no se ejecuta: es solo información) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://fdpsoftware.org/#organizacion",
+        "name": "FDP Software",
+        "url": "https://fdpsoftware.org/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Escenarios 3D de Venezuela",
+        "url": "https://fdpsoftware.org/proyectos/escenarios-3d/",
+        "description": "Proceso automatizado que convierte OpenStreetMap, relieve satelital e imágenes Sentinel-2 en escenarios 3D realistas de Caracas en Unreal Engine 5, para videojuegos y simuladores.",
+        "image": "https://fdpsoftware.org/img/og/escenarios-3d.jpg",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Windows",
+        "inLanguage": "es",
+        "author": {
+          "@id": "https://fdpsoftware.org/#organizacion"
+        },
+        "publisher": {
+          "@id": "https://fdpsoftware.org/#organizacion"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://fdpsoftware.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Escenarios 3D de Venezuela",
+            "item": "https://fdpsoftware.org/proyectos/escenarios-3d/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="/img/favicon-48.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=20261023">
+</head>
+<body>
+
+  <!-- ===== Encabezado flotante ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/" class="logo" aria-label="FDP Software, inicio">
+        <img src="/img/logo-fdp-dark.png" alt="" width="40" height="40" class="logo__img">
+        <span class="logo__text">FDP Software</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="/#soluciones">Soluciones</a>
+        <a href="/#proyectos">Proyectos</a>
+        <a href="/#apps">Apps</a>
+        <a href="/#sectores">Sectores</a>
+        <a href="/#nosotros">Nosotros</a>
+        <a href="#contacto" class="btn btn--dark btn--small">Contáctanos</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Portada del proyecto ===== -->
+    <section class="phero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Ruta de navegación">
+          <ol>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/#proyectos">Proyectos</a></li>
+            <li aria-current="page">Escenarios 3D de Venezuela</li>
+          </ol>
+        </nav>
+        <div class="phero__text">
+          <p class="slide__label">FDP Software · Escenarios 3D</p>
+          <h1 class="slide__title">Escenarios 3D. Venezuela, lista para simular.</h1>
+          <p class="slide__text">Convertimos datos abiertos del terreno en escenarios realistas de Caracas en Unreal Engine 5, listos para recorrer a pie, en vehículo o en vuelo dentro de videojuegos y simuladores.</p>
+          <div class="slide__actions">
+            <a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20Escenarios%203D%20de%20Venezuela." class="btn btn--light" target="_blank" rel="noopener">Solicita una demostración</a>
+            <a href="#incluye" class="btn btn--ghost-light">Qué incluye</a>
+          </div>
+        </div>
+        <div class="phero__media">
+          <img src="/img/proyecto-escenarios-3d.webp" srcset="/img/proyecto-escenarios-3d-480.webp 480w, /img/proyecto-escenarios-3d-800.webp 800w, /img/proyecto-escenarios-3d-1200.webp 1200w, /img/proyecto-escenarios-3d-1600.webp 1600w, /img/proyecto-escenarios-3d.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(100vw - 48px), 1192px" width="1920" height="1080" alt="Render 3D de la Plaza Francia de Altamira, en Caracas, generado con datos reales">
+        </div>
+      </div>
+    </section>
+
+    <div class="page">
+      <div class="container">
+        <dl class="specs">
+          <div><dt>Motor</dt><dd>Unreal Engine 5</dd></div>
+          <div><dt>Datos</dt><dd>OpenStreetMap y Sentinel-2</dd></div>
+          <div><dt>Relieve</dt><dd>Modelo satelital del terreno</dd></div>
+          <div><dt>Recorridos</dt><dd>A pie, en vehículo y en vuelo</dd></div>
+        </dl>
+      </div>
+
+      <!-- ===== Qué incluye ===== -->
+      <section class="section section--tight" id="incluye">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Del mapa a un mundo que se puede recorrer.</h2>
+            <p>Un proceso automatizado que se puede repetir para nuevas zonas, en lugar de modelar cada calle a mano.</p>
+          </div>
+          <div class="pfeatures">
+            <article class="pfeature">
+              <span class="badge badge--orange" aria-hidden="true">1</span>
+              <h3>Datos reales</h3>
+              <p>Calles, edificios, parques y vías tomados de OpenStreetMap, con su posición y altura.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--teal" aria-hidden="true">2</span>
+              <h3>Relieve e imagen satelital</h3>
+              <p>Montañas y valles a partir del modelo de elevación satelital, cubiertos con imágenes Sentinel-2.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--blue" aria-hidden="true">3</span>
+              <h3>Proceso automatizado</h3>
+              <p>El mismo proceso genera nuevas zonas de la ciudad sin modelarlas una por una.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--magenta" aria-hidden="true">4</span>
+              <h3>Lugares reconocibles</h3>
+              <p>Plazas, avenidas y edificios conocidos de Caracas, con el Ávila de fondo.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--violet" aria-hidden="true">5</span>
+              <h3>Listos para simuladores</h3>
+              <p>Escenarios preparados para recorrer a pie, en vehículo y en vuelo, e integrarse con nuestros simuladores.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--green" aria-hidden="true">6</span>
+              <h3>Calidad de imagen</h3>
+              <p>Iluminación y materiales de Unreal Engine 5 para imágenes realistas a distintas horas del día.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Galería ===== -->
+      <section class="section section--tight" id="galeria">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Así se ve.</h2>
+            <p>Capturas reales del sistema en funcionamiento.</p>
+          </div>
+          <div class="pgallery">
+            <figure>
+              <img src="/img/p/e3d-metro.webp" srcset="/img/p/e3d-metro-480.webp 480w, /img/p/e3d-metro-800.webp 800w, /img/p/e3d-metro-1200.webp 1200w, /img/p/e3d-metro.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="1080" loading="lazy" alt="Plaza Francia de Altamira a nivel de calle, con el obelisco y el Ávila al fondo">
+              <figcaption>Plaza Altamira a nivel de calle</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/e3d-torre.webp" srcset="/img/p/e3d-torre-480.webp 480w, /img/p/e3d-torre-800.webp 800w, /img/p/e3d-torre-1200.webp 1200w, /img/p/e3d-torre.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="1080" loading="lazy" alt="Torre de oficinas junto a la plaza, con jardines y una fuente">
+              <figcaption>Torres y jardines de Altamira</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/e3d-calle.webp" srcset="/img/p/e3d-calle-480.webp 480w, /img/p/e3d-calle-800.webp 800w, /img/p/e3d-calle-1200.webp 1200w, /img/p/e3d-calle.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="1080" loading="lazy" alt="Avenida de Caracas con edificios y vehículos estacionados">
+              <figcaption>Recorrido por una avenida</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/e3d-avila.webp" srcset="/img/p/e3d-avila-480.webp 480w, /img/p/e3d-avila-800.webp 800w, /img/p/e3d-avila-1200.webp 1200w, /img/p/e3d-avila.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="1080" loading="lazy" alt="El Ávila sobre la ciudad de Caracas, con miles de edificios generados automáticamente">
+              <figcaption>El Ávila sobre la ciudad</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Contacto ===== -->
+      <section class="section cta" id="contacto">
+        <div class="container">
+          <h2 class="display display--md">¿Quieres ver Escenarios 3D de Venezuela en acción?</h2>
+          <p>Agenda una demostración o cuéntanos qué necesitas. Te respondemos por WhatsApp o por correo.</p>
+          <div class="cta__actions">
+            <a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20Escenarios%203D%20de%20Venezuela." class="btn btn--dark" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+            <a href="mailto:contacto@fdpsoftware.org?subject=Escenarios%203D%20de%20Venezuela" class="btn btn--outline">contacto@fdpsoftware.org</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Otros proyectos ===== -->
+      <section class="section section--tight section--gray">
+        <div class="container">
+          <h2 class="more__title">Otros proyectos</h2>
+          <div class="more">
+            <a href="/proyectos/sigma-mro/"><span class="badge badge--blue" aria-hidden="true">Σ</span>SIGMA MRO</a>
+            <a href="/proyectos/aeroescuela/"><span class="badge badge--violet" aria-hidden="true">A</span>AeroEscuela</a>
+            <a href="/proyectos/simuladores-de-tiro/"><span class="badge badge--magenta" aria-hidden="true">T</span>Simuladores de tiro</a>
+            <a href="/proyectos/entrenamiento-tactico/"><span class="badge badge--teal" aria-hidden="true">S</span>Entrenamiento táctico y estratégico</a>
+            <a href="/proyectos/control-aereo/"><span class="badge badge--teal" aria-hidden="true">S</span>Control e interceptación aérea</a>
+            <a href="/proyectos/apps-moviles/"><span class="badge badge--green" aria-hidden="true">▶</span>Apps móviles</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__grid">
+            <div class="footer__brand">
+              <a href="/" class="logo" aria-label="FDP Software, inicio">
+                <img src="/img/logo-fdp-dark.png" alt="" width="40" height="40" class="logo__img" loading="lazy">
+                <span class="logo__text">FDP Software</span>
+              </a>
+              <p>Desarrollo, mantenimiento y distribución de software digital de alta gama.</p>
+            </div>
+
+            <div>
+              <h2>Proyectos</h2>
+              <ul>
+                <li><a href="/proyectos/sigma-mro/">SIGMA MRO</a></li>
+                <li><a href="/proyectos/aeroescuela/">Simulador de vuelo</a></li>
+                <li><a href="/proyectos/simuladores-de-tiro/">Simuladores de tiro</a></li>
+                <li><a href="/proyectos/entrenamiento-tactico/">Entrenamiento táctico</a></li>
+                <li><a href="/proyectos/escenarios-3d/">Escenarios 3D</a></li>
+                <li><a href="/proyectos/control-aereo/">Control aéreo</a></li>
+                <li><a href="/proyectos/apps-moviles/">Apps móviles</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Empresa</h2>
+              <ul>
+                <li><a href="/#soluciones">Soluciones</a></li>
+                <li><a href="/#sectores">Sectores</a></li>
+                <li><a href="/#nosotros">Nosotros</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Contacto</h2>
+              <ul>
+                <li><a href="mailto:contacto@fdpsoftware.org">contacto@fdpsoftware.org</a></li>
+                <li><a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones." target="_blank" rel="noopener">WhatsApp</a></li>
+                <li>Venezuela</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <p>© <span id="year">2026</span> FDP SOFTWARE. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="fab" href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
+  </a>
+
+  <script src="/js/main.js?v=20261023"></script>
+</body>
+</html>

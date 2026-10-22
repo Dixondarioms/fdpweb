@@ -9,11 +9,13 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
 
 - Sitio **estático**: HTML, CSS y JavaScript puros, sin frameworks y sin paso de compilación.
 - Todo lo que se publica está en `public/`:
-  - `index.html`: todo el contenido (una sola página).
+  - `index.html`: la página de inicio.
+  - `proyectos/<nombre>/index.html`: una página por proyecto (ver más abajo).
   - `css/styles.css`: el diseño. Los colores y las fuentes están en las variables de `:root`, al inicio.
   - `js/main.js`: el menú móvil, el carrusel de la portada, las pestañas de sectores, el carril de soluciones y la animación de aparición.
   - `img/`: logos, íconos y capturas de proyectos (WebP y PNG).
-  - `404.html`, `_headers` (seguridad y caché) y `robots.txt`.
+  - `img/p/`: capturas de las páginas de proyecto; `img/og/`: la imagen para redes (1200×630) de cada página de proyecto.
+  - `404.html`, `_headers` (seguridad y caché), `robots.txt` y `sitemap.xml` (lista de páginas para Google).
 - `wrangler.jsonc` publica `public/` en **Cloudflare Workers** (archivos estáticos) y conecta el dominio. No toques sus `routes`.
 - `LEEME.md` es la guía para personas. Mantenla al día si cambias la forma de trabajar.
 - `correo/` es un Email Worker aparte (`fdp-correo`) que reenvía `contacto@fdpsoftware.org` a las direcciones de
@@ -29,6 +31,21 @@ aéreo) → `apps` (Marcelo Go, Minijuegos de Marcelo Go y Ritmo Diario en Googl
 cita de la misión → `metodo` → `nosotros` (misión, visión, marcas y equipo por áreas) → `contacto` → pie de página.
 
 Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#slide-4`.
+
+### Páginas de proyecto (`public/proyectos/`)
+
+`sigma-mro`, `aeroescuela`, `simuladores-de-tiro`, `entrenamiento-tactico`, `escenarios-3d`, `control-aereo` y
+`apps-moviles`. Todas siguen el mismo orden: portada oscura (`.phero`, con ruta de navegación `.crumbs`) → ficha rápida
+(`.specs`) → "Qué incluye" (`#incluye`, tarjetas `.pfeature`; en apps, filas `.prow`) → galería (`#galeria`,
+`.pgallery`, con `.is-full` para las capturas a lo ancho) → contacto (`#contacto`) → otros proyectos (`.more`) → pie.
+
+- Usan rutas absolutas (`/css/...`, `/img/...`, `/#proyectos`), porque están dentro de carpetas.
+- Cada una tiene su propio `<title>`, descripción, `canonical`, imagen para redes (`img/og/<nombre>.jpg`) y datos
+  para Google (`application/ld+json`). Si cambias el nombre o la descripción de un proyecto, cámbialos en esos lugares.
+- El mensaje de WhatsApp de cada página ya nombra el proyecto (`...quiero%20informaci%C3%B3n%20sobre%20SIGMA%20MRO.`).
+- El encabezado, el pie de página y la lista "Otros proyectos" se repiten en las siete páginas: si cambias uno, cambia todos.
+- Si agregas un proyecto: copia una página parecida, agrégala a `sitemap.xml`, enlázala desde la tarjeta del proyecto en
+  `index.html`, desde el pie de página y desde "Otros proyectos" de las demás páginas.
 
 ### Estilo visual
 
@@ -52,6 +69,7 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
    institucionales. No menciones instituciones militares (DIDA, FANB, AMB ni Aviación Militar Bolivariana) ni los nombres
    propios de esos sistemas (IGLA-S, S.I.E.T.E., MANPADS, CODAI). Usa descripciones generales, como "simuladores de
    tiro" o "entrenamiento táctico y estratégico". Del simulador de control e interceptación aérea no se publican capturas.
+   En el entrenamiento táctico no muestres qué país real es cada bando (por ejemplo "Azul (Venezuela)"): tápalo.
    Tampoco uses grabaciones hechas con celular a pantallas de sistemas reales.
 4. **Revisa cada captura antes de publicarla**: no deben aparecer rutas de archivos de un computador
    (`C:\Users\...`), nombres de usuario, punteros del mouse ni datos personales. Si aparecen, recórtalos o tápalos
@@ -64,7 +82,8 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 ## Velocidad
 
 - **Versión de CSS y JS**: `styles.css` y `main.js` se cargan con `?v=AAAAMMDD` y se guardan 30 días en caché.
-  Cada vez que los cambies, actualiza ese número en `index.html` y `404.html`, o los visitantes seguirán viendo la versión vieja.
+  Cada vez que los cambies, actualiza ese número en `index.html`, `404.html` y las siete páginas de `proyectos/`,
+  o los visitantes seguirán viendo la versión vieja.
 - **Imágenes responsive**: cada imagen de contenido tiene versiones más pequeñas (`nombre-480.webp`, `nombre-800.webp`…)
   declaradas en `srcset`, con un `sizes` que describe su ancho real en pantalla. Si agregas o reemplazas una imagen,
   genera también sus versiones (solo anchos menores al original) y escribe su `srcset`/`sizes`.
@@ -82,7 +101,7 @@ Ninguna imagen puede verse borrosa ni de mala calidad.
   más grande, `transform: scale` o zooms al pasar el mouse) ni al exportarla. Si la fuente es pequeña, muéstrala
   pequeña y pide una versión de mayor resolución.
 - Exporta a WebP: las capturas con texto casi sin pérdida (`quality=100, near_lossless=60`) y las fotos con
-  calidad 92 o más. Al exportar se eliminan los metadatos: vuelve a pegar la imagen en un lienzo nuevo antes de guardarla.
+  calidad 92 o más (también las capturas con mapas satelitales, que casi sin pérdida pesan demasiado). Al exportar se eliminan los metadatos: vuelve a pegar la imagen en un lienzo nuevo antes de guardarla.
 - Los atributos `width` y `height` de cada `<img>` deben coincidir con el tamaño real del archivo.
 - Antes de publicar, mide en el navegador que ninguna imagen se muestre por encima de 1×: compara
   el tamaño en pantalla con `naturalWidth` y `naturalHeight` a 1280×800, 1920×1080 y 375 px de ancho.

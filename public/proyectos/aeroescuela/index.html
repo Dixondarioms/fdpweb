@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AeroEscuela: simulador de entrenamiento de vuelo | FDP Simuladores</title>
+  <meta name="description" content="Simulador de vuelo para escuelas de aviación: física de seis grados de libertad, instructor virtual, emergencias, navegación GPS con RNAV e ILS, aeropuertos reales de Venezuela y evaluación con informe.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://fdpsoftware.org/proyectos/aeroescuela/">
+  <meta name="theme-color" content="#0b0d1a">
+
+  <!-- Vista previa al compartir en redes (WhatsApp, Facebook, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FDP Software">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:url" content="https://fdpsoftware.org/proyectos/aeroescuela/">
+  <meta property="og:title" content="AeroEscuela: simulador de entrenamiento de vuelo | FDP Simuladores">
+  <meta property="og:description" content="Simulador de vuelo para escuelas de aviación: física de seis grados de libertad, instructor virtual, emergencias, navegación GPS con RNAV e ILS, aeropuertos reales de Venezuela y evaluación con informe.">
+  <meta property="og:image" content="https://fdpsoftware.org/img/og/aeroescuela.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AeroEscuela, de FDP Software">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AeroEscuela: simulador de entrenamiento de vuelo | FDP Simuladores">
+  <meta name="twitter:description" content="Simulador de vuelo para escuelas de aviación: física de seis grados de libertad, instructor virtual, emergencias, navegación GPS con RNAV e ILS, aeropuertos reales de Venezuela y evaluación con informe.">
+  <meta name="twitter:image" content="https://fdpsoftware.org/img/og/aeroescuela.jpg">
+
+  <!-- Datos del proyecto para Google (no se ejecuta: es solo información) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://fdpsoftware.org/#organizacion",
+        "name": "FDP Software",
+        "url": "https://fdpsoftware.org/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "AeroEscuela",
+        "url": "https://fdpsoftware.org/proyectos/aeroescuela/",
+        "description": "Simulador de vuelo para escuelas de aviación: física de seis grados de libertad, instructor virtual, emergencias, navegación GPS con RNAV e ILS, aeropuertos reales de Venezuela y evaluación con informe.",
+        "image": "https://fdpsoftware.org/img/og/aeroescuela.jpg",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Windows",
+        "inLanguage": "es",
+        "author": {
+          "@id": "https://fdpsoftware.org/#organizacion"
+        },
+        "publisher": {
+          "@id": "https://fdpsoftware.org/#organizacion"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://fdpsoftware.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AeroEscuela",
+            "item": "https://fdpsoftware.org/proyectos/aeroescuela/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="/img/favicon-48.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=20261023">
+</head>
+<body>
+
+  <!-- ===== Encabezado flotante ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/" class="logo" aria-label="FDP Software, inicio">
+        <img src="/img/logo-fdp-dark.png" alt="" width="40" height="40" class="logo__img">
+        <span class="logo__text">FDP Software</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="/#soluciones">Soluciones</a>
+        <a href="/#proyectos">Proyectos</a>
+        <a href="/#apps">Apps</a>
+        <a href="/#sectores">Sectores</a>
+        <a href="/#nosotros">Nosotros</a>
+        <a href="#contacto" class="btn btn--dark btn--small">Contáctanos</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Portada del proyecto ===== -->
+    <section class="phero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Ruta de navegación">
+          <ol>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/#proyectos">Proyectos</a></li>
+            <li aria-current="page">AeroEscuela</li>
+          </ol>
+        </nav>
+        <div class="phero__text">
+          <p class="slide__label">FDP Simuladores · Entrenamiento de vuelo</p>
+          <h1 class="slide__title">AeroEscuela. El entrenamiento de vuelo, en tu escuela.</h1>
+          <p class="slide__text">Simulador de entrenamiento de vuelo que funciona en una computadora común. El alumno practica cada lección guiado por un instructor virtual y termina con una evaluación objetiva de su vuelo.</p>
+          <div class="slide__actions">
+            <a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20AeroEscuela." class="btn btn--light" target="_blank" rel="noopener">Solicita una demostración</a>
+            <a href="#incluye" class="btn btn--ghost-light">Qué incluye</a>
+          </div>
+        </div>
+        <div class="phero__media">
+          <img src="/img/aero-vuelo.webp" srcset="/img/aero-vuelo-480.webp 480w, /img/aero-vuelo-800.webp 800w, /img/aero-vuelo.webp 1280w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(100vw - 48px), 1192px" width="1280" height="500" alt="AeroEscuela: avioneta en vuelo sobre campos verdes y nubes">
+        </div>
+      </div>
+    </section>
+
+    <div class="page">
+      <div class="container">
+        <dl class="specs">
+          <div><dt>Equipo</dt><dd>Una computadora común</dd></div>
+          <div><dt>Física</dt><dd>Seis grados de libertad</dd></div>
+          <div><dt>Escenarios</dt><dd>Aeropuertos reales de Venezuela</dd></div>
+          <div><dt>Conexión</dt><dd>Sin internet</dd></div>
+        </dl>
+      </div>
+
+      <!-- ===== Qué incluye ===== -->
+      <section class="section section--tight" id="incluye">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Horas de práctica real, sin riesgo y a bajo costo.</h2>
+            <p>Todo lo que el alumno necesita repetir antes de subirse al avión, con un instructor virtual que no se cansa.</p>
+          </div>
+          <div class="pfeatures">
+            <article class="pfeature">
+              <span class="badge badge--violet" aria-hidden="true">1</span>
+              <h3>Física validada</h3>
+              <p>Modelo de vuelo de seis grados de libertad validado contra el manual del fabricante del avión.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--blue" aria-hidden="true">2</span>
+              <h3>Instructor virtual</h3>
+              <p>Guía cada lección paso a paso, con listas de verificación y correcciones en el momento.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--magenta" aria-hidden="true">3</span>
+              <h3>Emergencias sin riesgo</h3>
+              <p>Fuego de motor, fallas de instrumentos y otras emergencias para practicar los procedimientos sin poner a nadie en peligro.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--teal" aria-hidden="true">4</span>
+              <h3>Navegación GPS</h3>
+              <p>Cabina con instrumentos digitales, planes de vuelo y aproximaciones RNAV e ILS.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--orange" aria-hidden="true">5</span>
+              <h3>Aeropuertos reales</h3>
+              <p>Aeródromos de Venezuela con su terreno e imagen satelital, de día y de noche.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--green" aria-hidden="true">6</span>
+              <h3>Evaluación con informe</h3>
+              <p>Al terminar, las gráficas del vuelo y un informe para el alumno y el instructor.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Galería ===== -->
+      <section class="section section--tight" id="galeria">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Así se ve.</h2>
+            <p>Capturas reales del sistema en funcionamiento.</p>
+          </div>
+          <div class="pgallery">
+            <figure>
+              <img src="/img/aero-cabina.webp" srcset="/img/aero-cabina-480.webp 480w, /img/aero-cabina-800.webp 800w, /img/aero-cabina.webp 1280w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1280" height="615" loading="lazy" alt="Cabina de AeroEscuela con instrumentos digitales y la lista de verificación del instructor virtual">
+              <figcaption>Cabina con instructor virtual</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/aero-navegacion.webp" srcset="/img/p/aero-navegacion-480.webp 480w, /img/p/aero-navegacion-800.webp 800w, /img/p/aero-navegacion-1200.webp 1200w, /img/p/aero-navegacion.webp 1280w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1280" height="620" loading="lazy" alt="Cabina con pantallas de vuelo y navegación durante un vuelo de práctica">
+              <figcaption>Instrumentos digitales y navegación</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/aero-aerodromo.webp" srcset="/img/p/aero-aerodromo-480.webp 480w, /img/p/aero-aerodromo-800.webp 800w, /img/p/aero-aerodromo-1200.webp 1200w, /img/p/aero-aerodromo.webp 1280w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1280" height="530" loading="lazy" alt="Aeródromo de práctica en 3D con pista y hangares">
+              <figcaption>Aeródromo de práctica en 3D</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/aero-aeropuerto-real.webp" srcset="/img/p/aero-aeropuerto-real-480.webp 480w, /img/p/aero-aeropuerto-real-800.webp 800w, /img/p/aero-aeropuerto-real-1200.webp 1200w, /img/p/aero-aeropuerto-real.webp 1280w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1280" height="530" loading="lazy" alt="Vista aérea de una ciudad venezolana con montañas, generada con imagen satelital">
+              <figcaption>Terreno real con imagen satelital</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/aero-emergencias.webp" srcset="/img/p/aero-emergencias-480.webp 480w, /img/p/aero-emergencias-800.webp 800w, /img/p/aero-emergencias-1200.webp 1200w, /img/p/aero-emergencias.webp 1280w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1280" height="620" loading="lazy" alt="Práctica de emergencia con alerta de fuego de motor en la cabina">
+              <figcaption>Práctica de emergencias</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/aero-evaluacion.webp" srcset="/img/p/aero-evaluacion-480.webp 480w, /img/p/aero-evaluacion-800.webp 800w, /img/p/aero-evaluacion-1200.webp 1200w, /img/p/aero-evaluacion.webp 1280w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1280" height="620" loading="lazy" alt="Evaluación del vuelo con gráficas de altitud, velocidad y parámetros del motor">
+              <figcaption>Evaluación con las gráficas del vuelo</figcaption>
+            </figure>
+            <figure class="is-full">
+              <img src="/img/p/aero-nocturno.webp" srcset="/img/p/aero-nocturno-480.webp 480w, /img/p/aero-nocturno-800.webp 800w, /img/p/aero-nocturno-1200.webp 1200w, /img/p/aero-nocturno.webp 1280w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(100vw - 48px), 1192px" width="1280" height="530" loading="lazy" alt="Aeródromo de noche con las luces de la pista encendidas">
+              <figcaption>Vuelo nocturno</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Contacto ===== -->
+      <section class="section cta" id="contacto">
+        <div class="container">
+          <h2 class="display display--md">¿Quieres ver AeroEscuela en acción?</h2>
+          <p>Agenda una demostración o cuéntanos qué necesitas. Te respondemos por WhatsApp o por correo.</p>
+          <div class="cta__actions">
+            <a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20AeroEscuela." class="btn btn--dark" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+            <a href="mailto:contacto@fdpsoftware.org?subject=AeroEscuela" class="btn btn--outline">contacto@fdpsoftware.org</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Otros proyectos ===== -->
+      <section class="section section--tight section--gray">
+        <div class="container">
+          <h2 class="more__title">Otros proyectos</h2>
+          <div class="more">
+            <a href="/proyectos/sigma-mro/"><span class="badge badge--blue" aria-hidden="true">Σ</span>SIGMA MRO</a>
+            <a href="/proyectos/simuladores-de-tiro/"><span class="badge badge--magenta" aria-hidden="true">T</span>Simuladores de tiro</a>
+            <a href="/proyectos/entrenamiento-tactico/"><span class="badge badge--teal" aria-hidden="true">S</span>Entrenamiento táctico y estratégico</a>
+            <a href="/proyectos/escenarios-3d/"><span class="badge badge--orange" aria-hidden="true">3D</span>Escenarios 3D de Venezuela</a>
+            <a href="/proyectos/control-aereo/"><span class="badge badge--teal" aria-hidden="true">S</span>Control e interceptación aérea</a>
+            <a href="/proyectos/apps-moviles/"><span class="badge badge--green" aria-hidden="true">▶</span>Apps móviles</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__grid">
+            <div class="footer__brand">
+              <a href="/" class="logo" aria-label="FDP Software, inicio">
+                <img src="/img/logo-fdp-dark.png" alt="" width="40" height="40" class="logo__img" loading="lazy">
+                <span class="logo__text">FDP Software</span>
+              </a>
+              <p>Desarrollo, mantenimiento y distribución de software digital de alta gama.</p>
+            </div>
+
+            <div>
+              <h2>Proyectos</h2>
+              <ul>
+                <li><a href="/proyectos/sigma-mro/">SIGMA MRO</a></li>
+                <li><a href="/proyectos/aeroescuela/">Simulador de vuelo</a></li>
+                <li><a href="/proyectos/simuladores-de-tiro/">Simuladores de tiro</a></li>
+                <li><a href="/proyectos/entrenamiento-tactico/">Entrenamiento táctico</a></li>
+                <li><a href="/proyectos/escenarios-3d/">Escenarios 3D</a></li>
+                <li><a href="/proyectos/control-aereo/">Control aéreo</a></li>
+                <li><a href="/proyectos/apps-moviles/">Apps móviles</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Empresa</h2>
+              <ul>
+                <li><a href="/#soluciones">Soluciones</a></li>
+                <li><a href="/#sectores">Sectores</a></li>
+                <li><a href="/#nosotros">Nosotros</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Contacto</h2>
+              <ul>
+                <li><a href="mailto:contacto@fdpsoftware.org">contacto@fdpsoftware.org</a></li>
+                <li><a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones." target="_blank" rel="noopener">WhatsApp</a></li>
+                <li>Venezuela</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <p>© <span id="year">2026</span> FDP SOFTWARE. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="fab" href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
+  </a>
+
+  <script src="/js/main.js?v=20261023"></script>
+</body>
+</html>

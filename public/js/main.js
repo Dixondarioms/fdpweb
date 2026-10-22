@@ -55,94 +55,96 @@ function setupTabs(tabs, onSelect) {
   return select;
 }
 
-// Carrusel de la portada
+// Carrusel de la portada (solo en la página de inicio)
 const hero = document.querySelector(".hero");
-const heroTabs = [...document.querySelectorAll(".hero__tab")];
-const slides = heroTabs.map((t) => document.getElementById(t.getAttribute("aria-controls")));
-const SLIDE_TIME = 7000;
-let timer = null;
-let paused = reduceMotion;
+if (hero && document.getElementById("hero-pause")) {
+  const heroTabs = [...document.querySelectorAll(".hero__tab")];
+  const slides = heroTabs.map((t) => document.getElementById(t.getAttribute("aria-controls")));
+  const SLIDE_TIME = 7000;
+  let timer = null;
+  let paused = reduceMotion;
 
-hero.style.setProperty("--slide-time", SLIDE_TIME + "ms");
+  hero.style.setProperty("--slide-time", SLIDE_TIME + "ms");
 
-// Con JavaScript las diapositivas se ocultan con opacidad (para el fundido) en lugar de "hidden"
-slides.forEach((s) => {
-  s.hidden = false;
-  if (!s.classList.contains("is-active")) {
-    s.inert = true;
-    s.setAttribute("aria-hidden", "true");
-  }
-});
-
-// Las imágenes de las diapositivas ocultas usan data-src/data-srcset para no competir con la carga inicial
-function loadSlideImages(slide) {
-  slide.querySelectorAll("img[data-src]").forEach((img) => {
-    img.srcset = img.dataset.srcset;
-    img.src = img.dataset.src;
-    img.removeAttribute("data-src");
-    img.removeAttribute("data-srcset");
-  });
-}
-window.addEventListener("load", () => {
-  const loadAll = () => slides.forEach(loadSlideImages);
-  if ("requestIdleCallback" in window) requestIdleCallback(loadAll, { timeout: 2000 });
-  else setTimeout(loadAll, 1000);
-});
-
-const selectSlide = setupTabs(heroTabs, (tab) => {
+  // Con JavaScript las diapositivas se ocultan con opacidad (para el fundido) en lugar de "hidden"
   slides.forEach((s) => {
-    const active = s.id === tab.getAttribute("aria-controls");
-    if (active) loadSlideImages(s);
-    s.classList.toggle("is-active", active);
-    s.inert = !active;
-    s.setAttribute("aria-hidden", String(!active));
+    s.hidden = false;
+    if (!s.classList.contains("is-active")) {
+      s.inert = true;
+      s.setAttribute("aria-hidden", "true");
+    }
   });
-  // En celular, desplaza la fila de pestañas para que se vea la activa
-  tab.parentElement.scrollTo({ left: tab.offsetLeft - 20, behavior: reduceMotion ? "auto" : "smooth" });
-  // Reinicia la barra de progreso
-  const bar = tab.querySelector(".hero__progress");
-  bar.style.animation = "none";
-  void bar.offsetWidth;
-  bar.style.animation = "";
-  schedule();
-});
 
-function schedule() {
-  clearTimeout(timer);
-  if (paused) return;
-  timer = setTimeout(() => {
-    const i = heroTabs.findIndex((t) => t.classList.contains("is-active"));
-    selectSlide(heroTabs[(i + 1) % heroTabs.length]);
-  }, SLIDE_TIME);
-}
-
-const pauseBtn = document.getElementById("hero-pause");
-function setPaused(value) {
-  paused = value;
-  hero.classList.toggle("is-paused", paused);
-  pauseBtn.setAttribute("aria-label", paused ? "Reproducir el carrusel" : "Pausar el carrusel");
-  if (paused) {
-    clearTimeout(timer);
-  } else {
-    selectSlide(heroTabs.find((t) => t.classList.contains("is-active")));
+  // Las imágenes de las diapositivas ocultas usan data-src/data-srcset para no competir con la carga inicial
+  function loadSlideImages(slide) {
+    slide.querySelectorAll("img[data-src]").forEach((img) => {
+      img.srcset = img.dataset.srcset;
+      img.src = img.dataset.src;
+      img.removeAttribute("data-src");
+      img.removeAttribute("data-srcset");
+    });
   }
+  window.addEventListener("load", () => {
+    const loadAll = () => slides.forEach(loadSlideImages);
+    if ("requestIdleCallback" in window) requestIdleCallback(loadAll, { timeout: 2000 });
+    else setTimeout(loadAll, 1000);
+  });
+
+  const selectSlide = setupTabs(heroTabs, (tab) => {
+    slides.forEach((s) => {
+      const active = s.id === tab.getAttribute("aria-controls");
+      if (active) loadSlideImages(s);
+      s.classList.toggle("is-active", active);
+      s.inert = !active;
+      s.setAttribute("aria-hidden", String(!active));
+    });
+    // En celular, desplaza la fila de pestañas para que se vea la activa
+    tab.parentElement.scrollTo({ left: tab.offsetLeft - 20, behavior: reduceMotion ? "auto" : "smooth" });
+    // Reinicia la barra de progreso
+    const bar = tab.querySelector(".hero__progress");
+    bar.style.animation = "none";
+    void bar.offsetWidth;
+    bar.style.animation = "";
+    schedule();
+  });
+
+  function schedule() {
+    clearTimeout(timer);
+    if (paused) return;
+    timer = setTimeout(() => {
+      const i = heroTabs.findIndex((t) => t.classList.contains("is-active"));
+      selectSlide(heroTabs[(i + 1) % heroTabs.length]);
+    }, SLIDE_TIME);
+  }
+
+  const pauseBtn = document.getElementById("hero-pause");
+  function setPaused(value) {
+    paused = value;
+    hero.classList.toggle("is-paused", paused);
+    pauseBtn.setAttribute("aria-label", paused ? "Reproducir el carrusel" : "Pausar el carrusel");
+    if (paused) {
+      clearTimeout(timer);
+    } else {
+      selectSlide(heroTabs.find((t) => t.classList.contains("is-active")));
+    }
+  }
+  pauseBtn.addEventListener("click", () => setPaused(!paused));
+  setPaused(paused);
+
+  // Enlace directo a una diapositiva, por ejemplo fdpsoftware.com/#slide-4
+  const linkedTab = heroTabs.find((t) => "#" + t.getAttribute("aria-controls") === location.hash);
+  if (linkedTab) selectSlide(linkedTab);
+
+  // Pausa automática cuando la hoja de contenido tapa la portada
+  // (la portada es "sticky", así que siempre cuenta como visible para el navegador)
+  let userPaused = false;
+  pauseBtn.addEventListener("click", () => (userPaused = paused));
+  window.addEventListener("scroll", () => {
+    if (userPaused || reduceMotion) return;
+    const covered = window.scrollY > hero.offsetHeight * 0.7;
+    if (covered !== paused) setPaused(covered);
+  }, { passive: true });
 }
-pauseBtn.addEventListener("click", () => setPaused(!paused));
-setPaused(paused);
-
-// Enlace directo a una diapositiva, por ejemplo fdpsoftware.com/#slide-4
-const linkedTab = heroTabs.find((t) => "#" + t.getAttribute("aria-controls") === location.hash);
-if (linkedTab) selectSlide(linkedTab);
-
-// Pausa automática cuando la hoja de contenido tapa la portada
-// (la portada es "sticky", así que siempre cuenta como visible para el navegador)
-let userPaused = false;
-pauseBtn.addEventListener("click", () => (userPaused = paused));
-window.addEventListener("scroll", () => {
-  if (userPaused || reduceMotion) return;
-  const covered = window.scrollY > hero.offsetHeight * 0.7;
-  if (covered !== paused) setPaused(covered);
-}, { passive: true });
 
 // Pestañas de sectores
 const sectorTabs = [...document.querySelectorAll(".pill")];
@@ -154,14 +156,14 @@ setupTabs(sectorTabs, (tab) => {
 
 // Botones del carril de soluciones
 const rail = document.getElementById("rail");
-document.querySelectorAll("[data-rail]").forEach((btn) => {
+if (rail) document.querySelectorAll("[data-rail]").forEach((btn) => {
   btn.addEventListener("click", () => {
     rail.scrollBy({ left: Number(btn.dataset.rail) * 340, behavior: reduceMotion ? "auto" : "smooth" });
   });
 });
 
 // Aparición suave de los elementos al hacer scroll
-const revealItems = document.querySelectorAll(".section__head, .rail-card, .feature, .media-card, .sector, .quote, .step, .about, .brand, .app-card, .team__card");
+const revealItems = document.querySelectorAll(".section__head, .rail-card, .feature, .media-card, .sector, .quote, .step, .about, .brand, .app-card, .team__card, .pfeature, .pgallery figure, .prow");
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
