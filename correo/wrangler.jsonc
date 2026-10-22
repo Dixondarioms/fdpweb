@@ -1,0 +1,15 @@
+// Email Worker: reenvía contacto@fdpsoftware.org a varios correos.
+// Publicar o actualizar (desde esta carpeta):  npx.cmd wrangler deploy
+{
+  "name": "fdp-correo",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-19",
+  // Este Worker solo procesa correo: no responde páginas en ninguna dirección web
+  "workers_dev": false,
+  "preview_urls": false,
+  "vars": {
+    // Direcciones que reciben los correos, separadas por comas.
+    // Cada una tiene que estar verificada en Email Routing → Destination addresses.
+    "DESTINOS": "dxnvndnhw@gmail.com, freethepress2026@gmail.com"
+  }
+}

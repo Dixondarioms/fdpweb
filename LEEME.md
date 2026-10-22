@@ -55,11 +55,18 @@ Cada diapositiva de la portada tiene su propio enlace, útil para compartir:
 - `https://fdpsoftware.org/#slide-4` → Simuladores de tiro
 - `https://fdpsoftware.org/#tiro` → sección de simuladores de tiro
 
-## 4. Correo con tu dominio (gratis)
+## 4. Correo contacto@fdpsoftware.org (gratis)
 
-- **Solo recibir** en tu Gmail: en Cloudflare, ve a `fdpsoftware.org` → **Email → Email Routing** y crea
-  `contacto@fdpsoftware.org` → tu correo personal.
-- **Buzón completo** (enviar y recibir): usa Zoho Mail y sigue su asistente para agregar los registros DNS en Cloudflare.
+Los mensajes que llegan a **contacto@fdpsoftware.org** se reenvían automáticamente a dos Gmail con
+**Cloudflare Email Routing** y un pequeño programa (Email Worker) que está en la carpeta `correo/`.
+
+- **Cambiar o agregar destinos**: edita `DESTINOS` en `correo/wrangler.jsonc` (separados por comas) y publica
+  desde esa carpeta con `npx.cmd wrangler deploy`. Cada destino nuevo debe agregarse antes en Cloudflare →
+  **Email Routing → Destination addresses** y confirmarse con el correo de verificación que recibe.
+- La regla está en **Email Routing → Routing rules**: `contacto@fdpsoftware.org` → *Send to a Worker* → `fdp-correo`.
+- Este correo solo **recibe**. Al responder desde Gmail, la respuesta sale desde la dirección de Gmail.
+  Para responder como contacto@fdpsoftware.org hace falta un servicio de correo con el dominio
+  (por ejemplo Zoho Mail o Google Workspace) y ajustar los registros SPF y DKIM.
 
 ## 5. Dominio
 
@@ -70,9 +77,10 @@ Ajustes de seguridad ya configurados en el panel de Cloudflare (no los desactive
 
 - **SSL/TLS → Edge Certificates**: *Always Use HTTPS* activado y *Minimum TLS Version* en **TLS 1.2**.
 - **DNS → Settings**: **DNSSEC** activado.
-- **DNS → Records**: `TXT @ "v=spf1 -all"` y `TXT _dmarc "v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s"`.
-  Impiden que alguien envíe correos falsos desde @fdpsoftware.org. Si algún día envían correo con el dominio
-  (por ejemplo con Zoho), hay que cambiar el SPF y agregar DKIM según las instrucciones de ese proveedor.
+- **DNS → Records**: `TXT _dmarc "v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s"`, que impide que alguien
+  envíe correos falsos desde @fdpsoftware.org. Los registros MX, SPF y DKIM de Email Routing los administra
+  Cloudflare: no los edites a mano. Si algún día envían correo con el dominio (por ejemplo con Zoho), hay que
+  ajustar el SPF y agregar DKIM según las instrucciones de ese proveedor.
 
 ## 6. Trabajar en equipo con git
 

@@ -16,6 +16,9 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
   - `404.html`, `_headers` (seguridad y caché) y `robots.txt`.
 - `wrangler.jsonc` publica `public/` en **Cloudflare Workers** (archivos estáticos) y conecta el dominio. No toques sus `routes`.
 - `LEEME.md` es la guía para personas. Mantenla al día si cambias la forma de trabajar.
+- `correo/` es un Email Worker aparte (`fdp-correo`) que reenvía `contacto@fdpsoftware.org` a las direcciones de
+  `DESTINOS` en `correo/wrangler.jsonc`. Se publica desde esa carpeta con `npx.cmd wrangler deploy`. Esas direcciones
+  son datos privados: nunca las muestres en la web.
 
 ### Secciones de `index.html` (por `id`)
 
