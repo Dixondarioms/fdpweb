@@ -24,7 +24,7 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
 
 `inicio` (portada con carrusel: `slide-1` FDP Software, `slide-2` SIGMA MRO, `slide-3` Escenarios 3D,
 `slide-4` simuladores de tiro) → `soluciones` (carril horizontal de tarjetas) → `proyectos` (SIGMA MRO destacado,
-`tiro` con galería, y una cuadrícula con AeroEscuela, DespachoPro, entrenamiento táctico, Escenarios 3D y control
+`tiro` con galería, y una cuadrícula con AeroEscuela, entrenamiento táctico, Escenarios 3D y control
 aéreo) → `apps` (Marcelo Go, Minijuegos de Marcelo Go y Ritmo Diario en Google Play) → `sectores` (pestañas) →
 cita de la misión → `metodo` → `nosotros` (misión, visión, marcas y equipo por áreas) → `contacto` → pie de página.
 
