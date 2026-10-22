@@ -7,6 +7,7 @@ Sitio estático (HTML, CSS y JavaScript) publicado en **Cloudflare** en <https:/
 WEB/
 ├── LEEME.md          ← esta guía (no se publica)
 ├── wrangler.jsonc    ← configuración de publicación en Cloudflare (no se publica)
+├── videos/          ← generador de videos para redes sociales (no se publica)
 └── public/           ← ESTA es la carpeta que se publica
     ├── index.html    ← contenido de la página
     ├── 404.html      ← página de "no encontrado"
@@ -134,3 +135,18 @@ npx.cmd wrangler deploy          # 4. publica en fdpsoftware.org
 ```
 
 Hagan siempre `git pull` antes de empezar, para no pisar el trabajo de la otra persona.
+
+## 8. Videos para redes sociales
+
+Los videos publicitarios verticales (Instagram, TikTok, Shorts y Estados) se arman con un programa que está en
+`videos/`. La guía completa, con cómo cambiar textos, hacer videos nuevos y las reglas del estilo, está en
+[videos/LEEME.md](videos/LEEME.md). Para generarlos todos:
+
+```
+python videos/generador/videos.py
+```
+
+Los videos terminados quedan en `videos-redes/` y no se suben a git.
+
+Redes de FDP: Instagram [@freethepress05](https://www.instagram.com/freethepress05/) y TikTok
+[@freethepress5](https://www.tiktok.com/@freethepress5). Aparecen en el pie de página de la web y al final de cada video.

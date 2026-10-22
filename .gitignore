@@ -15,3 +15,7 @@ desktop.ini
 
 # Registros
 *.log
+
+# Videos terminados para redes sociales (se generan con videos/generador)
+videos-redes/
+__pycache__/

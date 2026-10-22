@@ -59,6 +59,21 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 - Si agregas un tipo de tarjeta nuevo, súmalo a la lista `revealItems` en `js/main.js` para que tenga la animación de aparición.
 - Todo debe verse bien en computador (1280 y 1920 px) y en celular (375 px), sin desplazamiento lateral.
 
+## Videos para redes sociales (`videos/`)
+
+- `videos/generador/videos.py` tiene el guion de cada video (textos, imágenes, tomas y tiempos) y `engine.py` el
+  diseño (fondo de marca, animaciones, tarjetas y cierre). Se generan con `python videos/generador/videos.py [nombre]`
+  y quedan en `videos-redes/`, que está en `.gitignore`: nunca subas videos terminados. Guía para personas: `videos/LEEME.md`.
+- Usa las imágenes de `public/img/` y las tomas cortas de `videos/clips/` (recortadas a su tamaño original).
+  Para un video nuevo, copia la función de uno parecido y agrégalo a `VIDEOS`. Mantén el estilo: vertical
+  1080×1920 a 30 fps, de 15 a 25 s, gancho → escenas con etiqueta y titular → cierre `cta()`, y nada importante
+  por encima de 250 px ni por debajo de 1480 px.
+- Los videos **no muestran el simulador IGLA ni los simuladores de tiro**, y van sin música (se agrega al publicar).
+  También valen las reglas de contenido y de HD de abajo: el programa se detiene si una imagen se amplía por encima de 1×.
+- Revisa cada video antes de entregarlo (`... <nombre> previa 1,4.5,24`, o una hoja de cuadros con ffmpeg).
+- Redes de FDP: Instagram `@freethepress05` y TikTok `@freethepress5`. Están en `REDES` (en `engine.py`), en el pie
+  de página de las ocho páginas y en `sameAs` de los datos para Google de `index.html`; si cambian, cámbialas en todos.
+
 ## Reglas de contenido (obligatorias)
 
 1. **Nombre de la empresa y marcas**: siempre **FDP Software**, **FDP Simuladores** y **FDP Aplicaciones**.
