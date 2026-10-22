@@ -971,7 +971,7 @@ button { font: inherit; }
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
 }
 
-/* Marcas (FD Software, FD Simuladores, FDP Aplicaciones) */
+/* Marcas (FDP Software, FDP Simuladores, FDP Aplicaciones) */
 .brands {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
