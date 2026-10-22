@@ -68,7 +68,17 @@ Los mensajes que llegan a **contacto@fdpsoftware.org** se reenvían automáticam
   Para responder como contacto@fdpsoftware.org hace falta un servicio de correo con el dominio
   (por ejemplo Zoho Mail o Google Workspace) y ajustar los registros SPF y DKIM.
 
-## 5. Dominio
+## 5. Google (Search Console)
+
+`fdpsoftware.org` está registrado y verificado en **Google Search Console**
+(<https://search.google.com/search-console>, propiedad de dominio), con el sitemap `https://fdpsoftware.org/sitemap.xml`.
+
+- No borres el registro DNS `TXT google-site-verification=…`: es la prueba de que el dominio es suyo.
+- Si cambian mucho la portada, actualiza `<lastmod>` en `public/sitemap.xml` y, en Search Console,
+  usa **Inspección de URLs → Solicitar indexación** con `https://fdpsoftware.org/`.
+- Ahí también se ve cuántas personas encuentran la web en Google y con qué búsquedas.
+
+## 6. Dominio
 
 `fdpsoftware.org` está registrado en Cloudflare. Mantén activa la **renovación automática** en
 **Domain Registration → Manage Domains**.
@@ -82,7 +92,7 @@ Ajustes de seguridad ya configurados en el panel de Cloudflare (no los desactive
   Cloudflare: no los edites a mano. Si algún día envían correo con el dominio (por ejemplo con Zoho), hay que
   ajustar el SPF y agregar DKIM según las instrucciones de ese proveedor.
 
-## 6. Trabajar en equipo con git
+## 7. Trabajar en equipo con git
 
 El código de la web vive en un repositorio git. Así cada persona trabaja en su copia y los cambios
 quedan guardados con su historial.
