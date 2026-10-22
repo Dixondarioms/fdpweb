@@ -73,6 +73,21 @@ Ninguna imagen puede verse borrosa ni de mala calidad.
 - Antes de publicar, mide en el navegador que ninguna imagen se muestre por encima de 1×: compara
   el tamaño en pantalla con `naturalWidth` y `naturalHeight` a 1280×800, 1920×1080 y 375 px de ancho.
 
+## Seguridad (no la debilites)
+
+`public/_headers` aplica una política de seguridad estricta (Content-Security-Policy, HSTS, anti-iframe, etc.).
+
+- **Nada de código en línea**: no escribas `<script>` sin `src`, ni `onclick=`, ni atributos `style="..."` en el
+  HTML; el navegador los bloquea. Los estilos van en `css/styles.css` y el JavaScript en `js/main.js`.
+  Tampoco uses `innerHTML`, `eval` ni `document.write` (Trusted Types está activo); usa `textContent` y `createElement`.
+- **Recursos externos**: solo están permitidos Google Fonts y las estadísticas de Cloudflare
+  (`static.cloudflareinsights.com`). Si hace falta algo de otro dominio (un video, un mapa, un script),
+  agrégalo a la directiva correcta de la CSP en `_headers`, explica a ella el riesgo y pruébalo antes de publicar.
+- Los enlaces que abren otra pestaña (`target="_blank"`) llevan siempre `rel="noopener"`.
+- La web solo responde en `fdpsoftware.org` (`workers_dev` y `preview_urls` están en `false` en `wrangler.jsonc`).
+- Después de publicar, revisa en la consola del navegador que no haya mensajes de "Content Security Policy".
+- `public/.well-known/security.txt` dice cómo reportar problemas de seguridad; renueva su fecha `Expires` antes de que venza.
+
 ## Cómo trabajar
 
 1. Al empezar: `git pull`, para traer los últimos cambios.

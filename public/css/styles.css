@@ -692,6 +692,8 @@ button { font: inherit; }
   object-fit: cover;
   border-radius: var(--radius);
 }
+/* Capturas cuyo contenido importante está arriba a la izquierda */
+.gallery img.is-left { object-position: left top; }
 .gallery figcaption {
   margin-top: 8px;
   color: var(--ink);
@@ -1119,6 +1121,21 @@ button { font: inherit; }
   font-size: 0.85rem;
 }
 .footer__bottom p { margin: 0; }
+
+/* ===== Página 404 ===== */
+.page-404 {
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.page-404__bg { background: var(--brand-mesh); }
+.page-404__content {
+  position: relative;
+  padding: 40px 20px;
+}
+.page-404 .slide__text { margin: 0 auto; }
+.page-404 .slide__actions { justify-content: center; }
 
 /* ===== Botón flotante de WhatsApp ===== */
 .fab {

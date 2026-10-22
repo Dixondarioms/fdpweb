@@ -1,0 +1,6 @@
+# Para reportar un problema de seguridad en fdpsoftware.org
+Contact: mailto:contacto@fdpsoftware.org
+Contact: https://wa.me/584120846332
+Expires: 2027-10-22T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://fdpsoftware.org/.well-known/security.txt
