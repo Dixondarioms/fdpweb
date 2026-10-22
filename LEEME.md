@@ -66,6 +66,14 @@ Cada diapositiva de la portada tiene su propio enlace, útil para compartir:
 `fdpsoftware.org` está registrado en Cloudflare. Mantén activa la **renovación automática** en
 **Domain Registration → Manage Domains**.
 
+Ajustes de seguridad ya configurados en el panel de Cloudflare (no los desactives):
+
+- **SSL/TLS → Edge Certificates**: *Always Use HTTPS* activado y *Minimum TLS Version* en **TLS 1.2**.
+- **DNS → Settings**: **DNSSEC** activado.
+- **DNS → Records**: `TXT @ "v=spf1 -all"` y `TXT _dmarc "v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s"`.
+  Impiden que alguien envíe correos falsos desde @fdpsoftware.org. Si algún día envían correo con el dominio
+  (por ejemplo con Zoho), hay que cambiar el SPF y agregar DKIM según las instrucciones de ese proveedor.
+
 ## 6. Trabajar en equipo con git
 
 El código de la web vive en un repositorio git. Así cada persona trabaja en su copia y los cambios
