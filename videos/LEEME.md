@@ -24,6 +24,13 @@ Los videos terminados se guardan en la carpeta `videos-redes/`, que **no se sube
 | `03-aeroescuela` | 25 s | Tomas reales del simulador de vuelo |
 | `04-escenarios-3d` | 20 s | "Caracas, en 3D": recorrido por la ciudad |
 | `05-fdp-aplicaciones` | 17 s | Marcelo Go, Minijuegos y Ritmo Diario |
+| `06-sin-internet` | 16 s | "¿Tu sistema se cae cuando se va el internet?": SIGMA MRO sin nube |
+| `07-marcelo-go` | 15 s | "¿Listo para explotar burbujas?": poderes y retos de Marcelo Go |
+| `08-ia-local` | 17 s | IA que no envía tus datos a la nube |
+| `09-hecho-en-venezuela` | 20 s | Caracas en 3D, aeropuertos venezolanos en AeroEscuela y Marcelo Go |
+| `10-a-la-medida` | 20 s | Método de trabajo: diseñamos, desarrollamos, acompañamos |
+| `11-escuelas-de-vuelo` | 17 s | SIGMA MRO y AeroEscuela para escuelas de vuelo y talleres |
+| `12-ritmo-diario` | 14 s | "¿Cómo te sientes hoy?": la app Ritmo Diario |
 
 ## 1. Preparar el computador (solo la primera vez)
 
@@ -45,7 +52,7 @@ Desde la carpeta `WEB`:
 python videos/generador/videos.py
 ```
 
-Genera los cinco videos en `videos-redes/` (tarda unos minutos). Para generar uno solo:
+Genera todos los videos en `videos-redes/` (tarda unos minutos). Para generar uno solo:
 
 ```
 python videos/generador/videos.py 02-sigma-mro
@@ -94,7 +101,29 @@ ffmpeg -ss 20 -i original.mp4 -t 4.2 -vf "crop=1000:570:140:130,fps=30" -an -c:v
 Antes de usarla, mírala completa: no debe tener escudos, nombres de instituciones, subtítulos, rutas de archivos,
 punteros del mouse ni datos personales.
 
-## 5. Reglas del estilo (obligatorias)
+## 5. Calendario de publicaciones
+
+`videos/generador/calendario.py` tiene las publicaciones del mes: fecha, video, texto para Instagram y texto para
+TikTok. Después de generar los videos, ejecuta:
+
+```
+python videos/generador/calendario.py
+```
+
+Crea `videos-redes/programar/` con una carpeta por publicación (`01-2026-10-26`, `02-2026-10-28`…). Cada una trae el
+video, `portada.jpg`, `texto-instagram.txt` y `texto-tiktok.txt`. También crea `calendario.html`, una página con todas las
+publicaciones y botones para copiar los textos. Su diseño está en `videos/generador/calendario.html`.
+
+Para el mes siguiente, cambia las fechas y los textos de la lista `PUBLICACIONES` y vuelve a ejecutarlo.
+
+**Cómo programar**
+- **Instagram**: en [Meta Business Suite](https://business.facebook.com) → Planificador → Crear reel. Sube el video,
+  pega el texto, sube `portada.jpg` como portada y elige **Programar**. Se puede dejar el mes completo programado.
+- **TikTok**: en [TikTok Studio](https://www.tiktok.com/tiktokstudio/upload) sube el video, pega el texto, elige la portada
+  y en **Cuándo publicar** elige **Programar**. TikTok solo deja programar hasta 10 días antes: cada viernes programa
+  las publicaciones de la semana siguiente.
+
+## 6. Reglas del estilo (obligatorias)
 
 - **Formato**: vertical 1080×1920, 30 cuadros por segundo, entre 15 y 25 segundos.
 - **Estructura**: una frase de gancho grande al inicio → escenas con etiqueta, titular y una captura o toma →
@@ -110,7 +139,7 @@ punteros del mouse ni datos personales.
 - **Sin música**: se agrega al publicar, desde la biblioteca de Instagram o TikTok
   (así no hay problemas de derechos de autor y las apps los muestran a más gente).
 
-## 6. Con Claude
+## 7. Con Claude
 
 También puedes pedirle a Claude, en español, cosas como "haz un video de SIGMA MRO más corto" o
 "cambia el titular de la segunda escena". Claude conoce este estilo y estas reglas por el archivo `CLAUDE.md`.

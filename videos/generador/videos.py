@@ -131,8 +131,112 @@ def marca():
     return els, round(end + 4.2, 2)
 
 
+# ---------- Videos cortos para el calendario de publicaciones ----------
+SIGMA = 'proyecto-sigma-mro.webp'
+
+def sigma_card(t0, t1, c0, c1):
+    """Un recorte de la pantalla de SIGMA MRO a tamaño original (1000x700), con paneo lento."""
+    return Card(SIGMA, t0, t1, ('center', CARD_Y, 1000, 700), c0=c0, c1=c1)
+
+def frase(lineas, t0, t1, size=104, y=720):
+    """Frase grande sin imagen, a mitad del video."""
+    return hook(lineas, t0, t1, y=y, size=size)
+
+def paso(num, titulo, texto, t0, t1):
+    """Paso numerado del método de trabajo (01, 02, 03)."""
+    return [Text([(num, 'grad')], t0 + 0.3, t1, y=520, size=230, weight=900),
+            Text([titulo], t0 + 0.42, t1, y=800, size=112, weight=850),
+            Text(wrap(texto, 62, weight=600), t0 + 0.55, t1, y=960, size=62, weight=600, color=MUTED)]
+
+
+def sin_internet():
+    els = [Header('FDP Software', 0, 12.0)]
+    els += hook(['¿Tu sistema', 'se cae cuando', 'se va el', ('internet?', 'grad')], 0, 3.0, y=600, size=116)
+    els += feat('SIGMA MRO', 'Gestión de mantenimiento 100 % sin nube.', 2.8, 6.1,
+                Card(SIGMA, 2.8, 6.1, ('center', CARD_Y, 1000, 630), s0=0.732, s1=0.78))
+    els += feat('RED LOCAL', 'Escritorio y app móvil por tu propia red.', 5.9, 9.2,
+                sigma_card(5.9, 9.2, (500, 350), (760, 380)))
+    els += frase(['Tus datos,', ('bajo tu control.', 'grad')], 9.0, 12.0)
+    els += cta(11.8, 16.2)
+    return els, 16.2
+
+
+def marcelo_go():
+    els = [Header('FDP Aplicaciones', 0, 10.4, logo='logo-aplicaciones.webp')]
+    els += hook(['¿Listo para', 'explotar', ('burbujas?', 'grad')], 0, 2.8, y=680, size=130)
+    els += feat('MARCELO GO', 'Poderes especiales: varita, cohete, martillo, bomba y rayo.', 2.6, 6.4,
+                marcelo(0.1, 2.6, 6.4), size=76)
+    els += feat('RETOS POR NIVELES', 'Premios y recompensas al avanzar.', 6.2, 10.4,
+                Card('app-marcelo-go.webp', 6.2, 10.4, ('center', CARD_Y, 860, 700), s0=0.86, c0=(500, 420), c1=(500, 640)))
+    els += cta(10.2, 14.6, logo='logo-aplicaciones.webp', title=('Búscalo en', 'Google Play'),
+               extra=[('Busca «Marcelo Go»', WHITE), ('fdpsoftware.org', 'grad')])
+    return els, 14.6
+
+
+def ia_local():
+    els = [Header('FDP Software', 0, 12.3)]
+    els += hook(['IA que trabaja', 'sin enviar', 'tus datos a', ('la nube.', 'grad')], 0, 3.0, y=600, size=116)
+    els += feat('ASISTENTE CON IA', 'Consulta tus manuales técnicos, también por voz.', 2.8, 6.4,
+                sigma_card(2.8, 6.4, (500, 510), (866, 510)))
+    els += feat('IA LOCAL', 'Asistentes de IA sobre tus propios documentos.', 6.2, 9.5,
+                Card(SIGMA, 6.2, 9.5, ('center', CARD_Y, 1000, 630), s0=0.78, s1=0.732))
+    els += frase(['Tus datos se', ('quedan contigo.', 'grad')], 9.3, 12.3)
+    els += cta(12.1, 16.5)
+    return els, 16.5
+
+
+def hecho_en_venezuela():
+    els = [Header('FDP Software', 0, 15.4)]
+    els += hook(['Hecho en', ('Venezuela.', 'grad')], 0, 2.6, y=760, size=160)
+    els += feat('ESCENARIOS 3D', 'Caracas, recreada en 3D con datos reales.', 2.4, 5.8,
+                Card('proyecto-escenarios-3d.webp', 2.4, 5.8, ('center', CARD_Y, 1000, 760), c0=(600, 540), c1=(1000, 540)))
+    els += feat('AEROESCUELA', 'Vuela sobre aeropuertos reales de Venezuela.', 5.6, 9.0, aero('aeropuertos', 5.6, 9.0))
+    els += feat('FDP APLICACIONES', 'Juegos y apps en Google Play.', 8.8, 12.4, marcelo(0.1, 8.8, 12.4))
+    els += frase(['De Venezuela', ('para el mundo.', 'grad')], 12.2, 15.4, size=110)
+    els += cta(15.2, 19.6)
+    return els, 19.6
+
+
+def a_la_medida():
+    els = [Header('FDP Software', 0, 15.4)]
+    els += hook(['¿Necesitas un', 'sistema a', ('tu medida?', 'grad')], 0, 2.9, y=680, size=124)
+    els += paso('01', 'Diseñamos.', 'Analizamos tus procesos y definimos alcance, tiempos y costo.', 2.7, 6.0)
+    els += paso('02', 'Desarrollamos.', 'Por etapas, con pruebas y documentación en cada entrega.', 5.8, 9.1)
+    els += paso('03', 'Acompañamos.', 'Instalamos en tu sitio, capacitamos a tu equipo y damos soporte.', 8.9, 12.2)
+    els += frase(['Web, móvil,', 'IA y sistemas', ('embebidos.', 'grad')], 12.0, 15.4, y=660)
+    els += cta(15.2, 19.6)
+    return els, 19.6
+
+
+def escuelas_de_vuelo():
+    els = [Header('FDP Software', 0, 12.6)]
+    els += hook(['Para escuelas', 'de vuelo y', 'talleres', ('aeronáuticos.', 'grad')], 0, 3.0, y=600, size=116)
+    els += feat('SIGMA MRO', 'Tu flota al día: límites por horas, ciclos o calendario.', 2.8, 6.2,
+                sigma_card(2.8, 6.2, (500, 350), (700, 380)), size=76)
+    els += feat('AEROESCUELA', 'Entrenamiento de vuelo en una computadora común.', 6.0, 9.4,
+                aero('cabina', 6.0, 9.4), size=76)
+    els += feat('EVALUACIÓN', 'Gráficas del vuelo e informe para el alumno y el instructor.', 9.2, 12.6,
+                aero('evaluacion', 9.2, 12.6), size=72)
+    els += cta(12.4, 16.8)
+    return els, 16.8
+
+
+def ritmo_diario():
+    els = [Header('FDP Aplicaciones', 0, 10.0, logo='logo-aplicaciones.webp')]
+    els += hook(['¿Cómo te', ('sientes hoy?', 'grad')], 0, 2.7, y=760, size=130)
+    els += feat('RITMO DIARIO', 'Tu diario de salud: dolor, energía, sueño y agua.', 2.5, 6.6,
+                Card('app-ritmo-diario.webp', 2.5, 6.6, ('center', CARD_Y + 60, 640, 360)))
+    els += frase(['Registra tus', 'tratamientos y', 'mira tu evolución', ('en gráficas.', 'grad')], 6.4, 10.0, size=96, y=640)
+    els += cta(9.8, 14.2, logo='logo-aplicaciones.webp', title=('Búscalo en', 'Google Play'),
+               extra=[('Busca «Ritmo Diario»', WHITE), ('fdpsoftware.org', 'grad')])
+    return els, 14.2
+
+
 VIDEOS = {'01-fdp-software': marca, '02-sigma-mro': sigma, '03-aeroescuela': aeroescuela,
-          '04-escenarios-3d': escenarios, '05-fdp-aplicaciones': aplicaciones}
+          '04-escenarios-3d': escenarios, '05-fdp-aplicaciones': aplicaciones,
+          '06-sin-internet': sin_internet, '07-marcelo-go': marcelo_go, '08-ia-local': ia_local,
+          '09-hecho-en-venezuela': hecho_en_venezuela, '10-a-la-medida': a_la_medida,
+          '11-escuelas-de-vuelo': escuelas_de_vuelo, '12-ritmo-diario': ritmo_diario}
 
 if __name__ == '__main__':
     nombres = [sys.argv[1]] if len(sys.argv) > 1 else list(VIDEOS)

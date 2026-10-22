@@ -70,6 +70,7 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
   por encima de 250 px ni por debajo de 1480 px.
 - Los videos **no muestran el simulador IGLA ni los simuladores de tiro**, y van sin música (se agrega al publicar).
   También valen las reglas de contenido y de HD de abajo: el programa se detiene si una imagen se amplía por encima de 1×.
+- `videos/generador/calendario.py` arma `videos-redes/programar/` (video, portada y textos por publicación, más `calendario.html`) para programar en Meta Business Suite y TikTok Studio. La página publicada del calendario es https://claude.ai/artifact/YPZ1Yr9gQjsajYNHJTxaAk.
 - Revisa cada video antes de entregarlo (`... <nombre> previa 1,4.5,24`, o una hoja de cuadros con ffmpeg).
 - Redes de FDP: Instagram `@freethepress05` y TikTok `@freethepress5`. Están en `REDES` (en `engine.py`), en el pie
   de página de las ocho páginas y en `sameAs` de los datos para Google de `index.html`; si cambian, cámbialas en todos.
