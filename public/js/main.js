@@ -74,9 +74,25 @@ slides.forEach((s) => {
   }
 });
 
+// Las imágenes de las diapositivas ocultas usan data-src/data-srcset para no competir con la carga inicial
+function loadSlideImages(slide) {
+  slide.querySelectorAll("img[data-src]").forEach((img) => {
+    img.srcset = img.dataset.srcset;
+    img.src = img.dataset.src;
+    img.removeAttribute("data-src");
+    img.removeAttribute("data-srcset");
+  });
+}
+window.addEventListener("load", () => {
+  const loadAll = () => slides.forEach(loadSlideImages);
+  if ("requestIdleCallback" in window) requestIdleCallback(loadAll, { timeout: 2000 });
+  else setTimeout(loadAll, 1000);
+});
+
 const selectSlide = setupTabs(heroTabs, (tab) => {
   slides.forEach((s) => {
     const active = s.id === tab.getAttribute("aria-controls");
+    if (active) loadSlideImages(s);
     s.classList.toggle("is-active", active);
     s.inert = !active;
     s.setAttribute("aria-hidden", String(!active));

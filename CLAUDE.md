@@ -56,10 +56,21 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 4. **Revisa cada captura antes de publicarla**: no deben aparecer rutas de archivos de un computador
    (`C:\Users\...`), nombres de usuario, punteros del mouse ni datos personales. Si aparecen, recórtalos o tápalos
    con el color del fondo.
-5. **Contacto**: WhatsApp +58 412-0846332 (`https://wa.me/584120846332`) y correo `contacto@fdpsoftware.org`.
+5. **Contacto**: WhatsApp +58 412-0846332 (los enlaces llevan un mensaje ya escrito: `https://wa.me/584120846332?text=Hola%20FDP%20Software%2C...`) y correo `contacto@fdpsoftware.org`.
    Aparecen en la sección de contacto, en el pie de página y en el botón flotante; si cambian, cámbialos en todos.
 6. Escribe en español, tuteando al visitante, con frases claras y sin exagerar. No inventes clientes, cifras ni
    testimonios.
+
+## Velocidad
+
+- **Versión de CSS y JS**: `styles.css` y `main.js` se cargan con `?v=AAAAMMDD` y se guardan 30 días en caché.
+  Cada vez que los cambies, actualiza ese número en `index.html` y `404.html`, o los visitantes seguirán viendo la versión vieja.
+- **Imágenes responsive**: cada imagen de contenido tiene versiones más pequeñas (`nombre-480.webp`, `nombre-800.webp`…)
+  declaradas en `srcset`, con un `sizes` que describe su ancho real en pantalla. Si agregas o reemplazas una imagen,
+  genera también sus versiones (solo anchos menores al original) y escribe su `srcset`/`sizes`.
+- Las imágenes de las diapositivas 2 a 4 de la portada usan `data-src`/`data-srcset` y `js/main.js` las carga después del
+  arranque; no les pongas `src` directo.
+- Las imágenes que no están al inicio de la página llevan `loading="lazy"`.
 
 ## Imágenes: siempre en HD (regla estricta)
 
@@ -83,8 +94,8 @@ Ninguna imagen puede verse borrosa ni de mala calidad.
 - **Nada de código en línea**: no escribas `<script>` sin `src`, ni `onclick=`, ni atributos `style="..."` en el
   HTML; el navegador los bloquea. Los estilos van en `css/styles.css` y el JavaScript en `js/main.js`.
   Tampoco uses `innerHTML`, `eval` ni `document.write` (Trusted Types está activo); usa `textContent` y `createElement`.
-- **Recursos externos**: solo están permitidos Google Fonts y las estadísticas de Cloudflare
-  (`static.cloudflareinsights.com`). Si hace falta algo de otro dominio (un video, un mapa, un script),
+- **Recursos externos**: solo están permitidas las estadísticas de Cloudflare (`static.cloudflareinsights.com`).
+  Las fuentes (Inter e Inter Tight) están en `public/fonts/` con su licencia; no vuelvas a usar Google Fonts. Si hace falta algo de otro dominio (un video, un mapa, un script),
   agrégalo a la directiva correcta de la CSP en `_headers`, explica a ella el riesgo y pruébalo antes de publicar.
 - Los enlaces que abren otra pestaña (`target="_blank"`) llevan siempre `rel="noopener"`.
 - La web solo responde en `fdpsoftware.org` (`workers_dev` y `preview_urls` están en `false` en `wrangler.jsonc`).

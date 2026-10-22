@@ -1,3 +1,20 @@
+/* ===== Fuentes alojadas en la propia web (Inter e Inter Tight, licencia SIL OFL: ver fonts/) ===== */
+/* Son fuentes variables: un solo archivo por familia cubre todos los grosores. Solo alfabeto latino (incluye español). */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter-tight-latin.woff2") format("woff2");
+}
+
 /* ===== Variables de diseño (colores tomados del logo de FDP Software) ===== */
 :root {
   --ink: #111111;
@@ -113,7 +130,8 @@ button { font: inherit; }
 .link-arrow:hover { text-decoration: underline; }
 .link-arrow:hover::after { transform: translateX(4px); }
 
-/* Insignias de color (como los íconos de producto) */
+/* Insignias de color (como los íconos de producto).
+   Verde azulado, verde y naranja van más oscuros que la marca para que el texto blanco se lea bien (contraste 4.5:1). */
 .badge {
   display: inline-grid;
   place-items: center;
@@ -128,12 +146,12 @@ button { font: inherit; }
   line-height: 1;
 }
 .badge--blue    { background: var(--blue); }
-.badge--teal    { background: var(--teal); }
-.badge--green   { background: var(--green); }
-.badge--orange  { background: var(--orange); }
+.badge--teal    { background: #1a8171; }
+.badge--green   { background: #268349; }
+.badge--orange  { background: #a7631f; }
 .badge--magenta { background: var(--magenta); }
 .badge--violet  { background: var(--violet); }
-.badge--brand   { background: linear-gradient(135deg, #3b46c4, #1f9a87 40%, #e3862b 70%, #c9307a); }
+.badge--brand   { background: linear-gradient(135deg, #3b46c4, #1a8171 40%, #a7631f 70%, #c9307a); }
 
 /* ===== Encabezado flotante ===== */
 .header {
@@ -1103,7 +1121,7 @@ button { font: inherit; }
   border-bottom: 1px solid var(--gray-2);
 }
 .footer__brand p { margin-top: 16px; max-width: 30ch; }
-.footer h4 {
+.footer h2 {
   font-size: 1rem;
   margin-bottom: 1rem;
 }

@@ -76,10 +76,9 @@
 
   <link rel="icon" href="img/favicon-48.png" type="image/png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=20261022">
 </head>
 <body>
 
@@ -113,7 +112,7 @@
       <!-- Diapositiva 1: la empresa -->
       <div class="slide slide--brand is-active" id="slide-1" role="tabpanel" aria-labelledby="dot-1">
         <div class="slide__bg" aria-hidden="true">
-          <div class="slide__logo"><img src="img/logo-software.webp" width="1200" height="1200" alt=""></div>
+          <div class="slide__logo"><img src="img/logo-software.webp" srcset="img/logo-software-200.webp 200w, img/logo-software-400.webp 400w, img/logo-software-800.webp 800w, img/logo-software.webp 1200w" sizes="min(28vw, 50vh, 400px)" width="1200" height="1200" alt=""></div>
         </div>
         <div class="slide__content">
           <p class="slide__label">FDP Software</p>
@@ -129,7 +128,7 @@
       <!-- Diapositiva 2: SIGMA MRO -->
       <div class="slide slide--sigma" id="slide-2" role="tabpanel" aria-labelledby="dot-2" hidden>
         <div class="slide__bg" aria-hidden="true">
-          <img src="img/proyecto-sigma-mro.webp" width="1366" height="860" alt="">
+          <img data-src="img/proyecto-sigma-mro.webp" data-srcset="img/proyecto-sigma-mro-480.webp 480w, img/proyecto-sigma-mro-800.webp 800w, img/proyecto-sigma-mro-1100.webp 1100w, img/proyecto-sigma-mro.webp 1366w" sizes="(max-width: 760px) 140vw, min(50vw, 1366px)" width="1366" height="860" alt="">
         </div>
         <div class="slide__content">
           <p class="slide__label">SIGMA MRO</p>
@@ -144,7 +143,7 @@
       <!-- Diapositiva 3: Escenarios 3D -->
       <div class="slide slide--3d" id="slide-3" role="tabpanel" aria-labelledby="dot-3" hidden>
         <div class="slide__bg" aria-hidden="true">
-          <img src="img/proyecto-escenarios-3d.webp" width="1920" height="1080" alt="">
+          <img data-src="img/proyecto-escenarios-3d.webp" data-srcset="img/proyecto-escenarios-3d-480.webp 480w, img/proyecto-escenarios-3d-800.webp 800w, img/proyecto-escenarios-3d-1200.webp 1200w, img/proyecto-escenarios-3d-1600.webp 1600w, img/proyecto-escenarios-3d.webp 1920w" sizes="max(100vw, 178vh)" width="1920" height="1080" alt="">
         </div>
         <div class="slide__content">
           <p class="slide__label">Escenarios 3D</p>
@@ -159,7 +158,7 @@
       <!-- Diapositiva 4: Simuladores de tiro -->
       <div class="slide slide--sim" id="slide-4" role="tabpanel" aria-labelledby="dot-4" hidden>
         <div class="slide__bg" aria-hidden="true">
-          <img src="img/tiro-vuelo.webp" width="1920" height="760" alt="">
+          <img data-src="img/tiro-vuelo.webp" data-srcset="img/tiro-vuelo-480.webp 480w, img/tiro-vuelo-800.webp 800w, img/tiro-vuelo-1200.webp 1200w, img/tiro-vuelo-1600.webp 1600w, img/tiro-vuelo.webp 1920w" sizes="(max-width: 760px) 180vw, min(100vw, 1920px)" width="1920" height="760" alt="">
         </div>
         <div class="slide__content">
           <p class="slide__label">FDP Simuladores</p>
@@ -221,7 +220,7 @@
               <header><span class="badge badge--blue" aria-hidden="true">&lt;/&gt;</span><h3>Desarrollo web y móvil</h3></header>
               <p>Sistemas web, backend, bases de datos y aplicaciones móviles a la medida.</p>
               <div class="rail-card__panel rail-card__panel--photo">
-                <img src="img/despacho-app.webp" width="1660" height="760" loading="lazy"
+                <img src="img/despacho-app.webp" srcset="img/despacho-app-480.webp 480w, img/despacho-app-800.webp 800w, img/despacho-app-1200.webp 1200w, img/despacho-app.webp 1660w" sizes="660px" width="1660" height="760" loading="lazy"
                      alt="Pantallas de la app móvil DespachoPro: tanques, inventario, despachar y reportes">
               </div>
             </article>
@@ -290,7 +289,7 @@
           <article class="feature">
             <div class="feature__media">
               <span class="badge badge--blue feature__badge" aria-hidden="true">Σ</span>
-              <img src="img/proyecto-sigma-mro.webp" width="1366" height="860" loading="lazy"
+              <img src="img/proyecto-sigma-mro.webp" srcset="img/proyecto-sigma-mro-480.webp 480w, img/proyecto-sigma-mro-800.webp 800w, img/proyecto-sigma-mro-1100.webp 1100w, img/proyecto-sigma-mro.webp 1366w" sizes="(max-width: 760px) calc(100vw - 68px), (max-width: 1240px) calc(100vw - 96px), 1144px" width="1366" height="860" loading="lazy"
                    alt="Panel principal de SIGMA MRO con módulos de flota, hangar, órdenes de trabajo, inventario y directivas">
             </div>
             <div class="feature__caption">
@@ -315,27 +314,27 @@
           <article class="feature feature--photo" id="tiro">
             <div class="feature__media">
               <span class="badge badge--magenta feature__badge" aria-hidden="true">T</span>
-              <img src="img/tiro-vuelo.webp" width="1920" height="760" loading="lazy"
+              <img src="img/tiro-vuelo.webp" srcset="img/tiro-vuelo-480.webp 480w, img/tiro-vuelo-800.webp 800w, img/tiro-vuelo-1200.webp 1200w, img/tiro-vuelo-1600.webp 1600w, img/tiro-vuelo.webp 1920w" sizes="(max-width: 760px) calc((100vw - 40px) * 1.6), (max-width: 1240px) calc((100vw - 48px) * 1.09), 1300px" width="1920" height="760" loading="lazy"
                    alt="Simulador de tiro: helicóptero en vuelo visto desde el puesto del tirador">
             </div>
             <div class="gallery">
               <figure>
-                <img src="img/tiro-consola.webp" width="1656" height="861" loading="lazy"
+                <img src="img/tiro-consola.webp" srcset="img/tiro-consola-480.webp 480w, img/tiro-consola-800.webp 800w, img/tiro-consola-1200.webp 1200w, img/tiro-consola.webp 1656w" sizes="(max-width: 1000px) 70vw, 400px" width="1656" height="861" loading="lazy"
                      alt="Consola de seguimiento en tiempo real con estado del lanzador, telescopio, radar y aeronaves del ejercicio">
                 <figcaption>Seguimiento en tiempo real</figcaption>
               </figure>
               <figure>
-                <img src="img/tiro-nocturno.webp" width="1100" height="620" loading="lazy"
+                <img src="img/tiro-nocturno.webp" srcset="img/tiro-nocturno-480.webp 480w, img/tiro-nocturno-800.webp 800w, img/tiro-nocturno.webp 1100w" sizes="(max-width: 1000px) 70vw, 400px" width="1100" height="620" loading="lazy"
                      alt="Ejercicio nocturno con luces de navegación del blanco bajo un cielo estrellado">
                 <figcaption>Ejercicio nocturno</figcaption>
               </figure>
               <figure>
-                <img src="img/tiro-urbano.webp" width="1920" height="880" loading="lazy"
+                <img src="img/tiro-urbano.webp" srcset="img/tiro-urbano-480.webp 480w, img/tiro-urbano-800.webp 800w, img/tiro-urbano-1200.webp 1200w, img/tiro-urbano.webp 1920w" sizes="(max-width: 1000px) 70vw, 400px" width="1920" height="880" loading="lazy"
                      alt="Simulador de tiro en entorno urbano: calle de ciudad al atardecer con vehículos estacionados">
                 <figcaption>Tiro en entorno urbano</figcaption>
               </figure>
               <figure>
-                <img src="img/tiro-evaluacion.webp" width="1920" height="770" loading="lazy" class="is-left"
+                <img src="img/tiro-evaluacion.webp" srcset="img/tiro-evaluacion-480.webp 480w, img/tiro-evaluacion-800.webp 800w, img/tiro-evaluacion-1200.webp 1200w, img/tiro-evaluacion.webp 1920w" sizes="(max-width: 1000px) 70vw, 400px" width="1920" height="770" loading="lazy" class="is-left"
                      alt="Pantalla de resultado del ejercicio: 100 de 100, aprobado, con el repaso paso a paso">
                 <figcaption>Evaluación automática</figcaption>
               </figure>
@@ -363,9 +362,9 @@
             <article class="media-card media-card--wide">
               <div class="media-card__media">
                 <span class="badge badge--violet media-card__badge" aria-hidden="true">A</span>
-                <img src="img/aero-vuelo.webp" width="1280" height="500" loading="lazy"
+                <img src="img/aero-vuelo.webp" srcset="img/aero-vuelo-480.webp 480w, img/aero-vuelo-800.webp 800w, img/aero-vuelo.webp 1280w" sizes="(max-width: 1000px) calc((100vw - 40px) * 1.6), 1030px" width="1280" height="500" loading="lazy"
                      alt="AeroEscuela: avioneta en vuelo sobre campos verdes y nubes">
-                <img class="media-card__inset" src="img/aero-cabina.webp" width="1280" height="615" loading="lazy"
+                <img class="media-card__inset" src="img/aero-cabina.webp" srcset="img/aero-cabina-480.webp 480w, img/aero-cabina-800.webp 800w, img/aero-cabina.webp 1280w" sizes="(max-width: 1000px) 46vw, 300px" width="1280" height="615" loading="lazy"
                      alt="Cabina de AeroEscuela con instrumentos digitales y la lista de verificación del instructor virtual">
               </div>
               <div>
@@ -384,7 +383,7 @@
             <article class="media-card">
               <div class="media-card__media">
                 <span class="badge badge--blue media-card__badge" aria-hidden="true">D</span>
-                <img src="img/despacho-tanques.webp" width="1510" height="786" loading="lazy"
+                <img src="img/despacho-tanques.webp" srcset="img/despacho-tanques-480.webp 480w, img/despacho-tanques-800.webp 800w, img/despacho-tanques-1200.webp 1200w, img/despacho-tanques.webp 1510w" sizes="(max-width: 760px) calc((100vw - 40px) * 1.2), 700px" width="1510" height="786" loading="lazy"
                      alt="DespachoPro: monitoreo del nivel de cuatro tanques de combustible en tiempo real">
               </div>
               <h3>DespachoPro: control de combustible.</h3>
@@ -399,7 +398,7 @@
             <article class="media-card">
               <div class="media-card__media">
                 <span class="badge badge--teal media-card__badge" aria-hidden="true">S</span>
-                <img src="img/tactico-mapa.webp" width="1712" height="988" loading="lazy"
+                <img src="img/tactico-mapa.webp" srcset="img/tactico-mapa-480.webp 480w, img/tactico-mapa-800.webp 800w, img/tactico-mapa-1200.webp 1200w, img/tactico-mapa.webp 1712w" sizes="(max-width: 760px) calc((100vw - 40px) * 1.1), 640px" width="1712" height="988" loading="lazy"
                      alt="Simulador de entrenamiento táctico y estratégico: mapa de operaciones con órdenes, coberturas y unidades">
               </div>
               <h3>Entrenamiento táctico y estratégico.</h3>
@@ -412,7 +411,7 @@
             <article class="media-card">
               <div class="media-card__media">
                 <span class="badge badge--orange media-card__badge" aria-hidden="true">3D</span>
-                <img src="img/proyecto-escenarios-3d.webp" width="1920" height="1080" loading="lazy"
+                <img src="img/proyecto-escenarios-3d.webp" srcset="img/proyecto-escenarios-3d-480.webp 480w, img/proyecto-escenarios-3d-800.webp 800w, img/proyecto-escenarios-3d-1200.webp 1200w, img/proyecto-escenarios-3d-1600.webp 1600w, img/proyecto-escenarios-3d.webp 1920w" sizes="(max-width: 760px) calc((100vw - 40px) * 1.12), 650px" width="1920" height="1080" loading="lazy"
                      alt="Render 3D de la Plaza Francia de Altamira, en Caracas, generado con datos reales">
               </div>
               <h3>Escenarios 3D de Venezuela.</h3>
@@ -443,7 +442,7 @@
       <section class="section section--tight" id="apps">
         <div class="container">
           <div class="section__head">
-            <img class="apps__logo" src="img/logo-aplicaciones.webp" width="1200" height="1200" loading="lazy" alt="Logo FDP Aplicaciones">
+            <img class="apps__logo" src="img/logo-aplicaciones.webp" srcset="img/logo-aplicaciones-200.webp 200w, img/logo-aplicaciones-400.webp 400w, img/logo-aplicaciones-800.webp 800w, img/logo-aplicaciones.webp 1200w" sizes="96px" width="1200" height="1200" loading="lazy" alt="Logo FDP Aplicaciones">
             <h2 class="display">Apps en Google Play.</h2>
             <p>Con FDP Aplicaciones creamos juegos y apps móviles hechos en Venezuela para el mundo.</p>
           </div>
@@ -451,7 +450,7 @@
           <div class="apps">
             <article class="app-card">
               <div class="app-card__media">
-                <img src="img/app-marcelo-go.webp" width="1000" height="1060" loading="lazy"
+                <img src="img/app-marcelo-go.webp" srcset="img/app-marcelo-go-480.webp 480w, img/app-marcelo-go-700.webp 700w, img/app-marcelo-go.webp 1000w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1000px) 50vw, 400px" width="1000" height="1060" loading="lazy"
                      alt="Marcelo Go: tablero de burbujas de colores con personajes">
               </div>
               <div class="app-card__body">
@@ -638,7 +637,7 @@
         <div class="container">
           <div class="about">
             <div class="about__logo">
-              <img src="img/logo-software.webp" width="1200" height="1200" loading="lazy" alt="Logo de FDP Software">
+              <img src="img/logo-software.webp" srcset="img/logo-software-200.webp 200w, img/logo-software-400.webp 400w, img/logo-software-800.webp 800w, img/logo-software.webp 1200w" sizes="(max-width: 1000px) 280px, 420px" width="1200" height="1200" loading="lazy" alt="Logo de FDP Software">
             </div>
             <div class="about__text">
               <h2 class="display display--md">Hecho en Venezuela.<br>Pensado para durar.</h2>
@@ -660,21 +659,21 @@
           <h3 class="team__title">Nuestras marcas</h3>
           <div class="brands">
             <article class="brand">
-              <img src="img/logo-software.webp" width="1200" height="1200" loading="lazy" alt="Logo FDP Software">
+              <img src="img/logo-software.webp" srcset="img/logo-software-200.webp 200w, img/logo-software-400.webp 400w, img/logo-software-800.webp 800w, img/logo-software.webp 1200w" sizes="(max-width: 760px) 110px, (max-width: 1000px) 33vw, 400px" width="1200" height="1200" loading="lazy" alt="Logo FDP Software">
               <div>
                 <h4>FDP Software</h4>
                 <p>Sistemas de gestión, mantenimiento y logística con IA local, que funcionan sin internet.</p>
               </div>
             </article>
             <article class="brand">
-              <img src="img/logo-simuladores.webp" width="1200" height="1200" loading="lazy" alt="Logo FDP Simuladores">
+              <img src="img/logo-simuladores.webp" srcset="img/logo-simuladores-200.webp 200w, img/logo-simuladores-400.webp 400w, img/logo-simuladores-800.webp 800w, img/logo-simuladores.webp 1200w" sizes="(max-width: 760px) 110px, (max-width: 1000px) 33vw, 400px" width="1200" height="1200" loading="lazy" alt="Logo FDP Simuladores">
               <div>
                 <h4>FDP Simuladores</h4>
                 <p>Simuladores de vuelo, de tiro, de entrenamiento táctico y escenarios 3D realistas.</p>
               </div>
             </article>
             <article class="brand">
-              <img src="img/logo-aplicaciones.webp" width="1200" height="1200" loading="lazy" alt="Logo FDP Aplicaciones">
+              <img src="img/logo-aplicaciones.webp" srcset="img/logo-aplicaciones-200.webp 200w, img/logo-aplicaciones-400.webp 400w, img/logo-aplicaciones-800.webp 800w, img/logo-aplicaciones.webp 1200w" sizes="(max-width: 760px) 110px, (max-width: 1000px) 33vw, 400px" width="1200" height="1200" loading="lazy" alt="Logo FDP Aplicaciones">
               <div>
                 <h4>FDP Aplicaciones</h4>
                 <p>Juegos y apps móviles como Marcelo Go y Ritmo Diario, y aplicaciones web para empresas.</p>
@@ -719,7 +718,7 @@
           <p>Agenda una demostración o una reunión para conversar sobre tu proceso crítico.</p>
           <div class="cta__actions">
             <a href="mailto:contacto@fdpsoftware.org" class="btn btn--dark">Escríbenos: contacto@fdpsoftware.org</a>
-            <a href="https://wa.me/584120846332" class="btn btn--outline" target="_blank" rel="noopener">WhatsApp +58 412-0846332</a>
+            <a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones." class="btn btn--outline" target="_blank" rel="noopener">WhatsApp +58 412-0846332</a>
           </div>
           <p class="cta__place">República Bolivariana de Venezuela · Atención presencial y remota</p>
         </div>
@@ -738,7 +737,7 @@
             </div>
 
             <div>
-              <h4>Soluciones</h4>
+              <h2>Soluciones</h2>
               <ul>
                 <li><a href="#soluciones">Desarrollo web y móvil</a></li>
                 <li><a href="#soluciones">IA local</a></li>
@@ -752,7 +751,7 @@
             </div>
 
             <div>
-              <h4>Empresa</h4>
+              <h2>Empresa</h2>
               <ul>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#sectores">Sectores</a></li>
@@ -761,10 +760,10 @@
             </div>
 
             <div>
-              <h4>Contacto</h4>
+              <h2>Contacto</h2>
               <ul>
                 <li><a href="mailto:contacto@fdpsoftware.org">contacto@fdpsoftware.org</a></li>
-                <li><a href="https://wa.me/584120846332" target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones." target="_blank" rel="noopener">WhatsApp</a></li>
                 <li>Venezuela</li>
               </ul>
             </div>
@@ -779,10 +778,10 @@
   </main>
 
   <!-- Botón flotante de WhatsApp -->
-  <a class="fab" href="https://wa.me/584120846332" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <a class="fab" href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20261022"></script>
 </body>
 </html>

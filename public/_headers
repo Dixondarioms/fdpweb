@@ -3,10 +3,10 @@
 # tienes que permitirlo en Content-Security-Policy o el navegador lo bloqueará.
 
 /*
-  # Solo se cargan scripts, estilos e imágenes de este mismo sitio, más las fuentes de Google Fonts
-  # y las estadísticas de visitas de Cloudflare (Web Analytics, sin cookies).
+  # Solo se cargan scripts, estilos, fuentes e imágenes de este mismo sitio, más las estadísticas
+  # de visitas de Cloudflare (Web Analytics, sin cookies).
   # Bloquea la inyección de código (XSS), formularios hacia otros sitios y que otra web nos meta en un iframe.
-  Content-Security-Policy: default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self' https://cloudflareinsights.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests; require-trusted-types-for 'script'
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self' https://cloudflareinsights.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests; require-trusted-types-for 'script'
   # Obliga al navegador a usar siempre HTTPS durante un año (también en los subdominios).
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   # Evita que el navegador "adivine" el tipo de los archivos.
@@ -22,11 +22,17 @@
   Cross-Origin-Resource-Policy: same-origin
   X-Permitted-Cross-Domain-Policies: none
 
+# CSS y JS se guardan 30 días: al cambiarlos, sube el número ?v= en index.html y 404.html
 /css/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=2592000
 
 /js/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=2592000
 
+# Imágenes: 30 días (si reemplazas una imagen por otra distinta, mejor usa un nombre de archivo nuevo)
 /img/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=2592000
+
+# Fuentes: no cambian nunca
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
