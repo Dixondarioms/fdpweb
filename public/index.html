@@ -49,6 +49,10 @@
         "telephone": "+58-412-0846332",
         "address": { "@type": "PostalAddress", "addressCountry": "VE" },
         "areaServed": "VE",
+        "sameAs": [
+          "https://www.instagram.com/freethepress05/",
+          "https://www.tiktok.com/@freethepress5"
+        ],
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer service",
@@ -78,7 +82,7 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=20261023">
+  <link rel="stylesheet" href="css/styles.css?v=20261024">
 </head>
 <body>
 
@@ -666,25 +670,92 @@
               <div>
                 <h4>FDP Software</h4>
                 <p>Sistemas de gestión, mantenimiento y logística con IA local, que funcionan sin internet.</p>
+                <button type="button" class="brand__toggle" aria-expanded="false" aria-controls="marca-software">Ver proyectos (1) <svg class="brand__chevron" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
               </div>
             </article>
+            <div class="brand-panel" id="marca-software" hidden>
+              <p class="brand-panel__title">Proyectos de FDP Software</p>
+              <div class="brand-panel__grid">
+                <a class="brand-project" href="/proyectos/sigma-mro/">
+                  <span class="brand-project__media"><img src="img/proyecto-sigma-mro.webp" srcset="img/proyecto-sigma-mro-480.webp 480w, img/proyecto-sigma-mro-800.webp 800w, img/proyecto-sigma-mro-1100.webp 1100w, img/proyecto-sigma-mro.webp 1366w" sizes="(max-width: 760px) 46vw, 260px" width="1366" height="860" loading="lazy" alt="Panel principal de SIGMA MRO"></span>
+                  <strong>SIGMA MRO</strong>
+                  <span>Mantenimiento aeronáutico con IA local.</span>
+                </a>
+              </div>
+            </div>
             <article class="brand">
               <img src="img/logo-simuladores.webp" srcset="img/logo-simuladores-200.webp 200w, img/logo-simuladores-400.webp 400w, img/logo-simuladores-800.webp 800w, img/logo-simuladores.webp 1200w" sizes="(max-width: 760px) 110px, (max-width: 1000px) 33vw, 400px" width="1200" height="1200" loading="lazy" alt="Logo FDP Simuladores">
               <div>
                 <h4>FDP Simuladores</h4>
                 <p>Simuladores de vuelo, de tiro, de entrenamiento táctico y escenarios 3D realistas.</p>
+                <button type="button" class="brand__toggle" aria-expanded="false" aria-controls="marca-simuladores">Ver proyectos (5) <svg class="brand__chevron" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
               </div>
             </article>
+            <div class="brand-panel" id="marca-simuladores" hidden>
+              <p class="brand-panel__title">Proyectos de FDP Simuladores</p>
+              <div class="brand-panel__grid">
+                <a class="brand-project" href="/proyectos/aeroescuela/">
+                  <span class="brand-project__media"><img src="img/aero-vuelo.webp" srcset="img/aero-vuelo-480.webp 480w, img/aero-vuelo-800.webp 800w, img/aero-vuelo.webp 1280w" sizes="(max-width: 760px) 46vw, 260px" width="1280" height="500" loading="lazy" alt="Avioneta en vuelo en AeroEscuela"></span>
+                  <strong>AeroEscuela</strong>
+                  <span>Simulador de entrenamiento de vuelo.</span>
+                </a>
+                <a class="brand-project" href="/proyectos/simuladores-de-tiro/">
+                  <span class="brand-project__media"><img src="img/tiro-urbano.webp" srcset="img/tiro-urbano-480.webp 480w, img/tiro-urbano-800.webp 800w, img/tiro-urbano-1200.webp 1200w, img/tiro-urbano.webp 1920w" sizes="(max-width: 760px) 46vw, 260px" width="1920" height="880" loading="lazy" alt="Calle de ciudad en el simulador de tiro"></span>
+                  <strong>Simuladores de tiro</strong>
+                  <span>De la detección al impacto.</span>
+                </a>
+                <a class="brand-project" href="/proyectos/entrenamiento-tactico/">
+                  <span class="brand-project__media"><img src="img/tactico-mapa.webp" srcset="img/tactico-mapa-480.webp 480w, img/tactico-mapa-800.webp 800w, img/tactico-mapa-1200.webp 1200w, img/tactico-mapa.webp 1712w" sizes="(max-width: 760px) 46vw, 260px" width="1712" height="900" loading="lazy" alt="Mapa de operaciones del entrenamiento táctico"></span>
+                  <strong>Entrenamiento táctico</strong>
+                  <span>Planifica y conduce la campaña sobre mapas reales.</span>
+                </a>
+                <a class="brand-project" href="/proyectos/escenarios-3d/">
+                  <span class="brand-project__media"><img src="img/proyecto-escenarios-3d.webp" srcset="img/proyecto-escenarios-3d-480.webp 480w, img/proyecto-escenarios-3d-800.webp 800w, img/proyecto-escenarios-3d-1200.webp 1200w, img/proyecto-escenarios-3d.webp 1920w" sizes="(max-width: 760px) 46vw, 260px" width="1920" height="1080" loading="lazy" alt="Escenario 3D de Caracas"></span>
+                  <strong>Escenarios 3D</strong>
+                  <span>Caracas en 3D, con datos reales.</span>
+                </a>
+                <a class="brand-project" href="/proyectos/control-aereo/">
+                  <span class="brand-project__media media-card__media--radar" aria-hidden="true"><span class="radar"><span></span></span></span>
+                  <strong>Control aéreo</strong>
+                  <span>Simulador de control e interceptación aérea.</span>
+                </a>
+              </div>
+            </div>
             <article class="brand">
               <img src="img/logo-aplicaciones.webp" srcset="img/logo-aplicaciones-200.webp 200w, img/logo-aplicaciones-400.webp 400w, img/logo-aplicaciones-800.webp 800w, img/logo-aplicaciones.webp 1200w" sizes="(max-width: 760px) 110px, (max-width: 1000px) 33vw, 400px" width="1200" height="1200" loading="lazy" alt="Logo FDP Aplicaciones">
               <div>
                 <h4>FDP Aplicaciones</h4>
                 <p>Juegos y apps móviles como Marcelo Go y Ritmo Diario, y aplicaciones web para empresas.</p>
+                <button type="button" class="brand__toggle" aria-expanded="false" aria-controls="marca-aplicaciones">Ver proyectos (3) <svg class="brand__chevron" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
               </div>
             </article>
+            <div class="brand-panel" id="marca-aplicaciones" hidden>
+              <p class="brand-panel__title">Proyectos de FDP Aplicaciones</p>
+              <div class="brand-panel__grid">
+                <a class="brand-project" href="/proyectos/apps-moviles/">
+                  <span class="brand-project__media"><img src="img/app-marcelo-go.webp" srcset="img/app-marcelo-go-480.webp 480w, img/app-marcelo-go-700.webp 700w, img/app-marcelo-go.webp 1000w" sizes="(max-width: 760px) 46vw, 260px" width="1000" height="1060" loading="lazy" alt="Tablero de burbujas de Marcelo Go"></span>
+                  <strong>Marcelo Go</strong>
+                  <span>Juego de burbujas con poderes especiales.</span>
+                </a>
+                <a class="brand-project" href="/proyectos/apps-moviles/">
+                  <span class="brand-project__media"><img src="img/app-minijuegos.webp" srcset="img/app-minijuegos.webp 640w" sizes="(max-width: 760px) 46vw, 260px" width="640" height="360" loading="lazy" alt="Mesa de billar de Minijuegos de Marcelo Go"></span>
+                  <strong>Minijuegos de Marcelo Go</strong>
+                  <span>Billar, carrom, ludo y más.</span>
+                </a>
+                <a class="brand-project" href="/proyectos/apps-moviles/">
+                  <span class="brand-project__media"><img src="img/app-ritmo-diario.webp" srcset="img/app-ritmo-diario.webp 640w" sizes="(max-width: 760px) 46vw, 260px" width="640" height="360" loading="lazy" alt="Pantalla de inicio de Ritmo Diario"></span>
+                  <strong>Ritmo Diario</strong>
+                  <span>Tu diario de salud, con gráficas.</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           <h3 class="team__title">Nuestro equipo</h3>
+          <p class="team__intro">
+            Somos un equipo de ingenieros profesionales con experiencia en desarrollo de software aeronáutico,
+            simulación y entrenamiento, inteligencia artificial local, sistemas embebidos y aplicaciones web y móviles.
+          </p>
           <div class="team">
             <div class="team__card team__card--lead">
               <strong>Dirección General</strong>
@@ -766,6 +837,8 @@
               <ul>
                 <li><a href="mailto:contacto@fdpsoftware.org">contacto@fdpsoftware.org</a></li>
                 <li><a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones." target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/freethepress05/" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@freethepress5" target="_blank" rel="noopener">TikTok</a></li>
                 <li>Venezuela</li>
               </ul>
             </div>
@@ -784,6 +857,6 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
   </a>
 
-  <script src="js/main.js?v=20261023"></script>
+  <script src="js/main.js?v=20261024"></script>
 </body>
 </html>

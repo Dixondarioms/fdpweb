@@ -1012,6 +1012,91 @@ button { font: inherit; }
   margin-bottom: 0.3em;
 }
 .brand p { margin: 0; font-size: 0.95rem; }
+
+/* Marcas: al tocarlas muestran sus proyectos */
+.brand {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+.brand.is-open { box-shadow: 0 0 0 3px var(--teal); }
+.brand__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* toda la tarjeta (también el logo) responde al clic */
+.brand__toggle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+}
+.brand__toggle:focus-visible { outline: none; }
+.brand__toggle:focus-visible::after { outline: 3px solid var(--teal); outline-offset: -3px; }
+.brand__chevron { transition: transform 0.3s ease; }
+.brand.is-open .brand__chevron { transform: rotate(180deg); }
+.brand-panel {
+  grid-column: 1 / -1;
+  order: 1;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: #fff;
+}
+.brand-panel__title {
+  margin: 0 0 18px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+}
+.brand-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.brand-project {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand-project__media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+}
+.brand-project__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.brand-project__media.media-card__media--radar { display: grid; }
+.brand-project__media .radar { width: 46%; }
+.brand-project strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+.brand-project:hover strong { text-decoration: underline; }
+.brand-project span:last-child { color: var(--muted); font-size: 0.9rem; }
+.team__intro {
+  max-width: 780px;
+  margin: -8px 0 28px;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
 .about__text > p { font-size: 1.15rem; color: var(--muted); }
 .vision {
   margin-top: 28px;
@@ -1462,6 +1547,8 @@ button { font: inherit; }
   .brand { display: grid; grid-template-columns: 110px 1fr; align-items: center; }
   .brand img { aspect-ratio: 1; }
   .brand div { padding: 14px 18px; }
+  .brand-panel { order: 0; padding: 18px; }
+  .brand-panel__grid { grid-template-columns: 1fr 1fr; gap: 14px; }
   .apps { grid-template-columns: 1fr; }
   .feature--photo .feature__media img { aspect-ratio: 16 / 10; }
   .team__card--lead { grid-template-columns: 1fr; padding: 26px; }

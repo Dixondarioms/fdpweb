@@ -162,8 +162,22 @@ if (rail) document.querySelectorAll("[data-rail]").forEach((btn) => {
   });
 });
 
+// Marcas: al tocar una se muestran sus proyectos (una a la vez)
+const brandToggles = [...document.querySelectorAll(".brand__toggle")];
+brandToggles.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const open = btn.getAttribute("aria-expanded") !== "true";
+    brandToggles.forEach((b) => {
+      const on = b === btn && open;
+      b.setAttribute("aria-expanded", String(on));
+      b.closest(".brand").classList.toggle("is-open", on);
+      document.getElementById(b.getAttribute("aria-controls")).hidden = !on;
+    });
+  });
+});
+
 // Aparición suave de los elementos al hacer scroll
-const revealItems = document.querySelectorAll(".section__head, .rail-card, .feature, .media-card, .sector, .quote, .step, .about, .brand, .app-card, .team__card, .pfeature, .pgallery figure, .prow");
+const revealItems = document.querySelectorAll(".section__head, .rail-card, .feature, .media-card, .sector, .quote, .step, .about, .brand, .brand-project, .app-card, .team__card, .pfeature, .pgallery figure, .prow");
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
