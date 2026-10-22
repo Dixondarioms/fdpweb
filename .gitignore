@@ -1,0 +1,17 @@
+# Archivos temporales de Wrangler (Cloudflare)
+.wrangler/
+
+# Dependencias de Node, si alguna vez se instalan
+node_modules/
+
+# Configuración local de herramientas del editor
+.claude/
+.vscode/
+
+# Archivos del sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Registros
+*.log

@@ -1,0 +1,17 @@
+// Configuración de publicación en Cloudflare (Workers con archivos estáticos).
+// Publicar o actualizar la web:  npx.cmd wrangler deploy
+{
+  "name": "fdp-software",
+  "compatibility_date": "2026-10-19",
+  "assets": {
+    // Solo se sube la carpeta public (esta configuración y LEEME.md quedan fuera)
+    "directory": "./public",
+    // Las direcciones que no existen muestran public/404.html
+    "not_found_handling": "404-page"
+  },
+  // Dominio propio (registrado en esta misma cuenta de Cloudflare)
+  "routes": [
+    { "pattern": "fdpsoftware.org", "custom_domain": true },
+    { "pattern": "www.fdpsoftware.org", "custom_domain": true }
+  ]
+}
