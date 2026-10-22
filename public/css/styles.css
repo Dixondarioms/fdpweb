@@ -481,7 +481,6 @@ button { font: inherit; }
   flex: 0 0 320px;
   display: flex;
   flex-direction: column;
-  height: 500px;
   border-radius: var(--radius);
   background: var(--gray);
   overflow: hidden;
@@ -506,24 +505,92 @@ button { font: inherit; }
 .rail-card__panel {
   position: relative;
   margin-top: auto;
-  height: 300px;
+  height: 320px;
   display: grid;
   place-items: center;
   border-radius: var(--radius) var(--radius) 0 0;
   overflow: hidden;
   transition: transform 0.4s ease;
 }
-.rail-card__panel--blue    { background: linear-gradient(160deg, #4a5ee0, var(--blue)); }
-.rail-card__panel--magenta { background: linear-gradient(160deg, #e2559b, var(--magenta)); }
-.rail-card__panel--dark    { background: radial-gradient(circle at 50% 50%, #0f3b3a, #071a20 75%); }
-.rail-card__panel--orange  { background: linear-gradient(160deg, #f5a54f, var(--orange)); }
-.rail-card__panel--violet  { background: linear-gradient(160deg, #6b4dff, var(--violet)); }
-.rail-card__panel--green   { background: linear-gradient(160deg, #46b871, var(--green)); }
 .rail-card__panel--photo   { background: #071019; }
 .rail-card__panel--photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+/* Capturas de pantalla: se muestra la parte superior izquierda (donde está el contenido) */
+.rail-card__panel--top img { object-position: left top; }
+
+/* Ilustración de sistemas embebidos: placa de circuito con el chip FDP */
+.rail-card__panel--circuit {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(75, 43, 214, 0.45), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 22px),
+    #0b0d1a;
+}
+.art-board {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.art-board__chip {
+  position: relative;
+  z-index: 1;
+  width: 116px;
+  height: 116px;
+  padding: 10px;
+  border-radius: 18px;
+  background: #111;
+  outline: 2px dashed rgba(255, 255, 255, 0.35);
+  outline-offset: 10px;
+  box-shadow: 0 0 40px rgba(107, 77, 255, 0.55);
+}
+.art-board__chip img { width: 100%; height: 100%; border-radius: 10px; }
+.art-board__trace {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, #5fd3c6, transparent);
+  height: 2px;
+  opacity: 0.8;
+}
+.art-board__trace--1 { top: 30%; left: 0; width: 45%; }
+.art-board__trace--2 { top: 70%; right: 0; width: 45%; background: linear-gradient(90deg, transparent, #f5b25a, transparent); }
+.art-board__trace--3 { left: 30%; top: 0; width: 2px; height: 40%; background: linear-gradient(180deg, transparent, #e2559b, transparent); }
+.art-board__trace--4 { right: 30%; bottom: 0; width: 2px; height: 40%; background: linear-gradient(180deg, transparent, #8fa0ff, transparent); }
+
+/* Ilustración de soporte: lista de servicios activos */
+.rail-card__panel--status {
+  background: radial-gradient(circle at 80% 10%, rgba(46, 157, 87, 0.4), transparent 55%), #0b0d1a;
+}
+.art-status {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 82%;
+  display: grid;
+  gap: 10px;
+}
+.art-status li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.art-status span {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 10px #34d399;
 }
 
 .rail-nav {
@@ -554,82 +621,6 @@ button { font: inherit; }
   stroke-width: 2.2;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-/* Ilustraciones dentro de los paneles */
-.art-window,
-.art-table {
-  width: 74%;
-  padding: 16px;
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.art-window { height: 62%; }
-.art-window i,
-.art-table i { display: block; border-radius: 6px; }
-.art-window i:nth-child(1) { height: 12px; width: 40%; background: var(--blue); }
-.art-window i:nth-child(2) { height: 9px; width: 80%; background: #dde3ff; }
-.art-window i:nth-child(3) { flex: 1; background: linear-gradient(135deg, #e8ecff, #f6e8ff); }
-.art-table i { height: 20px; background: var(--gray); }
-.art-table i:nth-child(1) { background: #ffd9b3; }
-
-.art-chat {
-  width: 76%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.art-chat i {
-  display: block;
-  height: 36px;
-  border-radius: 18px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-}
-.art-chat i:nth-child(1) { width: 72%; background: #fff; }
-.art-chat i:nth-child(2) { width: 55%; align-self: flex-end; background: var(--ink); }
-.art-chat i:nth-child(3) { width: 84%; background: rgba(255, 255, 255, 0.75); }
-
-.art-chip i {
-  position: relative;
-  display: block;
-  width: 110px;
-  height: 110px;
-  border-radius: 18px;
-  background: var(--ink);
-  outline: 10px dashed rgba(255, 255, 255, 0.55);
-  outline-offset: 8px;
-}
-.art-chip i::before {
-  content: "";
-  position: absolute;
-  inset: 26px;
-  border-radius: 8px;
-  background: var(--brand-gradient);
-}
-
-.art-shield i {
-  position: relative;
-  display: block;
-  width: 104px;
-  height: 120px;
-  border-radius: 18px 18px 56px 56px;
-  background: #fff;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-.art-shield i::after {
-  content: "";
-  position: absolute;
-  left: 34px;
-  top: 38px;
-  width: 30px;
-  height: 18px;
-  border-left: 6px solid var(--green);
-  border-bottom: 6px solid var(--green);
-  transform: rotate(-45deg);
 }
 
 /* Radar animado (simulación) */
@@ -1284,8 +1275,8 @@ button { font: inherit; }
   .hero__tabs::-webkit-scrollbar { display: none; }
   .hero__tab { flex: 0 0 auto; height: 56px; font-size: 0.85rem; padding: 0 14px; }
 
-  .rail-card { flex-basis: 280px; height: 470px; }
-  .rail-card__panel { height: 270px; }
+  .rail-card { flex-basis: 280px; }
+  .rail-card__panel { height: 290px; }
 
   .feature__media { padding: 28px 0 0 28px; }
   .feature__caption h3,
