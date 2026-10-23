@@ -1183,6 +1183,35 @@ button { font: inherit; }
   font-size: 0.95rem;
 }
 
+/* Contacto con el fondo de la marca (degradado y cuadrícula tenue) */
+.cta--brand {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(45% 70% at 12% 20%, rgba(59, 70, 196, 0.75), transparent 70%),
+    radial-gradient(40% 70% at 88% 85%, rgba(201, 48, 122, 0.65), transparent 70%),
+    radial-gradient(35% 60% at 80% 10%, rgba(31, 154, 135, 0.5), transparent 70%),
+    radial-gradient(30% 50% at 25% 95%, rgba(227, 134, 43, 0.45), transparent 70%),
+    var(--night);
+  color: #fff;
+}
+.cta--brand::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, #000 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, #000 20%, transparent 75%);
+  pointer-events: none;
+}
+.cta--brand .container { position: relative; }
+.cta--brand h2 { color: #fff; }
+.cta--brand p,
+.cta--brand .cta__place { color: rgba(255, 255, 255, 0.85); }
+
 /* ===== Pie de página ===== */
 .footer {
   padding: 64px 0 28px;
@@ -1364,6 +1393,8 @@ button { font: inherit; }
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .more a:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
+/* Si sobra una sola tarjeta en la última fila, va al centro */
+.more a:last-child:nth-child(3n+1) { grid-column: 2; }
 .more__title {
   margin-bottom: 24px;
   font-family: var(--font-display);
@@ -1458,6 +1489,7 @@ button { font: inherit; }
   .specs div:nth-child(odd) { padding-left: 0; border-left: 0; }
   .pfeatures,
   .more { grid-template-columns: 1fr 1fr; }
+  .more a:last-child:nth-child(3n+1) { grid-column: auto; }
   .prow { grid-template-columns: 1fr; gap: 32px; }
   .prow--flip .prow__media { order: 0; }
 }
