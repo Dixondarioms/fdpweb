@@ -11,6 +11,7 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
 - Todo lo que se publica está en `public/`:
   - `index.html`: la página de inicio.
   - `proyectos/<nombre>/index.html`: una página por proyecto (ver más abajo).
+  - `servicios/index.html`: los servicios (desarrollo a la medida), con el mismo encabezado y pie que las páginas de proyecto.
   - `css/styles.css`: el diseño. Los colores y las fuentes están en las variables de `:root`, al inicio.
   - `js/main.js`: el menú móvil, el carrusel de la portada, las pestañas de sectores, el carril de soluciones y la animación de aparición.
   - `img/`: logos, íconos y capturas de proyectos (WebP y PNG).
@@ -43,7 +44,7 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 - Cada una tiene su propio `<title>`, descripción, `canonical`, imagen para redes (`img/og/<nombre>.jpg`) y datos
   para Google (`application/ld+json`). Si cambias el nombre o la descripción de un proyecto, cámbialos en esos lugares.
 - El mensaje de WhatsApp de cada página ya nombra el proyecto (`...quiero%20informaci%C3%B3n%20sobre%20SIGMA%20MRO.`).
-- El encabezado, el pie de página y la lista "Otros proyectos" se repiten en las siete páginas: si cambias uno, cambia todos.
+- El encabezado, el pie de página y la lista "Otros proyectos" se repiten en las siete páginas de proyecto y en `servicios/`: si cambias uno, cambia todos.
 - Si agregas un proyecto: copia una página parecida, agrégala a `sitemap.xml`, enlázala desde la tarjeta del proyecto en
   `index.html`, desde el pie de página y desde "Otros proyectos" de las demás páginas.
 
@@ -73,7 +74,7 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 - `videos/generador/calendario.py` arma `videos-redes/programar/` (video, portada y textos por publicación, más `calendario.html`) para programar en Meta Business Suite y TikTok Studio. La página publicada del calendario es https://claude.ai/artifact/YPZ1Yr9gQjsajYNHJTxaAk.
 - Revisa cada video antes de entregarlo (`... <nombre> previa 1,4.5,24`, o una hoja de cuadros con ffmpeg).
 - Redes de FDP: Instagram `@freethepress05` y TikTok `@freethepress5`. Están en `REDES` (en `engine.py`), en el pie
-  de página de las ocho páginas y en `sameAs` de los datos para Google de `index.html`; si cambian, cámbialas en todos.
+  de página de las nueve páginas y en `sameAs` de los datos para Google de `index.html`; si cambian, cámbialas en todos.
 
 ## Reglas de contenido (obligatorias)
 
@@ -98,7 +99,7 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 ## Velocidad
 
 - **Versión de CSS y JS**: `styles.css` y `main.js` se cargan con `?v=AAAAMMDD` y se guardan 30 días en caché.
-  Cada vez que los cambies, actualiza ese número en `index.html`, `404.html` y las siete páginas de `proyectos/`,
+  Cada vez que los cambies, actualiza ese número en `index.html`, `404.html` las siete páginas de `proyectos/` y `servicios/`,
   o los visitantes seguirán viendo la versión vieja.
 - **Imágenes responsive**: cada imagen de contenido tiene versiones más pequeñas (`nombre-480.webp`, `nombre-800.webp`…)
   declaradas en `srcset`, con un `sizes` que describe su ancho real en pantalla. Si agregas o reemplazas una imagen,

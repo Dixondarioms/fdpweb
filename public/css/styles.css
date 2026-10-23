@@ -1299,6 +1299,8 @@ button { font: inherit; }
   letter-spacing: -0.01em;
 }
 .pfeature p { margin: 0; color: var(--muted); }
+.pfeature .link-arrow { margin-top: 16px; }
+.section__link { margin-top: 18px; }
 
 .pgallery {
   display: grid;

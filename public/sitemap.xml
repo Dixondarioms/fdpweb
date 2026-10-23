@@ -10,6 +10,11 @@
     <image:image><image:loc>https://fdpsoftware.org/img/proyecto-escenarios-3d.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://fdpsoftware.org/servicios/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <image:image><image:loc>https://fdpsoftware.org/img/og/servicios.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://fdpsoftware.org/proyectos/sigma-mro/</loc>
     <lastmod>2026-10-23</lastmod>
     <image:image><image:loc>https://fdpsoftware.org/img/og/sigma-mro.jpg</image:loc></image:image>
