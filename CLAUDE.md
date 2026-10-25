@@ -16,7 +16,8 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
   - `js/main.js`: el menú móvil, el carrusel de la portada, las pestañas de sectores, el carril de soluciones y la animación de aparición.
   - `img/`: logos, íconos y capturas de proyectos (WebP y PNG).
   - `video/simak/`: videos de SIMAK (fondo en bucle `fondo-1912.mp4` / `fondo-1280.mp4` para celular, un clip de 8 s por
-    escenario y `sala.mp4`) con su imagen de espera `.webp`. `docs/simak-dossier.pdf`: el dossier de SIMAK para descargar.
+    escenario y `sala.mp4`) con su imagen de espera `.webp`. `video/antiaereo/`: lo mismo para el simulador antiaéreo
+    (fondo de 1920×760). `docs/`: los dossiers en PDF para descargar (`simak-dossier.pdf` y `antiaereo-dossier.pdf`).
   - `img/p/`: capturas de las páginas de proyecto; `img/og/`: la imagen para redes (1200×630) de cada página de proyecto.
   - `404.html`, `_headers` (seguridad y caché), `robots.txt` y `sitemap.xml` (lista de páginas para Google).
 - `wrangler.jsonc` publica `public/` en **Cloudflare Workers** (archivos estáticos) y conecta el dominio. No toques sus `routes`.
@@ -30,9 +31,10 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
 ### Secciones de `index.html` (por `id`)
 
 `inicio` (portada con carrusel: `slide-1` FDP Software, `slide-2` SIGMA MRO, `slide-3` Escenarios 3D,
-`slide-4` simulador de tiro antiaéreo, `slide-5` SIMAK) → `soluciones` (carril horizontal de tarjetas) → `proyectos` (SIGMA MRO destacado,
-`tiro` con galería, y una cuadrícula con AeroEscuela, entrenamiento táctico, Escenarios 3D y control
-aéreo) → `simak` (franja con video de fondo, `.vband`) → `simak-escenarios` (seis clips, `.clips`) → `apps` (Marcelo Go, Minijuegos de Marcelo Go y Ritmo Diario en Google Play) → `sectores` (pestañas) →
+`slide-4` simulador de tiro antiaéreo, `slide-5` SIMAK) → `soluciones` (carril horizontal de tarjetas) → `proyectos` (SIGMA MRO destacado
+y una cuadrícula con AeroEscuela, entrenamiento táctico, Escenarios 3D y control
+aéreo) → `tiro` (simulador antiaéreo: franja con video de fondo, `.vband--franja`) → `tiro-escenarios` (seis clips) →
+`simak` (franja con video de fondo, `.vband`) → `simak-escenarios` (seis clips, `.clips`) → `apps` (Marcelo Go, Minijuegos de Marcelo Go y Ritmo Diario en Google Play) → `sectores` (pestañas) →
 cita de la misión → `metodo` → `nosotros` (misión, visión, marcas y equipo por áreas) → `contacto` → pie de página.
 
 Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#slide-4`.
@@ -72,7 +74,9 @@ en lugar de `.phero` y tiene los clips de escenarios. Todas siguen el mismo orde
   está cerca, lo reproduce solo mientras se ve y lo pausa al salir. Cada video tiene un botón `.vtoggle` con
   `data-video-toggle` dentro del contenedor `[data-video]`. Con "reducir movimiento" activado no arrancan solos.
 - Se sacan del video del stand de SIMAK con `ffmpeg`, solo del tramo de los escenarios: el inicio y el final de ese video muestran
-  un escudo institucional. Recorta el borde blanco de la grabación (4 px) y nunca amplíes por encima del tamaño original.
+  un escudo institucional. Los del antiaéreo salen del video de presentación recortando la franja `crop=1920:760:0:175`, que deja
+  fuera el título, la etiqueta, el escudo de la esquina y los subtítulos (que nombran el sistema); en la consola se quita el
+  panel del lanzador, que lleva su designación (9K38), y se usan solo tramos sin la ventana de la consola superpuesta. Recorta el borde blanco de la grabación (4 px) y nunca amplíes por encima del tamaño original.
 - Mantén los videos livianos: el fondo pesa unos 3 MB (1,7 MB la versión de celular) y cada clip menos de 700 KB.
 - `sala.mp4` fue generado con IA; en la web se aclara que es una recreación ilustrativa.
 
@@ -100,7 +104,7 @@ en lugar de `.phero` y tiene los clips de escenarios. Todas siguen el mismo orde
    otros datos que identifiquen a alguien. El equipo se muestra solo por áreas.
 3. **Proyectos de defensa**: pueden mostrarse capturas, pero hay que recortar o tapar escudos, emblemas y logos
    institucionales. No menciones instituciones militares (DIDA, FANB, AMB ni Aviación Militar Bolivariana) ni los nombres
-   propios de esos sistemas (IGLA-S, S.I.E.T.E., MANPADS, CODAI). Usa descripciones generales, como "simuladores de
+   propios de esos sistemas (IGLA-S, S.I.E.T.E., MANPADS, CODAI, ni la designación 9K38). Usa descripciones generales, como "simuladores de
    tiro" o "entrenamiento táctico y estratégico". Del simulador de control e interceptación aérea no se publican capturas.
    En el entrenamiento táctico no muestres qué país real es cada bando (por ejemplo "Azul (Venezuela)"): tápalo.
    En SIMAK, la bandera y el escudo del uniforme del soldado de la portada y de la consola van difuminados.

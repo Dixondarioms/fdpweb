@@ -1477,6 +1477,10 @@ button { font: inherit; }
   color: rgba(255, 255, 255, 0.88);
 }
 .vband--page { min-height: min(94vh, 920px); }
+/* Video de 1920×760: la franja no pasa de 760 px de alto para no ampliarlo */
+.vband--franja,
+.vband--franja.vband--page { min-height: min(88vh, 760px); }
+.vband--franja .vband__media { max-width: 1920px; }
 .vband--page .vband__content { padding-top: 130px; }
 
 /* Botón redondo de pausa/reproducción (fondo y clips) */

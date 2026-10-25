@@ -82,7 +82,7 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=20261027">
+  <link rel="stylesheet" href="css/styles.css?v=20261028">
 </head>
 <body>
 
@@ -351,53 +351,6 @@
             </div>
           </article>
 
-          <!-- Simulador de tiro antiaéreo -->
-          <article class="feature feature--photo" id="tiro">
-            <div class="feature__media">
-              <span class="badge badge--magenta feature__badge" aria-hidden="true">T</span>
-              <img src="img/tiro-vuelo.webp" srcset="img/tiro-vuelo-480.webp 480w, img/tiro-vuelo-800.webp 800w, img/tiro-vuelo-1200.webp 1200w, img/tiro-vuelo-1600.webp 1600w, img/tiro-vuelo.webp 1920w" sizes="(max-width: 760px) calc((100vw - 40px) * 1.6), (max-width: 1240px) calc((100vw - 48px) * 1.09), 1300px" width="1920" height="760" loading="lazy"
-                   alt="Simulador de tiro: helicóptero en vuelo visto desde el puesto del tirador">
-            </div>
-            <div class="gallery">
-              <figure>
-                <img src="img/tiro-consola.webp" srcset="img/tiro-consola-480.webp 480w, img/tiro-consola-800.webp 800w, img/tiro-consola-1200.webp 1200w, img/tiro-consola.webp 1656w" sizes="(max-width: 1000px) 70vw, 400px" width="1656" height="861" loading="lazy"
-                     alt="Consola de seguimiento en tiempo real con estado del lanzador, telescopio, radar y aeronaves del ejercicio">
-                <figcaption>Seguimiento en tiempo real</figcaption>
-              </figure>
-              <figure>
-                <img src="img/tiro-nocturno.webp" srcset="img/tiro-nocturno-480.webp 480w, img/tiro-nocturno-800.webp 800w, img/tiro-nocturno.webp 1100w" sizes="(max-width: 1000px) 70vw, 400px" width="1100" height="620" loading="lazy"
-                     alt="Ejercicio nocturno con luces de navegación del blanco bajo un cielo estrellado">
-                <figcaption>Ejercicio nocturno</figcaption>
-              </figure>
-              <figure>
-                <img src="img/p/tiro-lluvia.webp" srcset="img/p/tiro-lluvia-480.webp 480w, img/p/tiro-lluvia-800.webp 800w, img/p/tiro-lluvia-1200.webp 1200w, img/p/tiro-lluvia.webp 1920w" sizes="(max-width: 1000px) 70vw, 400px" width="1920" height="760" loading="lazy"
-                     alt="Helicóptero en vuelo bajo la lluvia, visto desde el puesto del tirador">
-                <figcaption>Ejercicio con lluvia</figcaption>
-              </figure>
-              <figure>
-                <img src="img/tiro-evaluacion.webp" srcset="img/tiro-evaluacion-480.webp 480w, img/tiro-evaluacion-800.webp 800w, img/tiro-evaluacion-1200.webp 1200w, img/tiro-evaluacion.webp 1920w" sizes="(max-width: 1000px) 70vw, 400px" width="1920" height="770" loading="lazy" class="is-left"
-                     alt="Pantalla de resultado del ejercicio: 100 de 100, aprobado, con el repaso paso a paso">
-                <figcaption>Evaluación automática</figcaption>
-              </figure>
-            </div>
-            <div class="feature__caption">
-              <div>
-                <h3>Simulador de tiro antiaéreo: de la detección al impacto.</h3>
-                <p>
-                  Entrenamiento de tiro antiaéreo en escenarios 3D realistas, de día, de noche y con mal tiempo, sin gastar
-                  munición real. El tirador practica la secuencia completa mientras el instructor sigue cada ejercicio
-                  desde su consola.
-                </p>
-                <a href="/proyectos/simuladores-de-tiro/" class="link-arrow">Conoce el simulador antiaéreo</a>
-              </div>
-              <ul class="checks">
-                <li>Secuencia completa: preparación, identificación, captura y disparo</li>
-                <li>Consola del instructor con catálogo de ejercicios y perfil del operador</li>
-                <li>Escenarios de día, de noche, con lluvia o tormenta</li>
-                <li>Evaluación automática con puntaje y repaso cronológico</li>
-              </ul>
-            </div>
-          </article>
 
           <div class="cards2">
             <article class="media-card media-card--wide">
@@ -464,6 +417,108 @@
                 <a href="/proyectos/control-aereo/" class="link-arrow">Conoce el simulador</a>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Simulador de tiro antiaéreo: video de fondo en silencio, con botón de pausa ===== -->
+      <section class="vband vband--franja" id="tiro" data-video aria-labelledby="tiro-titulo">
+        <div class="vband__media">
+          <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/fondo.webp" width="1920" height="760" aria-hidden="true">
+            <source src="/video/antiaereo/fondo-1280.mp4" type="video/mp4" media="(max-width: 900px)">
+            <source src="/video/antiaereo/fondo-1920.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="container vband__content">
+          <p class="vband__label">FDP Simuladores · Simulador de tiro antiaéreo</p>
+          <h2 class="vband__title" id="tiro-titulo">De la detección al impacto. <button type="button" class="vtoggle" data-video-toggle data-name="el video de fondo" aria-label="Pausar el video de fondo"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button></h2>
+          <p class="vband__text">El tirador practica la secuencia completa (preparación, identificación, captura y disparo) contra blancos en vuelo, de día, de noche y con mal tiempo, sin gastar munición real.</p>
+          <div class="slide__actions">
+            <a href="/proyectos/simuladores-de-tiro/" class="btn btn--light">Conoce el simulador</a>
+            <a href="/docs/antiaereo-dossier.pdf" class="btn btn--ghost-light" download>Descarga el dossier (PDF)</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="tiro-escenarios">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Así se entrena.</h2>
+            <p>Imágenes reales del simulador: blancos en vuelo, disparo, impacto y la consola del instructor.</p>
+          </div>
+          <div class="clips">
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/blanco.webp" width="1280" height="720" aria-label="Simulador de tiro antiaéreo: blanco a la vista">
+                  <source src="/video/antiaereo/blanco.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el video: blanco a la vista" aria-label="Reproducir el video: blanco a la vista"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Blanco a la vista</h3>
+                <p>Helicópteros y aviones que se acercan, maniobran y pasan sobre el puesto del tirador.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/lanzamiento.webp" width="1280" height="720" aria-label="Simulador de tiro antiaéreo: disparo y persecución">
+                  <source src="/video/antiaereo/lanzamiento.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el video: disparo y persecución" aria-label="Reproducir el video: disparo y persecución"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Disparo y persecución</h3>
+                <p>El misil sale, persigue la señal infrarroja del blanco y deja su estela en el cielo.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/derribo.webp" width="1280" height="720" aria-label="Simulador de tiro antiaéreo: impacto y caída">
+                  <source src="/video/antiaereo/derribo.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el video: impacto y caída" aria-label="Reproducir el video: impacto y caída"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Impacto y caída</h3>
+                <p>Cuando el disparo es correcto, el blanco es alcanzado y cae; si no, el ejercicio continúa.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/montana.webp" width="1280" height="720" aria-label="Simulador de tiro antiaéreo: defensa de punto en montaña">
+                  <source src="/video/antiaereo/montana.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el video: defensa de punto en montaña" aria-label="Reproducir el video: defensa de punto en montaña"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Defensa de punto en montaña</h3>
+                <p>Blancos en vuelo bajo entre colinas, que aparecen y se ocultan detrás del relieve.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/nocturno.webp" width="1280" height="720" aria-label="Simulador de tiro antiaéreo: ejercicio nocturno">
+                  <source src="/video/antiaereo/nocturno.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el video: ejercicio nocturno" aria-label="Reproducir el video: ejercicio nocturno"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Ejercicio nocturno</h3>
+                <p>Solo las luces de navegación delatan al blanco: identificación y captura en la oscuridad.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/consola.webp" width="1280" height="720" aria-label="Simulador de tiro antiaéreo: consola del instructor">
+                  <source src="/video/antiaereo/consola.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el video: consola del instructor" aria-label="Reproducir el video: consola del instructor"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Consola del instructor</h3>
+                <p>Vista del operador, telescopio, radar y aeronaves del ejercicio, en tiempo real.</p>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -989,6 +1044,6 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
   </a>
 
-  <script src="js/main.js?v=20261027"></script>
+  <script src="js/main.js?v=20261028"></script>
 </body>
 </html>
