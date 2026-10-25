@@ -1106,6 +1106,9 @@ button { font: inherit; }
 }
 .brand-project:hover strong { text-decoration: underline; }
 .brand-project span:last-child { color: var(--muted); font-size: 0.9rem; }
+.sims { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1000px) { .sims { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) { .sims { grid-template-columns: 1fr 1fr; } }
 .team__intro {
   max-width: 780px;
   margin: -8px 0 28px;
