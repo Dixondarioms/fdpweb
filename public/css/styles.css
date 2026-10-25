@@ -1191,6 +1191,11 @@ button { font: inherit; }
   stroke-linecap: round;
 }
 .glyph__brillo path { stroke-width: 2; }
+.glyph__tubo .lleno { fill: url(#fdp-arco); stroke-width: 4; }
+.glyph__lustre .lleno { fill: url(#fdp-lustre); stroke: none; opacity: 1; }
+.glyph__brillo .lleno { stroke-width: 1.2; }
+/* En la lista de "Otros proyectos" los íconos van más chicos, a la izquierda del nombre */
+.more .glyph { height: 30px; margin: 0; flex-shrink: 0; }
 .team__card p {
   margin: 0;
   color: var(--muted);
