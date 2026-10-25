@@ -1196,6 +1196,26 @@ button { font: inherit; }
 .glyph__brillo .lleno { stroke-width: 1.2; }
 /* En la lista de "Otros proyectos" los íconos van más chicos, a la izquierda del nombre */
 .more .glyph { height: 30px; margin: 0; flex-shrink: 0; }
+/* "Otros proyectos" sobre fondo oscuro: tarjetas de vidrio y texto claro */
+.others {
+  position: relative;
+  background:
+    radial-gradient(40% 80% at 10% 0%, rgba(59, 70, 196, 0.35), transparent 70%),
+    radial-gradient(35% 80% at 95% 100%, rgba(201, 48, 122, 0.3), transparent 70%),
+    #080a14;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.others .more__title { color: #fff; }
+.others .more a {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.others .more a:hover {
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+.others .glyph { filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)); }
 .team__card p {
   margin: 0;
   color: var(--muted);
