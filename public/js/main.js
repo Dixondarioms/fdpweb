@@ -177,7 +177,7 @@ brandToggles.forEach((btn) => {
 });
 
 // Aparición suave de los elementos al hacer scroll
-const revealItems = document.querySelectorAll(".section__head, .rail-card, .feature, .media-card, .sector, .quote, .step, .about, .brand, .brand-project, .app-card, .team__card, .pfeature, .pgallery figure, .prow");
+const revealItems = document.querySelectorAll(".section__head, .rail-card, .feature, .media-card, .sector, .quote, .step, .about, .brand, .brand-project, .app-card, .team__card, .pfeature, .pgallery figure, .prow, .clip, .split");
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
@@ -196,4 +196,63 @@ if ("IntersectionObserver" in window) {
     el.classList.add("reveal");
     observer.observe(el);
   });
+}
+
+// Videos de SIMAK: se reproducen en silencio solo mientras se ven, y cada uno tiene su botón de pausa.
+// Con "reducir movimiento" activado no arrancan solos: quedan quietos hasta que se pulse reproducir.
+const autoVideos = [...document.querySelectorAll("video[data-autoplay]")];
+const playVideo = (v) => {
+  const p = v.play();
+  if (p) p.catch(() => {});
+};
+autoVideos.forEach((v) => {
+  const box = v.closest("[data-video]");
+  const btn = box && box.querySelector("[data-video-toggle]");
+  const sync = () => {
+    if (box) box.classList.toggle("is-paused", v.paused);
+    if (btn) btn.setAttribute("aria-label", (v.paused ? "Reproducir " : "Pausar ") + btn.dataset.name);
+  };
+  v.addEventListener("play", sync);
+  v.addEventListener("pause", sync);
+  sync();
+  if (btn) {
+    btn.addEventListener("click", () => {
+      if (v.paused) {
+        delete v.dataset.userPaused;
+        playVideo(v);
+      } else {
+        v.dataset.userPaused = "1";
+        v.pause();
+      }
+    });
+  }
+});
+// La imagen de espera de cada video se carga solo cuando el video está por aparecer
+if ("IntersectionObserver" in window) {
+  const posterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.poster = entry.target.dataset.poster;
+        posterObserver.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "600px 0px" }
+  );
+  document.querySelectorAll("video[data-poster]").forEach((v) => posterObserver.observe(v));
+} else {
+  document.querySelectorAll("video[data-poster]").forEach((v) => (v.poster = v.dataset.poster));
+}
+if (!reduceMotion && "IntersectionObserver" in window) {
+  const videoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const v = entry.target;
+        if (entry.isIntersecting && !v.dataset.userPaused) playVideo(v);
+        else if (!entry.isIntersecting) v.pause();
+      });
+    },
+    { threshold: 0.35 }
+  );
+  autoVideos.forEach((v) => videoObserver.observe(v));
 }

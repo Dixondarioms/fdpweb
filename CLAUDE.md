@@ -15,9 +15,13 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
   - `css/styles.css`: el diseño. Los colores y las fuentes están en las variables de `:root`, al inicio.
   - `js/main.js`: el menú móvil, el carrusel de la portada, las pestañas de sectores, el carril de soluciones y la animación de aparición.
   - `img/`: logos, íconos y capturas de proyectos (WebP y PNG).
+  - `video/simak/`: videos de SIMAK (fondo en bucle `fondo-1912.mp4` / `fondo-1280.mp4` para celular, un clip de 8 s por
+    escenario y `sala.mp4`) con su imagen de espera `.webp`. `docs/simak-dossier.pdf`: el dossier de SIMAK para descargar.
   - `img/p/`: capturas de las páginas de proyecto; `img/og/`: la imagen para redes (1200×630) de cada página de proyecto.
   - `404.html`, `_headers` (seguridad y caché), `robots.txt` y `sitemap.xml` (lista de páginas para Google).
 - `wrangler.jsonc` publica `public/` en **Cloudflare Workers** (archivos estáticos) y conecta el dominio. No toques sus `routes`.
+- `sitio/worker.js` solo atiende `/video/*`: entrega los videos por partes ("Range"), que Safari en iPhone exige para
+  reproducirlos. Todo lo demás lo sirven los archivos estáticos con las cabeceras de `_headers`.
 - `LEEME.md` es la guía para personas. Mantenla al día si cambias la forma de trabajar.
 - `correo/` es un Email Worker aparte (`fdp-correo`) que reenvía `contacto@fdpsoftware.org` a las direcciones de
   `DESTINOS` en `correo/wrangler.jsonc`. Se publica desde esa carpeta con `npx.cmd wrangler deploy`. Esas direcciones
@@ -26,17 +30,18 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
 ### Secciones de `index.html` (por `id`)
 
 `inicio` (portada con carrusel: `slide-1` FDP Software, `slide-2` SIGMA MRO, `slide-3` Escenarios 3D,
-`slide-4` simuladores de tiro) → `soluciones` (carril horizontal de tarjetas) → `proyectos` (SIGMA MRO destacado,
+`slide-4` simulador de tiro antiaéreo, `slide-5` SIMAK) → `soluciones` (carril horizontal de tarjetas) → `proyectos` (SIGMA MRO destacado,
 `tiro` con galería, y una cuadrícula con AeroEscuela, entrenamiento táctico, Escenarios 3D y control
-aéreo) → `apps` (Marcelo Go, Minijuegos de Marcelo Go y Ritmo Diario en Google Play) → `sectores` (pestañas) →
+aéreo) → `simak` (franja con video de fondo, `.vband`) → `simak-escenarios` (seis clips, `.clips`) → `apps` (Marcelo Go, Minijuegos de Marcelo Go y Ritmo Diario en Google Play) → `sectores` (pestañas) →
 cita de la misión → `metodo` → `nosotros` (misión, visión, marcas y equipo por áreas) → `contacto` → pie de página.
 
 Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#slide-4`.
 
 ### Páginas de proyecto (`public/proyectos/`)
 
-`sigma-mro`, `aeroescuela`, `simuladores-de-tiro`, `entrenamiento-tactico`, `escenarios-3d`, `control-aereo` y
-`apps-moviles`. Todas siguen el mismo orden: portada oscura (`.phero`, con ruta de navegación `.crumbs`) → ficha rápida
+`sigma-mro`, `aeroescuela`, `simuladores-de-tiro` (solo el simulador antiaéreo), `simak` (simulador de tiro con láser),
+`entrenamiento-tactico`, `escenarios-3d`, `control-aereo` y `apps-moviles`. La de `simak` empieza con video de fondo (`.vband`)
+en lugar de `.phero` y tiene los clips de escenarios. Todas siguen el mismo orden: portada oscura (`.phero`, con ruta de navegación `.crumbs`) → ficha rápida
 (`.specs`) → "Qué incluye" (`#incluye`, tarjetas `.pfeature`; en apps, filas `.prow`) → galería (`#galeria`,
 `.pgallery`, con `.is-full` para las capturas a lo ancho) → contacto (`#contacto`) → otros proyectos (`.more`) → pie.
 
@@ -44,7 +49,7 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 - Cada una tiene su propio `<title>`, descripción, `canonical`, imagen para redes (`img/og/<nombre>.jpg`) y datos
   para Google (`application/ld+json`). Si cambias el nombre o la descripción de un proyecto, cámbialos en esos lugares.
 - El mensaje de WhatsApp de cada página ya nombra el proyecto (`...quiero%20informaci%C3%B3n%20sobre%20SIGMA%20MRO.`).
-- El encabezado, el pie de página y la lista "Otros proyectos" se repiten en las siete páginas de proyecto y en `servicios/`: si cambias uno, cambia todos.
+- El encabezado, el pie de página y la lista "Otros proyectos" se repiten en las ocho páginas de proyecto y en `servicios/`: si cambias uno, cambia todos.
 - Si agregas un proyecto: copia una página parecida, agrégala a `sitemap.xml`, enlázala desde la tarjeta del proyecto en
   `index.html`, desde el pie de página y desde "Otros proyectos" de las demás páginas.
 
@@ -60,6 +65,17 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 - Si agregas un tipo de tarjeta nuevo, súmalo a la lista `revealItems` en `js/main.js` para que tenga la animación de aparición.
 - Todo debe verse bien en computador (1280 y 1920 px) y en celular (375 px), sin desplazamiento lateral.
 
+## Videos en la web (SIMAK)
+
+- Son MP4 (H.264) sin sonido, en `public/video/`, con `muted loop playsinline preload="none" data-autoplay` y la imagen de espera
+  en `data-poster` (no en `poster`, para que no se descargue al abrir la página). `js/main.js` carga la imagen cuando el video
+  está cerca, lo reproduce solo mientras se ve y lo pausa al salir. Cada video tiene un botón `.vtoggle` con
+  `data-video-toggle` dentro del contenedor `[data-video]`. Con "reducir movimiento" activado no arrancan solos.
+- Se sacan del video del stand de SIMAK con `ffmpeg`, solo del tramo de los escenarios: el inicio y el final de ese video muestran
+  un escudo institucional. Recorta el borde blanco de la grabación (4 px) y nunca amplíes por encima del tamaño original.
+- Mantén los videos livianos: el fondo pesa unos 3 MB (1,7 MB la versión de celular) y cada clip menos de 700 KB.
+- `sala.mp4` fue generado con IA; en la web se aclara que es una recreación ilustrativa.
+
 ## Videos para redes sociales (`videos/`)
 
 - `videos/generador/videos.py` tiene el guion de cada video (textos, imágenes, tomas y tiempos) y `engine.py` el
@@ -74,7 +90,7 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 - `videos/generador/calendario.py` arma `videos-redes/programar/` (video, portada y textos por publicación, más `calendario.html`) para programar en Meta Business Suite y TikTok Studio. La página publicada del calendario es https://claude.ai/artifact/YPZ1Yr9gQjsajYNHJTxaAk.
 - Revisa cada video antes de entregarlo (`... <nombre> previa 1,4.5,24`, o una hoja de cuadros con ffmpeg).
 - Redes de FDP: Instagram `@freethepress05` y TikTok `@freethepress5`. Están en `REDES` (en `engine.py`), en el pie
-  de página de las nueve páginas y en `sameAs` de los datos para Google de `index.html`; si cambian, cámbialas en todos.
+  de página de las diez páginas y en `sameAs` de los datos para Google de `index.html`; si cambian, cámbialas en todos.
 
 ## Reglas de contenido (obligatorias)
 
@@ -87,6 +103,7 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
    propios de esos sistemas (IGLA-S, S.I.E.T.E., MANPADS, CODAI). Usa descripciones generales, como "simuladores de
    tiro" o "entrenamiento táctico y estratégico". Del simulador de control e interceptación aérea no se publican capturas.
    En el entrenamiento táctico no muestres qué país real es cada bando (por ejemplo "Azul (Venezuela)"): tápalo.
+   En SIMAK, la bandera y el escudo del uniforme del soldado de la portada y de la consola van difuminados.
    Tampoco uses grabaciones hechas con celular a pantallas de sistemas reales.
 4. **Revisa cada captura antes de publicarla**: no deben aparecer rutas de archivos de un computador
    (`C:\Users\...`), nombres de usuario, punteros del mouse ni datos personales. Si aparecen, recórtalos o tápalos
@@ -99,7 +116,7 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 ## Velocidad
 
 - **Versión de CSS y JS**: `styles.css` y `main.js` se cargan con `?v=AAAAMMDD` y se guardan 30 días en caché.
-  Cada vez que los cambies, actualiza ese número en `index.html`, `404.html` las siete páginas de `proyectos/` y `servicios/`,
+  Cada vez que los cambies, actualiza ese número en `index.html`, `404.html`, las ocho páginas de `proyectos/` y `servicios/`,
   o los visitantes seguirán viendo la versión vieja.
 - **Imágenes responsive**: cada imagen de contenido tiene versiones más pequeñas (`nombre-480.webp`, `nombre-800.webp`…)
   declaradas en `srcset`, con un `sizes` que describe su ancho real en pantalla. Si agregas o reemplazas una imagen,
@@ -131,6 +148,7 @@ Ninguna imagen puede verse borrosa ni de mala calidad.
   HTML; el navegador los bloquea. Los estilos van en `css/styles.css` y el JavaScript en `js/main.js`.
   Tampoco uses `innerHTML`, `eval` ni `document.write` (Trusted Types está activo); usa `textContent` y `createElement`.
 - **Recursos externos**: solo están permitidas las estadísticas de Cloudflare (`static.cloudflareinsights.com`).
+  Los videos solo pueden venir de este mismo sitio (`media-src 'self'`); no incrustes YouTube ni otros reproductores.
   Las fuentes (Inter e Inter Tight) están en `public/fonts/` con su licencia; no vuelvas a usar Google Fonts. Si hace falta algo de otro dominio (un video, un mapa, un script),
   agrégalo a la directiva correcta de la CSP en `_headers`, explica a ella el riesgo y pruébalo antes de publicar.
 - Los enlaces que abren otra pestaña (`target="_blank"`) llevan siempre `rel="noopener"`.

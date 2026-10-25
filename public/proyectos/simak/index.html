@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIMAK: simulador de tiro con láser y escenarios 3D | FDP Simuladores</title>
+  <meta name="description" content="SIMAK convierte cualquier sala con un proyector en un polígono de tiro: arma láser, proyección a tamaño real, seis escenarios tácticos en 3D, consola del instructor y resultados medibles. Sin munición y sin riesgo.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://fdpsoftware.org/proyectos/simak/">
+  <meta name="theme-color" content="#0b0d1a">
+
+  <!-- Vista previa al compartir en redes (WhatsApp, Facebook, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FDP Software">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:url" content="https://fdpsoftware.org/proyectos/simak/">
+  <meta property="og:title" content="SIMAK: simulador de tiro con láser y escenarios 3D | FDP Simuladores">
+  <meta property="og:description" content="SIMAK convierte cualquier sala con un proyector en un polígono de tiro: arma láser, proyección a tamaño real, seis escenarios tácticos en 3D, consola del instructor y resultados medibles. Sin munición y sin riesgo.">
+  <meta property="og:image" content="https://fdpsoftware.org/img/og/simak.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SIMAK, simulador de tiro de FDP Simuladores">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SIMAK: simulador de tiro con láser y escenarios 3D | FDP Simuladores">
+  <meta name="twitter:description" content="SIMAK convierte cualquier sala con un proyector en un polígono de tiro: arma láser, proyección a tamaño real, seis escenarios tácticos en 3D, consola del instructor y resultados medibles. Sin munición y sin riesgo.">
+  <meta name="twitter:image" content="https://fdpsoftware.org/img/og/simak.jpg">
+
+  <!-- Datos del proyecto para Google (no se ejecuta: es solo información) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://fdpsoftware.org/#organizacion",
+        "name": "FDP Software",
+        "url": "https://fdpsoftware.org/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "SIMAK",
+        "alternateName": "SIMAK · Simulador de tiro",
+        "url": "https://fdpsoftware.org/proyectos/simak/",
+        "description": "SIMAK convierte cualquier sala con un proyector en un polígono de tiro: arma láser, proyección a tamaño real, seis escenarios tácticos en 3D, consola del instructor y resultados medibles. Sin munición y sin riesgo.",
+        "image": "https://fdpsoftware.org/img/og/simak.jpg",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Windows",
+        "inLanguage": "es",
+        "author": {
+          "@id": "https://fdpsoftware.org/#organizacion"
+        },
+        "publisher": {
+          "@id": "https://fdpsoftware.org/#organizacion"
+        },
+        "video": {
+          "@type": "VideoObject",
+          "name": "SIMAK: escenarios del simulador de tiro",
+          "description": "Recorrido por los escenarios de SIMAK: galería de precisión, polígono exterior, azotea, calle, edificio con rehenes y sala final.",
+          "thumbnailUrl": "https://fdpsoftware.org/video/simak/fondo.webp",
+          "contentUrl": "https://fdpsoftware.org/video/simak/fondo-1912.mp4",
+          "uploadDate": "2026-10-25",
+          "duration": "PT16S"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://fdpsoftware.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "SIMAK",
+            "item": "https://fdpsoftware.org/proyectos/simak/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="/img/favicon-48.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=20261027">
+</head>
+<body>
+
+  <!-- ===== Encabezado flotante ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/" class="logo" aria-label="FDP Software, inicio">
+        <img src="/img/logo-fdp-dark.png" alt="" width="40" height="40" class="logo__img">
+        <span class="logo__text">FDP Software</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="/#soluciones">Soluciones</a>
+        <a href="/#proyectos">Proyectos</a>
+        <a href="/proyectos/simak/">SIMAK</a>
+        <a href="/#apps">Apps</a>
+        <a href="/#sectores">Sectores</a>
+        <a href="/#nosotros">Nosotros</a>
+        <a href="#contacto" class="btn btn--dark btn--small">Contáctanos</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Portada con video de fondo en silencio ===== -->
+    <section class="vband vband--page" data-video aria-labelledby="simak-titulo">
+      <div class="vband__media">
+        <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/fondo.webp" width="1912" height="1072" aria-hidden="true">
+          <source src="/video/simak/fondo-1280.mp4" type="video/mp4" media="(max-width: 900px)">
+          <source src="/video/simak/fondo-1912.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="container vband__content">
+        <nav class="crumbs" aria-label="Ruta de navegación">
+          <ol>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/#simak">Simuladores</a></li>
+            <li aria-current="page">SIMAK</li>
+          </ol>
+        </nav>
+        <p class="vband__label">FDP Simuladores · Simulador de tiro con láser</p>
+        <h1 class="vband__title" id="simak-titulo">SIMAK. Cualquier sala, un polígono de tiro. <button type="button" class="vtoggle" data-video-toggle data-name="el video de fondo" aria-label="Pausar el video de fondo"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button></h1>
+        <p class="vband__text">Entrenamiento de tiro con arma láser, proyección a tamaño real y escenarios tácticos en 3D. Sin munición, sin riesgo y con cada disparo medido.</p>
+        <div class="slide__actions">
+          <a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20SIMAK%2C%20el%20simulador%20de%20tiro." class="btn btn--light" target="_blank" rel="noopener">Solicita una demostración</a>
+          <a href="/docs/simak-dossier.pdf" class="btn btn--ghost-light" download>Descarga el dossier (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="page">
+      <div class="container">
+        <dl class="specs">
+          <div><dt>Sala</dt><dd>Cualquiera con proyector</dd></div>
+          <div><dt>Láser</dt><dd>Verde, rojo o infrarrojo</dd></div>
+          <div><dt>Escenarios</dt><dd>Seis, de precisión a combate</dd></div>
+          <div><dt>Munición</dt><dd>Cero: sin riesgo</dd></div>
+        </dl>
+      </div>
+
+      <!-- ===== La portada y qué es ===== -->
+      <section class="section section--tight">
+        <div class="container split split--wide">
+          <div class="split__media">
+            <img src="/img/simak-portada.webp" srcset="/img/simak-portada-480.webp 480w, /img/simak-portada-800.webp 800w, /img/simak-portada.webp 1160w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1000px) calc(100vw - 48px), 640px" width="1160" height="733" loading="lazy" alt="Portada de SIMAK: tirador con equipo táctico apuntando, junto al logo del simulador">
+          </div>
+          <div>
+            <h2 class="display display--md">¿Qué es SIMAK?</h2>
+            <p>Un simulador de tiro que convierte cualquier sala con un proyector en un polígono de entrenamiento. El tirador dispara un arma de entrenamiento con emisor láser contra el escenario proyectado; una cámara detecta cada disparo y el programa lo convierte en un impacto real sobre la diana, la silueta o la amenaza.</p>
+            <ul class="checks">
+              <li>Cero munición y cero riesgo: sin polígono ni medidas de seguridad balística</li>
+              <li>Medición objetiva: puntos, agrupación en milímetros y tiempos de reacción</li>
+              <li>Repetible: el mismo ejercicio, en las mismas condiciones, tantas veces como haga falta</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Cómo funciona ===== -->
+      <section class="section section--tight" id="incluye">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Cómo funciona.</h2>
+            <p>Del disparo al impacto al instante, con equipos comerciales que ya conoces.</p>
+          </div>
+          <div class="pfeatures">
+            <article class="pfeature">
+              <span class="badge badge--blue" aria-hidden="true">1</span>
+              <h3>Disparo</h3>
+              <p>El tirador acciona un arma de entrenamiento con emisor láser, que solo se enciende en el instante del disparo.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--teal" aria-hidden="true">2</span>
+              <h3>Proyección</h3>
+              <p>El proyector muestra el escenario sobre una pantalla o una pared, con las dianas a tamaño real.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--orange" aria-hidden="true">3</span>
+              <h3>Detección</h3>
+              <p>Una cámara vigila la proyección y localiza el destello del láser fotograma a fotograma, con precisión de milímetros.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--magenta" aria-hidden="true">4</span>
+              <h3>Impacto</h3>
+              <p>El programa aplica la balística del arma elegida, puntúa el disparo y hace reaccionar al blanco al instante.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--violet" aria-hidden="true">5</span>
+              <h3>Balística real</h3>
+              <p>El impacto se desplaza según el arma (reglaje, caída, viento y dispersión), como ocurriría con munición real.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--green" aria-hidden="true">6</span>
+              <h3>Instalación sencilla</h3>
+              <p>Equipos comerciales: una computadora con Windows, proyector, cámara, altavoces y armas de entrenamiento.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Escenarios en video ===== -->
+      <section class="section section--tight" id="escenarios">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Seis escenarios, del fundamento al combate.</h2>
+            <p>Imágenes reales del simulador. Cada clip se reproduce en silencio mientras lo ves.</p>
+          </div>
+          <div class="clips">
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/galeria.webp" width="1280" height="718" aria-label="Escenario 1 de SIMAK: Galería cubierta · Precisión 10 m">
+                  <source src="/video/simak/galeria.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 1" aria-label="Reproducir el escenario 1"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Galería cubierta · Precisión 10 m</h3>
+                <p>Diana de anillos a 10 metros, impactos en tiempo real y diana de ayuda en pantalla.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/poligono.webp" width="1280" height="718" aria-label="Escenario 2 de SIMAK: Polígono exterior · Blancos móviles">
+                  <source src="/video/simak/poligono.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 2" aria-label="Reproducir el escenario 2"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Polígono exterior · Blancos móviles</h3>
+                <p>Siluetas que se acercan y se alejan; cada impacto se puntúa por zona.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/azotea.webp" width="1280" height="718" aria-label="Escenario 3 de SIMAK: Azotea urbana · Tiradores enemigos">
+                  <source src="/video/simak/azotea.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 3" aria-label="Reproducir el escenario 3"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Azotea urbana · Tiradores enemigos</h3>
+                <p>Enemigos que se cubren, se asoman y disparan desde una azotea.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/calle.webp" width="1280" height="718" aria-label="Escenario 4 de SIMAK: Calle · Enemigos que cruzan">
+                  <source src="/video/simak/calle.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 4" aria-label="Reproducir el escenario 4"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Calle · Enemigos que cruzan</h3>
+                <p>Blancos en movimiento entre carros y barricadas: reacción y puntería.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/edificio.webp" width="1280" height="718" aria-label="Escenario 5 de SIMAK: Edificio · Despeje con rehenes">
+                  <source src="/video/simak/edificio.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 5" aria-label="Reproducir el escenario 5"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Edificio · Despeje con rehenes</h3>
+                <p>Habitación por habitación: los rehenes no se tocan y huyen al ser liberados.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/sala-final.webp" width="1280" height="718" aria-label="Escenario 6 de SIMAK: Sala final · Fin de la simulación">
+                  <source src="/video/simak/sala-final.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 6" aria-label="Reproducir el escenario 6"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Sala final · Fin de la simulación</h3>
+                <p>Las amenazas devuelven el fuego: la cobertura cuenta. Al final, los resultados.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Sala de entrenamiento (recreación) ===== -->
+      <section class="section section--tight">
+        <div class="container split">
+          <div>
+            <h2 class="display display--md">Entrena en equipo.</h2>
+            <p>Varios tiradores pueden entrenar a la vez frente a la proyección, cada uno en su carril y con su boleta de resultados, mientras el instructor dirige el ejercicio desde su consola.</p>
+            <ul class="checks">
+              <li>Reacción al contacto y decisión bajo presión</li>
+              <li>Discriminación entre amenaza y civil</li>
+              <li>Uso de la cobertura: las amenazas solo disparan con línea de visión</li>
+            </ul>
+          </div>
+          <figure class="split__media" data-video>
+            <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/sala.webp" width="1280" height="720" aria-label="Recreación de una sala de entrenamiento con SIMAK: dos tiradores frente a la proyección de una calle">
+              <source src="/video/simak/sala.mp4" type="video/mp4">
+            </video>
+            <button type="button" class="vtoggle" data-video-toggle data-name="la recreación de la sala" aria-label="Reproducir la recreación de la sala"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+            <figcaption class="split__note">Recreación ilustrativa de una sala de entrenamiento (video generado por computadora).</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ===== Consola del operador ===== -->
+      <section class="section section--tight">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">La consola del instructor.</h2>
+            <p>Su propia pantalla, separada de la proyección: configura el ejercicio, registra a los tiradores, inicia y detiene las series y sigue el marcador en vivo.</p>
+          </div>
+          <div class="pgallery">
+            <figure class="is-full">
+              <img src="/img/simak-consola.webp" srcset="/img/simak-consola-480.webp 480w, /img/simak-consola-800.webp 800w, /img/simak-consola-1200.webp 1200w, /img/simak-consola.webp 1600w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(100vw - 48px), 1192px" width="1600" height="900" loading="lazy" alt="Consola del operador de SIMAK con la configuración del ejercicio y el marcador en vivo">
+              <figcaption>Configuración del ejercicio, tiradores y carriles, cámara y láser, y marcador en vivo.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Resultados ===== -->
+      <section class="section section--tight">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Resultados medibles de cada tirador.</h2>
+            <p>El instructor deja de evaluar «a ojo»: tiene datos para corregir y para comparar la evolución en el tiempo.</p>
+          </div>
+          <div class="pfeatures">
+            <article class="pfeature">
+              <span class="badge badge--blue" aria-hidden="true">T</span>
+              <h3>Tiempos</h3>
+              <p>Tiempo al primer disparo, intervalos entre disparos y tiempo total de la serie.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--teal" aria-hidden="true">P</span>
+              <h3>Puntuación</h3>
+              <p>Puntos por zona o anillo y puntos por segundo (hit factor).</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--orange" aria-hidden="true">A</span>
+              <h3>Agrupación</h3>
+              <p>Radio medio y dispersión máxima del grupo, en milímetros.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--magenta" aria-hidden="true">C</span>
+              <h3>Centro del grupo</h3>
+              <p>Distingue un problema de reglaje del arma de uno de puntería.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--violet" aria-hidden="true">R</span>
+              <h3>Escenarios tácticos</h3>
+              <p>Amenazas neutralizadas, tiempo de reacción, civiles alcanzados y veces que el tirador fue alcanzado.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--green" aria-hidden="true">H</span>
+              <h3>Historial</h3>
+              <p>Boleta por tirador, mismo formato en precisión y en 3D, y exportación de cada serie a CSV.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Contacto ===== -->
+      <section class="section cta cta--brand" id="contacto">
+        <div class="container">
+          <h2 class="display display--md">Entrena más. Gasta menos. Mide todo.</h2>
+          <p>Solicita una demostración y prueba SIMAK con tu propio personal.</p>
+          <div class="cta__actions">
+            <a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20SIMAK%2C%20el%20simulador%20de%20tiro." class="btn btn--light" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+            <a href="/docs/simak-dossier.pdf" class="btn btn--ghost-light" download>Descarga el dossier (PDF)</a>
+          </div>
+          <p class="cta__place">También en <a href="mailto:contacto@fdpsoftware.org?subject=SIMAK">contacto@fdpsoftware.org</a></p>
+        </div>
+      </section>
+
+      <!-- ===== Otros proyectos ===== -->
+      <section class="section section--tight section--gray">
+        <div class="container">
+          <h2 class="more__title">Otros proyectos</h2>
+          <div class="more">
+            <a href="/proyectos/sigma-mro/"><span class="badge badge--blue" aria-hidden="true">Σ</span>SIGMA MRO</a>
+            <a href="/proyectos/aeroescuela/"><span class="badge badge--violet" aria-hidden="true">A</span>AeroEscuela</a>
+            <a href="/proyectos/simuladores-de-tiro/"><span class="badge badge--magenta" aria-hidden="true">T</span>Tiro antiaéreo</a>
+            <a href="/proyectos/entrenamiento-tactico/"><span class="badge badge--teal" aria-hidden="true">S</span>Entrenamiento táctico y estratégico</a>
+            <a href="/proyectos/escenarios-3d/"><span class="badge badge--orange" aria-hidden="true">3D</span>Escenarios 3D de Venezuela</a>
+            <a href="/proyectos/apps-moviles/"><span class="badge badge--green" aria-hidden="true">▶</span>Apps móviles</a>
+            <a href="/proyectos/control-aereo/"><span class="badge badge--teal" aria-hidden="true">S</span>Control e interceptación aérea</a>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__grid">
+            <div class="footer__brand">
+              <a href="/" class="logo" aria-label="FDP Software, inicio">
+                <img src="/img/logo-fdp-dark.png" alt="" width="40" height="40" class="logo__img" loading="lazy">
+                <span class="logo__text">FDP Software</span>
+              </a>
+              <p>Desarrollo, mantenimiento y distribución de software digital de alta gama.</p>
+            </div>
+
+            <div>
+              <h2>Proyectos</h2>
+              <ul>
+                <li><a href="/proyectos/sigma-mro/">SIGMA MRO</a></li>
+                <li><a href="/proyectos/aeroescuela/">Simulador de vuelo</a></li>
+                <li><a href="/proyectos/simak/">SIMAK: tiro con láser</a></li>
+                <li><a href="/proyectos/simuladores-de-tiro/">Tiro antiaéreo</a></li>
+                <li><a href="/proyectos/entrenamiento-tactico/">Entrenamiento táctico</a></li>
+                <li><a href="/proyectos/escenarios-3d/">Escenarios 3D</a></li>
+                <li><a href="/proyectos/control-aereo/">Control aéreo</a></li>
+                <li><a href="/proyectos/apps-moviles/">Apps móviles</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Empresa</h2>
+              <ul>
+                <li><a href="/#soluciones">Soluciones</a></li>
+                <li><a href="/servicios/">Servicios</a></li>
+                <li><a href="/#sectores">Sectores</a></li>
+                <li><a href="/#nosotros">Nosotros</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Contacto</h2>
+              <ul>
+                <li><a href="mailto:contacto@fdpsoftware.org">contacto@fdpsoftware.org</a></li>
+                <li><a href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones." target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/freethepress05/" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@freethepress5" target="_blank" rel="noopener">TikTok</a></li>
+                <li>Venezuela</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <p>© <span id="year">2026</span> FDP SOFTWARE. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="fab" href="https://wa.me/584120846332?text=Hola%20FDP%20Software%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20soluciones." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
+  </a>
+
+  <script src="/js/main.js?v=20261027"></script>
+</body>
+</html>

@@ -3,10 +3,10 @@
 # tienes que permitirlo en Content-Security-Policy o el navegador lo bloqueará.
 
 /*
-  # Solo se cargan scripts, estilos, fuentes e imágenes de este mismo sitio, más las estadísticas
+  # Solo se cargan scripts, estilos, fuentes, imágenes y videos de este mismo sitio, más las estadísticas
   # de visitas de Cloudflare (Web Analytics, sin cookies).
   # Bloquea la inyección de código (XSS), formularios hacia otros sitios y que otra web nos meta en un iframe.
-  Content-Security-Policy: default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self' https://cloudflareinsights.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests; require-trusted-types-for 'script'
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self'; media-src 'self'; connect-src 'self' https://cloudflareinsights.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests; require-trusted-types-for 'script'
   # Obliga al navegador a usar siempre HTTPS durante un año (también en los subdominios).
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   # Evita que el navegador "adivine" el tipo de los archivos.
@@ -15,8 +15,8 @@
   X-Frame-Options: DENY
   # Al salir hacia otro sitio solo se comparte el dominio, no la dirección completa.
   Referrer-Policy: strict-origin-when-cross-origin
-  # Desactiva funciones del navegador que la web no usa.
-  Permissions-Policy: accelerometer=(), autoplay=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  # Desactiva funciones del navegador que la web no usa (la reproducción automática solo para nuestros videos).
+  Permissions-Policy: accelerometer=(), autoplay=(self), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
   # Aísla la pestaña de otras ventanas y evita que otros sitios incrusten nuestros archivos.
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
@@ -31,6 +31,13 @@
 
 # Imágenes: 30 días (si reemplazas una imagen por otra distinta, mejor usa un nombre de archivo nuevo)
 /img/*
+  Cache-Control: public, max-age=2592000
+
+# Videos y documentos: 30 días (si reemplazas uno, mejor usa un nombre de archivo nuevo)
+/video/*
+  Cache-Control: public, max-age=2592000
+
+/docs/*
   Cache-Control: public, max-age=2592000
 
 # Fuentes: no cambian nunca

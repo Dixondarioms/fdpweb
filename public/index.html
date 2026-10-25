@@ -82,7 +82,7 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=20261026">
+  <link rel="stylesheet" href="css/styles.css?v=20261027">
 </head>
 <body>
 
@@ -97,6 +97,7 @@
       <nav class="nav" id="nav">
         <a href="#soluciones">Soluciones</a>
         <a href="#proyectos">Proyectos</a>
+        <a href="#simak">SIMAK</a>
         <a href="#apps">Apps</a>
         <a href="#sectores">Sectores</a>
         <a href="#nosotros">Nosotros</a>
@@ -169,7 +170,23 @@
           <h2 class="slide__title">Entrena como en la realidad. Sin conexión.</h2>
           <p class="slide__text">Simuladores de tiro y de entrenamiento con consola de instructor, ejercicios de día, de noche y con clima adverso, y evaluación automática.</p>
           <div class="slide__actions">
-            <a href="/proyectos/simuladores-de-tiro/" class="btn btn--light">Ver simuladores de tiro</a>
+            <a href="/proyectos/simuladores-de-tiro/" class="btn btn--light">Ver el simulador antiaéreo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diapositiva 5: SIMAK, simulador de tiro con láser -->
+      <div class="slide slide--simak" id="slide-5" role="tabpanel" aria-labelledby="dot-5" hidden>
+        <div class="slide__bg" aria-hidden="true">
+          <img data-src="img/simak-portada.webp" data-srcset="img/simak-portada-480.webp 480w, img/simak-portada-800.webp 800w, img/simak-portada.webp 1160w" sizes="(max-width: 760px) 100vw, min(50vw, 1160px)" width="1160" height="733" alt="">
+        </div>
+        <div class="slide__content">
+          <p class="slide__label">FDP Simuladores · SIMAK</p>
+          <h2 class="slide__title">Cualquier sala, un polígono de tiro.</h2>
+          <p class="slide__text">Simulador de tiro con arma láser, proyección a tamaño real y seis escenarios tácticos en 3D. Sin munición y con cada disparo medido.</p>
+          <div class="slide__actions">
+            <a href="/proyectos/simak/" class="btn btn--light">Conoce SIMAK</a>
+            <a href="#simak" class="btn btn--ghost-light">Ver en video</a>
           </div>
         </div>
       </div>
@@ -200,6 +217,11 @@
           <button class="hero__tab" role="tab" id="dot-4" aria-controls="slide-4" aria-selected="false" tabindex="-1">
             <span class="badge badge--teal" aria-hidden="true">S</span>
             <span>Simulación</span>
+            <i class="hero__progress" aria-hidden="true"></i>
+          </button>
+          <button class="hero__tab" role="tab" id="dot-5" aria-controls="slide-5" aria-selected="false" tabindex="-1">
+            <span class="badge badge--magenta" aria-hidden="true">SK</span>
+            <span>SIMAK</span>
             <i class="hero__progress" aria-hidden="true"></i>
           </button>
         </div>
@@ -329,7 +351,7 @@
             </div>
           </article>
 
-          <!-- Simuladores de tiro -->
+          <!-- Simulador de tiro antiaéreo -->
           <article class="feature feature--photo" id="tiro">
             <div class="feature__media">
               <span class="badge badge--magenta feature__badge" aria-hidden="true">T</span>
@@ -348,9 +370,9 @@
                 <figcaption>Ejercicio nocturno</figcaption>
               </figure>
               <figure>
-                <img src="img/tiro-urbano.webp" srcset="img/tiro-urbano-480.webp 480w, img/tiro-urbano-800.webp 800w, img/tiro-urbano-1200.webp 1200w, img/tiro-urbano.webp 1920w" sizes="(max-width: 1000px) 70vw, 400px" width="1920" height="880" loading="lazy"
-                     alt="Simulador de tiro en entorno urbano: calle de ciudad al atardecer con vehículos estacionados">
-                <figcaption>Tiro en entorno urbano</figcaption>
+                <img src="img/p/tiro-lluvia.webp" srcset="img/p/tiro-lluvia-480.webp 480w, img/p/tiro-lluvia-800.webp 800w, img/p/tiro-lluvia-1200.webp 1200w, img/p/tiro-lluvia.webp 1920w" sizes="(max-width: 1000px) 70vw, 400px" width="1920" height="760" loading="lazy"
+                     alt="Helicóptero en vuelo bajo la lluvia, visto desde el puesto del tirador">
+                <figcaption>Ejercicio con lluvia</figcaption>
               </figure>
               <figure>
                 <img src="img/tiro-evaluacion.webp" srcset="img/tiro-evaluacion-480.webp 480w, img/tiro-evaluacion-800.webp 800w, img/tiro-evaluacion-1200.webp 1200w, img/tiro-evaluacion.webp 1920w" sizes="(max-width: 1000px) 70vw, 400px" width="1920" height="770" loading="lazy" class="is-left"
@@ -360,18 +382,18 @@
             </div>
             <div class="feature__caption">
               <div>
-                <h3>Simuladores de tiro: de la detección al impacto.</h3>
+                <h3>Simulador de tiro antiaéreo: de la detección al impacto.</h3>
                 <p>
-                  Entrenamiento de tiro antiaéreo y de tiro en entorno urbano, en escenarios 3D realistas y sin gastar
+                  Entrenamiento de tiro antiaéreo en escenarios 3D realistas, de día, de noche y con mal tiempo, sin gastar
                   munición real. El tirador practica la secuencia completa mientras el instructor sigue cada ejercicio
                   desde su consola.
                 </p>
-                <a href="/proyectos/simuladores-de-tiro/" class="link-arrow">Conoce los simuladores de tiro</a>
+                <a href="/proyectos/simuladores-de-tiro/" class="link-arrow">Conoce el simulador antiaéreo</a>
               </div>
               <ul class="checks">
                 <li>Secuencia completa: preparación, identificación, captura y disparo</li>
                 <li>Consola del instructor con catálogo de ejercicios y perfil del operador</li>
-                <li>Escenarios de día, de noche, con lluvia o tormenta, y calles de ciudad</li>
+                <li>Escenarios de día, de noche, con lluvia o tormenta</li>
                 <li>Evaluación automática con puntaje y repaso cronológico</li>
               </ul>
             </div>
@@ -442,6 +464,108 @@
                 <a href="/proyectos/control-aereo/" class="link-arrow">Conoce el simulador</a>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SIMAK: video de fondo en silencio, con botón de pausa ===== -->
+      <section class="vband" id="simak" data-video aria-labelledby="simak-titulo">
+        <div class="vband__media">
+          <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/fondo.webp" width="1912" height="1072" aria-hidden="true">
+            <source src="/video/simak/fondo-1280.mp4" type="video/mp4" media="(max-width: 900px)">
+            <source src="/video/simak/fondo-1912.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="container vband__content">
+          <p class="vband__label">FDP Simuladores · Simulador de tiro con láser</p>
+          <h2 class="vband__title" id="simak-titulo">SIMAK. Entrena como en la realidad. <button type="button" class="vtoggle" data-video-toggle data-name="el video de fondo" aria-label="Pausar el video de fondo"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button></h2>
+          <p class="vband__text">Convierte cualquier sala con un proyector en un polígono de entrenamiento: arma láser, proyección a tamaño real y escenarios tácticos en 3D, dirigidos desde la consola del instructor.</p>
+          <div class="slide__actions">
+            <a href="/proyectos/simak/" class="btn btn--light">Conoce SIMAK</a>
+            <a href="/docs/simak-dossier.pdf" class="btn btn--ghost-light" download>Descarga el dossier (PDF)</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="simak-escenarios">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Seis escenarios, del fundamento al combate.</h2>
+            <p>Imágenes reales del simulador. Cada escenario mide puntos, tiempos de reacción y faltas.</p>
+          </div>
+          <div class="clips">
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/galeria.webp" width="1280" height="718" aria-label="Escenario 1 de SIMAK: Galería cubierta · Precisión 10 m">
+                  <source src="/video/simak/galeria.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 1" aria-label="Reproducir el escenario 1"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Galería cubierta · Precisión 10 m</h3>
+                <p>Diana de anillos a 10 metros, impactos en tiempo real y diana de ayuda en pantalla.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/poligono.webp" width="1280" height="718" aria-label="Escenario 2 de SIMAK: Polígono exterior · Blancos móviles">
+                  <source src="/video/simak/poligono.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 2" aria-label="Reproducir el escenario 2"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Polígono exterior · Blancos móviles</h3>
+                <p>Siluetas que se acercan y se alejan; cada impacto se puntúa por zona.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/azotea.webp" width="1280" height="718" aria-label="Escenario 3 de SIMAK: Azotea urbana · Tiradores enemigos">
+                  <source src="/video/simak/azotea.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 3" aria-label="Reproducir el escenario 3"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Azotea urbana · Tiradores enemigos</h3>
+                <p>Enemigos que se cubren, se asoman y disparan desde una azotea.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/calle.webp" width="1280" height="718" aria-label="Escenario 4 de SIMAK: Calle · Enemigos que cruzan">
+                  <source src="/video/simak/calle.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 4" aria-label="Reproducir el escenario 4"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Calle · Enemigos que cruzan</h3>
+                <p>Blancos en movimiento entre carros y barricadas: reacción y puntería.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/edificio.webp" width="1280" height="718" aria-label="Escenario 5 de SIMAK: Edificio · Despeje con rehenes">
+                  <source src="/video/simak/edificio.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 5" aria-label="Reproducir el escenario 5"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Edificio · Despeje con rehenes</h3>
+                <p>Habitación por habitación: los rehenes no se tocan y huyen al ser liberados.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/simak/sala-final.webp" width="1280" height="718" aria-label="Escenario 6 de SIMAK: Sala final · Fin de la simulación">
+                  <source src="/video/simak/sala-final.mp4" type="video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="el escenario 6" aria-label="Reproducir el escenario 6"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Sala final · Fin de la simulación</h3>
+                <p>Las amenazas devuelven el fuego: la cobertura cuenta. Al final, los resultados.</p>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -689,7 +813,7 @@
               <div>
                 <h4>FDP Simuladores</h4>
                 <p>Simuladores de vuelo, de tiro, de entrenamiento táctico y escenarios 3D realistas.</p>
-                <button type="button" class="brand__toggle" aria-expanded="false" aria-controls="marca-simuladores">Ver proyectos (5) <svg class="brand__chevron" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <button type="button" class="brand__toggle" aria-expanded="false" aria-controls="marca-simuladores">Ver proyectos (6) <svg class="brand__chevron" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
               </div>
             </article>
             <div class="brand-panel" id="marca-simuladores" hidden>
@@ -700,9 +824,14 @@
                   <strong>AeroEscuela</strong>
                   <span>Simulador de entrenamiento de vuelo.</span>
                 </a>
+                <a class="brand-project" href="/proyectos/simak/">
+                  <span class="brand-project__media"><img src="img/simak-portada.webp" srcset="img/simak-portada-480.webp 480w, img/simak-portada-800.webp 800w, img/simak-portada.webp 1160w" sizes="(max-width: 760px) 46vw, 260px" width="1160" height="733" loading="lazy" alt="Portada de SIMAK, simulador de tiro"></span>
+                  <strong>SIMAK</strong>
+                  <span>Simulador de tiro con láser.</span>
+                </a>
                 <a class="brand-project" href="/proyectos/simuladores-de-tiro/">
-                  <span class="brand-project__media"><img src="img/tiro-urbano.webp" srcset="img/tiro-urbano-480.webp 480w, img/tiro-urbano-800.webp 800w, img/tiro-urbano-1200.webp 1200w, img/tiro-urbano.webp 1920w" sizes="(max-width: 760px) 46vw, 260px" width="1920" height="880" loading="lazy" alt="Calle de ciudad en el simulador de tiro"></span>
-                  <strong>Simuladores de tiro</strong>
+                  <span class="brand-project__media"><img src="img/tiro-vuelo.webp" srcset="img/tiro-vuelo-480.webp 480w, img/tiro-vuelo-800.webp 800w, img/tiro-vuelo-1200.webp 1200w, img/tiro-vuelo.webp 1920w" sizes="(max-width: 760px) 46vw, 260px" width="1920" height="760" loading="lazy" alt="Helicóptero en vuelo visto desde el puesto del tirador"></span>
+                  <strong>Tiro antiaéreo</strong>
                   <span>De la detección al impacto.</span>
                 </a>
                 <a class="brand-project" href="/proyectos/entrenamiento-tactico/">
@@ -818,7 +947,8 @@
                 <li><a href="#soluciones">IA local</a></li>
                 <li><a href="#soluciones">Simulación y entrenamiento</a></li>
                 <li><a href="/proyectos/aeroescuela/">Simulador de vuelo</a></li>
-                <li><a href="/proyectos/simuladores-de-tiro/">Simuladores de tiro</a></li>
+                <li><a href="/proyectos/simak/">SIMAK: tiro con láser</a></li>
+                <li><a href="/proyectos/simuladores-de-tiro/">Tiro antiaéreo</a></li>
                 <li><a href="/proyectos/apps-moviles/">Apps móviles</a></li>
                 <li><a href="/proyectos/sigma-mro/">Gestión de mantenimiento</a></li>
               </ul>
@@ -859,6 +989,6 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
   </a>
 
-  <script src="js/main.js?v=20261026"></script>
+  <script src="js/main.js?v=20261027"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://fdpsoftware.org/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <image:image><image:loc>https://fdpsoftware.org/img/og-fdp-software.jpg</image:loc></image:image>
     <image:image><image:loc>https://fdpsoftware.org/img/proyecto-sigma-mro.webp</image:loc></image:image>
     <image:image><image:loc>https://fdpsoftware.org/img/tiro-vuelo.webp</image:loc></image:image>
@@ -13,6 +13,13 @@
     <loc>https://fdpsoftware.org/servicios/</loc>
     <lastmod>2026-10-23</lastmod>
     <image:image><image:loc>https://fdpsoftware.org/img/og/servicios.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/proyectos/simak/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <image:image><image:loc>https://fdpsoftware.org/img/og/simak.jpg</image:loc></image:image>
+    <image:image><image:loc>https://fdpsoftware.org/img/simak-portada.webp</image:loc></image:image>
+    <image:image><image:loc>https://fdpsoftware.org/img/simak-consola.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://fdpsoftware.org/proyectos/sigma-mro/</loc>
@@ -48,8 +55,7 @@
     <image:image><image:loc>https://fdpsoftware.org/img/p/tiro-montana.webp</image:loc></image:image>
     <image:image><image:loc>https://fdpsoftware.org/img/p/tiro-lluvia.webp</image:loc></image:image>
     <image:image><image:loc>https://fdpsoftware.org/img/tiro-consola.webp</image:loc></image:image>
-    <image:image><image:loc>https://fdpsoftware.org/img/tiro-urbano.webp</image:loc></image:image>
-  </url>
+      </url>
   <url>
     <loc>https://fdpsoftware.org/proyectos/entrenamiento-tactico/</loc>
     <lastmod>2026-10-23</lastmod>

@@ -3,9 +3,13 @@
 {
   "name": "fdp-software",
   "compatibility_date": "2026-10-19",
+  // sitio/worker.js solo atiende /video/* (entrega los videos por partes, como exige Safari en iPhone)
+  "main": "sitio/worker.js",
   "assets": {
     // Solo se sube la carpeta public (esta configuración y LEEME.md quedan fuera)
     "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/video/*"],
     // Las direcciones que no existen muestran public/404.html
     "not_found_handling": "404-page"
   },

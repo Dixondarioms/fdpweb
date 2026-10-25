@@ -61,6 +61,7 @@ Y cada proyecto tiene su página propia, ideal para enviar por WhatsApp (se ve c
 
 - `https://fdpsoftware.org/proyectos/sigma-mro/`
 - `https://fdpsoftware.org/proyectos/aeroescuela/`
+- `https://fdpsoftware.org/proyectos/simak/` (SIMAK, con videos y el dossier en PDF)
 - `https://fdpsoftware.org/proyectos/simuladores-de-tiro/`
 - `https://fdpsoftware.org/proyectos/entrenamiento-tactico/`
 - `https://fdpsoftware.org/proyectos/escenarios-3d/`
