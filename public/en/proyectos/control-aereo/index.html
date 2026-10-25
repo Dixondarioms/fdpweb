@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Air control and interception simulator | FDP Simuladores</title>
-  <meta name="description" content="Simulator for training controllers, with radar tracks, flight identification and voice communications powered by local AI, an instructor station and evaluation. Works without internet.">
+  <meta name="description" content="Simulator for training air control and air defense operators: radar tracks, flight identification, interceptor guidance, voice with local AI, an instructor station and evaluation. No internet.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://fdpsoftware.org/en/proyectos/control-aereo/">
   <link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/control-aereo/">
@@ -18,7 +18,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://fdpsoftware.org/en/proyectos/control-aereo/">
   <meta property="og:title" content="Air control and interception simulator | FDP Simuladores">
-  <meta property="og:description" content="Simulator for training controllers, with radar tracks, flight identification and voice communications powered by local AI, an instructor station and evaluation. Works without internet.">
+  <meta property="og:description" content="Simulator for training air control and air defense operators: radar tracks, flight identification, interceptor guidance, voice with local AI, an instructor station and evaluation. No internet.">
   <meta property="og:image" content="https://fdpsoftware.org/img/og/control-aereo.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
   <meta property="og:image:alt" content="Air control and interception, by FDP Software">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Air control and interception simulator | FDP Simuladores">
-  <meta name="twitter:description" content="Simulator for training controllers, with radar tracks, flight identification and voice communications powered by local AI, an instructor station and evaluation. Works without internet.">
+  <meta name="twitter:description" content="Simulator for training air control and air defense operators: radar tracks, flight identification, interceptor guidance, voice with local AI, an instructor station and evaluation. No internet.">
   <meta name="twitter:image" content="https://fdpsoftware.org/img/og/control-aereo.jpg">
 
   <!-- Datos del proyecto para Google (no se ejecuta: es solo información) -->
@@ -44,7 +44,7 @@
         "@type": "SoftwareApplication",
         "name": "Air control and interception",
         "url": "https://fdpsoftware.org/en/proyectos/control-aereo/",
-        "description": "Simulator for training controllers, with radar tracks, flight identification and voice communications powered by local AI, an instructor station and evaluation. Works without internet.",
+        "description": "Simulator for training air control and air defense operators: radar tracks, flight identification, interceptor guidance, voice with local AI, an instructor station and evaluation. No internet.",
         "image": "https://fdpsoftware.org/img/og/control-aereo.jpg",
         "applicationCategory": "EducationalApplication",
         "operatingSystem": "Windows",
@@ -81,7 +81,7 @@
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="preload" href="/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/styles.css?v=20261030">
+  <link rel="stylesheet" href="/css/styles.css?v=20261031">
 </head>
 <body>
 
@@ -111,27 +111,28 @@
   </header>
 
   <main>
-    <!-- ===== Portada del proyecto ===== -->
-    <section class="phero">
-      <div class="container">
+    <!-- ===== Portada con video de fondo en silencio ===== -->
+    <section class="vband vband--page vband--radar" data-video aria-labelledby="control-titulo">
+      <div class="vband__media">
+        <video muted loop playsinline preload="none" data-autoplay data-poster="/video/radar/fondo.webp" width="1680" height="900" aria-hidden="true">
+          <source src="/video/radar/fondo-1280.mp4" type="/video/mp4" media="(max-width: 900px)">
+          <source src="/video/radar/fondo-1680.mp4" type="/video/mp4">
+        </video>
+      </div>
+      <div class="container vband__content">
         <nav class="crumbs" aria-label="Breadcrumb">
           <ol>
             <li><a href="/en/">Home</a></li>
-            <li><a href="/en/#proyectos">Projects</a></li>
+            <li><a href="/en/#control">Simulators</a></li>
             <li aria-current="page">Air control and interception</li>
           </ol>
         </nav>
-        <div class="phero__text">
-          <p class="slide__label">FDP Simuladores · Air control</p>
-          <h1 class="slide__title">Air control and interception. Train your controllers.</h1>
-          <p class="slide__text">Simulator for training controllers, with radar tracks, flight identification and voice communications powered by local artificial intelligence. The instructor prepares each exercise and evaluates performance.</p>
-          <div class="slide__actions">
-            <a href="https://wa.me/584120846332?text=Hi%20FDP%20Software%2C%20I%27d%20like%20information%20about%20the%20air%20control%20and%20interception%20simulator." class="btn btn--light" target="_blank" rel="noopener">Request a demo</a>
-            <a href="#incluye" class="btn btn--ghost-light">What's included</a>
-          </div>
-        </div>
-        <div class="phero__art" aria-hidden="true">
-          <div class="radar"><span></span></div>
+        <p class="vband__label">FDP Simuladores · Air control and interception</p>
+        <h1 class="vband__title" id="control-titulo">Air control and interception. Train your operators. <button type="button" class="vtoggle" data-video-toggle data-name="the background video" aria-label="Pause the background video"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button></h1>
+        <p class="vband__text">Simulator for training air control and air defense operators, with radar tracks, flight identification, interceptor guidance and voice communications powered by local artificial intelligence. The instructor prepares each exercise and evaluates performance.</p>
+        <div class="slide__actions">
+          <a href="https://wa.me/584120846332?text=Hi%20FDP%20Software%2C%20I%27d%20like%20information%20about%20the%20air%20control%20and%20interception%20simulator." class="btn btn--light" target="_blank" rel="noopener">Request a demo</a>
+          <a href="/docs/control-aereo-dossier.pdf" class="btn btn--ghost-light" download>Download the brochure (PDF, in Spanish)</a>
         </div>
       </div>
     </section>
@@ -139,9 +140,9 @@
     <div class="page">
       <div class="container">
         <dl class="specs">
-          <div><dt>Users</dt><dd>Controllers in training</dd></div>
+          <div><dt>Users</dt><dd>Operators in training</dd></div>
           <div><dt>Voice</dt><dd>With local AI</dd></div>
-          <div><dt>Instructor</dt><dd>Dedicated station</dd></div>
+          <div><dt>Instructor</dt><dd>Dedicated console</dd></div>
           <div><dt>Connection</dt><dd>No internet</dd></div>
         </dl>
       </div>
@@ -185,7 +186,86 @@
               <p>Complete exercise log to review every decision with the student.</p>
             </article>
           </div>
-          <p class="note pnote">For confidentiality reasons, we do not publish screenshots of this project. We will gladly show it to you in an in-person demo.</p>
+          
+        </div>
+      </section>
+
+      <!-- ===== Videos del simulador ===== -->
+      <section class="section section--tight" id="videos">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">An interception, step by step.</h2>
+            <p>Real footage from the simulator. Each clip plays silently while you watch.</p>
+          </div>
+          <div class="clips">
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/radar/vectores.webp" width="854" height="480" aria-label="Air control and interception simulator: vectors to the target">
+                  <source src="/video/radar/vectores.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: vectors to the target" aria-label="Play the video: vectors to the target"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Vectors to the target</h3>
+                <p>The operator guides the interceptors toward the suspicious track with heading, altitude and speed.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/radar/contacto.webp" width="854" height="480" aria-label="Air control and interception simulator: contact and identification">
+                  <source src="/video/radar/contacto.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: contact and identification" aria-label="Play the video: contact and identification"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Contact and identification</h3>
+                <p>The interceptors pull up alongside the target and the pilot identifies it visually, over the radio.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/radar/escolta.webp" width="854" height="480" aria-label="Air control and interception simulator: persuasion and escort">
+                  <source src="/video/radar/escolta.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: persuasion and escort" aria-label="Play the video: persuasion and escort"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Persuasion and escort</h3>
+                <p>With command authorization, the interceptor signals the intruder to follow it to an airfield.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Galería ===== -->
+      <section class="section section--tight" id="galeria">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">See it in action.</h2>
+            <p>For confidentiality reasons, these images hide the system name, the bases and the real radar data.</p>
+          </div>
+          <div class="pgallery">
+            <figure class="is-full">
+              <img src="/img/p/radar-puesto.webp" srcset="/img/p/radar-puesto-480.webp 480w, /img/p/radar-puesto-800.webp 800w, /img/p/radar-puesto-1200.webp 1200w, /img/p/radar-puesto.webp 1680w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(100vw - 48px), 1192px" width="1680" height="900" loading="lazy" alt="Operator station: radar map with two interceptors next to the suspicious track, and the side panels">
+              <figcaption>Operator station during an interception</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/radar-resultado.webp" srcset="/img/p/radar-resultado-480.webp 480w, /img/p/radar-resultado.webp 796w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="796" height="495" loading="lazy" alt="Exercise result: 100, passed, with all objectives achieved and no errors">
+              <figcaption>Automatic evaluation at the end</figcaption>
+            </figure>
+            <figure>
+              <div class="pgallery__text">
+                <h3>What it evaluates</h3>
+                <ul class="checks">
+                  <li>Reaction time, from alert to takeoff</li>
+                  <li>Identifications and radio transmissions</li>
+                  <li>Scenario objectives achieved</li>
+                  <li>Procedure and phraseology errors</li>
+                </ul>
+              </div>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -277,6 +357,6 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
   </a>
 
-  <script src="/js/main.js?v=20261030"></script>
+  <script src="/js/main.js?v=20261031"></script>
 </body>
 </html>

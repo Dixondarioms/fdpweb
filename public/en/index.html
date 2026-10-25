@@ -85,7 +85,7 @@
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="preload" href="/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/styles.css?v=20261030">
+  <link rel="stylesheet" href="/css/styles.css?v=20261031">
 </head>
 <body>
 
@@ -400,20 +400,72 @@
               <a href="/en/proyectos/escenarios-3d/" class="link-arrow">See the 3D environments</a>
             </article>
 
-            <article class="media-card media-card--wide">
-              <div class="media-card__media media-card__media--radar" aria-hidden="true">
-                <span class="badge badge--teal media-card__badge">S</span>
-                <div class="radar"><span></span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Control e interceptación aérea: video de fondo en silencio, con botón de pausa ===== -->
+      <section class="vband vband--radar" id="control" data-video aria-labelledby="control-titulo">
+        <div class="vband__media">
+          <video muted loop playsinline preload="none" data-autoplay data-poster="/video/radar/fondo.webp" width="1680" height="900" aria-hidden="true">
+            <source src="/video/radar/fondo-1280.mp4" type="/video/mp4" media="(max-width: 900px)">
+            <source src="/video/radar/fondo-1680.mp4" type="/video/mp4">
+          </video>
+        </div>
+        <div class="container vband__content">
+          <p class="vband__label">FDP Simuladores · Air control and interception</p>
+          <h2 class="vband__title" id="control-titulo">From radar to interception. <button type="button" class="vtoggle" data-video-toggle data-name="the background video" aria-label="Pause the background video"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button></h2>
+          <p class="vband__text">The operator watches the airspace, classifies every track, scrambles interceptors and guides them to the target, talking over the radio with pilots simulated by local AI. No internet.</p>
+          <div class="slide__actions">
+            <a href="/en/proyectos/control-aereo/" class="btn btn--light">Discover the simulator</a>
+            <a href="/docs/control-aereo-dossier.pdf" class="btn btn--ghost-light" download>Download the brochure (PDF, in Spanish)</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="control-escenas">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">An interception, step by step.</h2>
+            <p>Real footage from the simulator. For confidentiality reasons, these images hide the system name, the bases and the real radar data.</p>
+          </div>
+          <div class="clips">
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/radar/vectores.webp" width="854" height="480" aria-label="Air control and interception simulator: vectors to the target">
+                  <source src="/video/radar/vectores.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: vectors to the target" aria-label="Play the video: vectors to the target"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
               </div>
-              <div>
-                <h3>Air control and interception.</h3>
-                <p>
-                  Simulator for controllers with radar tracks, flight identification and voice communications powered by local AI, an instructor station and evaluation. Works completely offline.
-                </p>
-                <p class="note">For confidentiality reasons, we do not publish screenshots of this project.</p>
-                <a href="/en/proyectos/control-aereo/" class="link-arrow">Discover the simulator</a>
+              <figcaption>
+                <h3>Vectors to the target</h3>
+                <p>The operator guides the interceptors toward the suspicious track with heading, altitude and speed.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/radar/contacto.webp" width="854" height="480" aria-label="Air control and interception simulator: contact and identification">
+                  <source src="/video/radar/contacto.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: contact and identification" aria-label="Play the video: contact and identification"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
               </div>
-            </article>
+              <figcaption>
+                <h3>Contact and identification</h3>
+                <p>The interceptors pull up alongside the target and the pilot identifies it visually, over the radio.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/radar/escolta.webp" width="854" height="480" aria-label="Air control and interception simulator: persuasion and escort">
+                  <source src="/video/radar/escolta.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: persuasion and escort" aria-label="Play the video: persuasion and escort"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Persuasion and escort</h3>
+                <p>With command authorization, the interceptor signals the intruder to follow it to an airfield.</p>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -894,7 +946,7 @@
                   <span>Caracas in 3D, built from real data.</span>
                 </a>
                 <a class="brand-project" href="/en/proyectos/control-aereo/">
-                  <span class="brand-project__media media-card__media--radar" aria-hidden="true"><span class="radar"><span></span></span></span>
+                  <span class="brand-project__media"><img src="/img/p/radar-puesto.webp" srcset="/img/p/radar-puesto-480.webp 480w, /img/p/radar-puesto-800.webp 800w, /img/p/radar-puesto-1200.webp 1200w, /img/p/radar-puesto.webp 1680w" sizes="(max-width: 760px) 46vw, 260px" width="1680" height="900" loading="lazy" alt="Operator station of the air control and interception simulator"></span>
                   <strong>Air control</strong>
                   <span>Air control and interception simulator.</span>
                 </a>
@@ -1055,6 +1107,6 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
   </a>
 
-  <script src="/js/main.js?v=20261030"></script>
+  <script src="/js/main.js?v=20261031"></script>
 </body>
 </html>

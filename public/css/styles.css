@@ -1538,6 +1538,20 @@ button { font: inherit; }
 .vband--franja,
 .vband--franja.vband--page { min-height: min(88vh, 760px); }
 .vband--franja .vband__media { max-width: 1920px; }
+/* Video de 1680×900 (control aéreo): nunca más ancho que su tamaño real */
+.vband--radar .vband__media { max-width: 1680px; }
+.vband--radar,
+.vband--radar.vband--page { min-height: min(88vh, 860px); }
+.pgallery__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 32px;
+  border-radius: var(--radius);
+  background: var(--gray);
+}
+.pgallery__text h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; margin-bottom: 16px; }
 .vband--page .vband__content { padding-top: 130px; }
 
 /* Botón redondo de pausa/reproducción (fondo y clips) */
