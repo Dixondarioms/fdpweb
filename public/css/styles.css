@@ -1457,6 +1457,8 @@ button { font: inherit; }
   border-radius: var(--radius-lg);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
 }
+/* Capturas de celulares con fondo transparente: sin marco ni sombra de caja */
+.prow__media img[src*="-pantallas"] { border-radius: 0; box-shadow: none; }
 .prow h2 {
   font-family: var(--font-display);
   font-weight: 900;
