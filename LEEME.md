@@ -92,6 +92,12 @@ Los mensajes que llegan a **contacto@fdpsoftware.org** se reenvían automáticam
   Para responder como contacto@fdpsoftware.org hace falta un servicio de correo con el dominio
   (por ejemplo Zoho Mail o Google Workspace) y ajustar los registros SPF y DKIM.
 
+## Estadísticas de visitas
+
+Cloudflare cuenta las visitas sin cookies (Web Analytics, configuración automática). Para verlas: entra a Cloudflare →
+**Analytics & Logs → Web Analytics → fdpsoftware.org**. Ahí aparecen visitas, páginas más vistas, países y dispositivos.
+No hay que tocar la web: Cloudflare agrega el contador solo.
+
 ## 5. Google (Search Console)
 
 `fdpsoftware.org` está registrado y verificado en **Google Search Console**
