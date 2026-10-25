@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anti-aircraft shooting simulator | FDP Simuladores</title>
+  <meta name="description" content="Anti-aircraft shooting simulator in realistic 3D scenarios, without using ammunition: the shooter&#x27;s full sequence, targets in flight, an instructor console, day, night and rain exercises, and automatic scoring.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://fdpsoftware.org/en/proyectos/simuladores-de-tiro/">
+  <link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/simuladores-de-tiro/">
+  <link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/simuladores-de-tiro/">
+  <link rel="alternate" hreflang="x-default" href="https://fdpsoftware.org/proyectos/simuladores-de-tiro/">
+  <meta name="theme-color" content="#0b0d1a">
+
+  <!-- Vista previa al compartir en redes (WhatsApp, Facebook, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FDP Software">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://fdpsoftware.org/en/proyectos/simuladores-de-tiro/">
+  <meta property="og:title" content="Anti-aircraft shooting simulator | FDP Simuladores">
+  <meta property="og:description" content="Anti-aircraft shooting simulator in realistic 3D scenarios, without using ammunition: the shooter&#x27;s full sequence, targets in flight, an instructor console, day, night and rain exercises, and automatic scoring.">
+  <meta property="og:image" content="https://fdpsoftware.org/img/og/simuladores-de-tiro.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anti-aircraft shooting simulator, by FDP Software">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anti-aircraft shooting simulator | FDP Simuladores">
+  <meta name="twitter:description" content="Anti-aircraft shooting simulator in realistic 3D scenarios, without using ammunition: the shooter&#x27;s full sequence, targets in flight, an instructor console, day, night and rain exercises, and automatic scoring.">
+  <meta name="twitter:image" content="https://fdpsoftware.org/img/og/simuladores-de-tiro.jpg">
+
+  <!-- Datos del proyecto para Google (no se ejecuta: es solo información) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://fdpsoftware.org/#organizacion",
+        "name": "FDP Software",
+        "url": "https://fdpsoftware.org/en/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Anti-aircraft shooting simulator",
+        "url": "https://fdpsoftware.org/en/proyectos/simuladores-de-tiro/",
+        "description": "Anti-aircraft shooting simulator in realistic 3D scenarios, without using ammunition: the shooter's full sequence, targets in flight, an instructor console, day, night and rain exercises, and automatic scoring.",
+        "image": "https://fdpsoftware.org/img/og/simuladores-de-tiro.jpg",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Windows",
+        "inLanguage": "en",
+        "author": {
+          "@id": "https://fdpsoftware.org/#organizacion"
+        },
+        "publisher": {
+          "@id": "https://fdpsoftware.org/#organizacion"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://fdpsoftware.org/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Anti-aircraft shooting simulator",
+            "item": "https://fdpsoftware.org/en/proyectos/simuladores-de-tiro/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="/img/favicon-48.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=20261030">
+</head>
+<body>
+
+  <!-- ===== Encabezado flotante ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/en/" class="logo" aria-label="FDP Software, home">
+        <img src="/img/logo-fdp-dark.png" alt="" width="40" height="40" class="logo__img">
+        <span class="logo__text">FDP Software</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="/en/#soluciones">Solutions</a>
+        <a href="/en/#proyectos">Projects</a>
+        <a href="/en/proyectos/simak/">SIMAK</a>
+        <a href="/en/#apps">Apps</a>
+        <a href="/en/#sectores">Industries</a>
+        <a href="/en/#nosotros">About us</a>
+        <a href="/proyectos/simuladores-de-tiro/" class="nav__lang" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+        <a href="#contacto" class="btn btn--dark btn--small">Contact us</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Portada con video de fondo en silencio ===== -->
+    <section class="vband vband--page vband--franja" data-video aria-labelledby="tiro-titulo">
+      <div class="vband__media">
+        <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/fondo.webp" width="1920" height="760" aria-hidden="true">
+          <source src="/video/antiaereo/fondo-1280.mp4" type="/video/mp4" media="(max-width: 900px)">
+          <source src="/video/antiaereo/fondo-1920.mp4" type="/video/mp4">
+        </video>
+      </div>
+      <div class="container vband__content">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/en/">Home</a></li>
+            <li><a href="/en/#tiro">Simulators</a></li>
+            <li aria-current="page">Anti-aircraft shooting</li>
+          </ol>
+        </nav>
+        <p class="vband__label">FDP Simuladores · Anti-aircraft shooting simulator</p>
+        <h1 class="vband__title" id="tiro-titulo">Anti-aircraft shooting. From detection to impact. <button type="button" class="vtoggle" data-video-toggle data-name="the background video" aria-label="Pause the background video"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button></h1>
+        <p class="vband__text">Anti-aircraft shooting training in realistic 3D scenarios, by day, at night and in bad weather, without using live ammunition. The shooter practices the full sequence while the instructor follows every exercise from the console.</p>
+        <div class="slide__actions">
+          <a href="https://wa.me/584120846332?text=Hi%20FDP%20Software%2C%20I%27d%20like%20information%20about%20the%20anti-aircraft%20shooting%20simulator." class="btn btn--light" target="_blank" rel="noopener">Request a demo</a>
+          <a href="/docs/antiaereo-dossier.pdf" class="btn btn--ghost-light" download>Download the brochure (PDF, in Spanish)</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="page">
+      <div class="container">
+        <dl class="specs">
+          <div><dt>Mode</dt><dd>Anti-aircraft shooting</dd></div>
+          <div><dt>Scenarios</dt><dd>Day, night, rain and storm</dd></div>
+          <div><dt>Instructor</dt><dd>Real-time console</dd></div>
+          <div><dt>Connection</dt><dd>No internet</dd></div>
+        </dl>
+      </div>
+
+      <!-- ===== Qué incluye ===== -->
+      <section class="section section--tight" id="incluye">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Train the full sequence, as many times as needed.</h2>
+            <p>Every exercise is recorded so the instructor can correct with data and the shooter can see their progress.</p>
+          </div>
+          <div class="pfeatures">
+            <article class="pfeature">
+              <span class="badge badge--magenta" aria-hidden="true">1</span>
+              <h3>Full sequence</h3>
+              <p>Preparation, target identification, lock-on and firing, in the same order as the real procedure.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--blue" aria-hidden="true">2</span>
+              <h3>Targets in flight</h3>
+              <p>Airplanes and helicopters with varied routes and maneuvers: passes over the position, low-level flights and point defense.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--teal" aria-hidden="true">3</span>
+              <h3>Weather and time of day</h3>
+              <p>Day, night, rain or storm exercises, to train in difficult conditions.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--orange" aria-hidden="true">4</span>
+              <h3>Realistic terrain</h3>
+              <p>Savannas, hills and mountains with relief and vegetation, where the target appears and hides just like on real terrain.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--violet" aria-hidden="true">5</span>
+              <h3>Instructor console</h3>
+              <p>Exercise catalog, a profile for each operator and real-time tracking of the launcher, the telescope and the aircraft.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--green" aria-hidden="true">6</span>
+              <h3>Automatic scoring</h3>
+              <p>A score at the end and a step-by-step timeline to correct mistakes.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Videos del simulador ===== -->
+      <section class="section section--tight" id="videos">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Training in action.</h2>
+            <p>Real footage from the simulator. Each clip plays silently while you watch.</p>
+          </div>
+          <div class="clips">
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/blanco.webp" width="1280" height="720" aria-label="Anti-aircraft shooting simulator: target in sight">
+                  <source src="/video/antiaereo/blanco.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: target in sight" aria-label="Play the video: target in sight"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Target in sight</h3>
+                <p>Helicopters and airplanes that approach, maneuver and fly over the shooter's position.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/lanzamiento.webp" width="1280" height="720" aria-label="Anti-aircraft shooting simulator: firing and pursuit">
+                  <source src="/video/antiaereo/lanzamiento.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: firing and pursuit" aria-label="Play the video: firing and pursuit"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Firing and pursuit</h3>
+                <p>The missile launches, follows the target's infrared signature and leaves its trail in the sky.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/derribo.webp" width="1280" height="720" aria-label="Anti-aircraft shooting simulator: impact and fall">
+                  <source src="/video/antiaereo/derribo.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: impact and fall" aria-label="Play the video: impact and fall"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Impact and fall</h3>
+                <p>When the shot is right, the target is hit and goes down; if not, the exercise continues.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/montana.webp" width="1280" height="720" aria-label="Anti-aircraft shooting simulator: point defense in the mountains">
+                  <source src="/video/antiaereo/montana.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: point defense in the mountains" aria-label="Play the video: point defense in the mountains"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Point defense in the mountains</h3>
+                <p>Low-flying targets between hills that appear and hide behind the terrain.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/nocturno.webp" width="1280" height="720" aria-label="Anti-aircraft shooting simulator: night exercise">
+                  <source src="/video/antiaereo/nocturno.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: night exercise" aria-label="Play the video: night exercise"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Night exercise</h3>
+                <p>Only the navigation lights give the target away: identification and lock-on in the dark.</p>
+              </figcaption>
+            </figure>
+            <figure class="clip" data-video>
+              <div class="clip__media">
+                <video muted loop playsinline preload="none" data-autoplay data-poster="/video/antiaereo/consola.webp" width="1280" height="720" aria-label="Anti-aircraft shooting simulator: instructor console">
+                  <source src="/video/antiaereo/consola.mp4" type="/video/mp4">
+                </video>
+                <button type="button" class="vtoggle" data-video-toggle data-name="the video: instructor console" aria-label="Play the video: instructor console"><svg viewBox="0 0 24 24" class="icon-pause" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z"/></svg><svg viewBox="0 0 24 24" class="icon-play" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+              </div>
+              <figcaption>
+                <h3>Instructor console</h3>
+                <p>Operator view, telescope, radar and exercise aircraft, in real time.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Galería ===== -->
+      <section class="section section--tight" id="galeria">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">See it in action.</h2>
+            <p>Real screenshots of the simulator at work.</p>
+          </div>
+          <div class="pgallery">
+            <figure>
+              <img src="/img/p/tiro-lanzamiento.webp" srcset="/img/p/tiro-lanzamiento-480.webp 480w, /img/p/tiro-lanzamiento-800.webp 800w, /img/p/tiro-lanzamiento-1200.webp 1200w, /img/p/tiro-lanzamiento.webp 1440w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1440" height="750" loading="lazy" alt="Firing at an aircraft crossing over the savanna">
+              <figcaption>Firing at the target</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/tiro-nocturno.webp" srcset="/img/tiro-nocturno-480.webp 480w, /img/tiro-nocturno-800.webp 800w, /img/tiro-nocturno.webp 1100w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1100" height="620" loading="lazy" alt="Night exercise with the target&#x27;s navigation lights under a starry sky">
+              <figcaption>Night exercise</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/tiro-derribo.webp" srcset="/img/p/tiro-derribo-480.webp 480w, /img/p/tiro-derribo-800.webp 800w, /img/p/tiro-derribo-1200.webp 1200w, /img/p/tiro-derribo.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="760" loading="lazy" alt="Smoke in the sky after hitting the target over the savanna">
+              <figcaption>Hit on the target</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/tiro-evaluacion.webp" srcset="/img/tiro-evaluacion-480.webp 480w, /img/tiro-evaluacion-800.webp 800w, /img/tiro-evaluacion-1200.webp 1200w, /img/tiro-evaluacion.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="770" loading="lazy" alt="Exercise result screen: 100 out of 100, passed, with the step-by-step review">
+              <figcaption>Automatic scoring</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/tiro-montana.webp" srcset="/img/p/tiro-montana-480.webp 480w, /img/p/tiro-montana-800.webp 800w, /img/p/tiro-montana-1200.webp 1200w, /img/p/tiro-montana.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="760" loading="lazy" alt="Aircraft flying low between hills during a point defense exercise">
+              <figcaption>Point defense in mountainous terrain</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/tiro-lluvia.webp" srcset="/img/p/tiro-lluvia-480.webp 480w, /img/p/tiro-lluvia-800.webp 800w, /img/p/tiro-lluvia-1200.webp 1200w, /img/p/tiro-lluvia.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="760" loading="lazy" alt="Helicopter flying in the rain, seen from the shooter&#x27;s position">
+              <figcaption>Exercise in the rain</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/tiro-helicoptero.webp" srcset="/img/p/tiro-helicoptero-480.webp 480w, /img/p/tiro-helicoptero-800.webp 800w, /img/p/tiro-helicoptero-1200.webp 1200w, /img/p/tiro-helicoptero.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="760" loading="lazy" alt="Helicopter flying toward the shooter&#x27;s position">
+              <figcaption>Target in sight</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/tiro-caida.webp" srcset="/img/p/tiro-caida-480.webp 480w, /img/p/tiro-caida-800.webp 800w, /img/p/tiro-caida-1200.webp 1200w, /img/p/tiro-caida.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="760" loading="lazy" alt="Hit helicopter falling engulfed in fire">
+              <figcaption>Target going down</figcaption>
+            </figure>
+            <figure>
+              <img src="/img/p/tiro-explosion.webp" srcset="/img/p/tiro-explosion-480.webp 480w, /img/p/tiro-explosion-800.webp 800w, /img/p/tiro-explosion-1200.webp 1200w, /img/p/tiro-explosion.webp 1920w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(50vw - 36px), 584px" width="1920" height="760" loading="lazy" alt="Hit airplane exploding over the ground, seen from above">
+              <figcaption>Target downed on the ground</figcaption>
+            </figure>
+            <figure class="is-full">
+              <img src="/img/tiro-consola.webp" srcset="/img/tiro-consola-480.webp 480w, /img/tiro-consola-800.webp 800w, /img/tiro-consola-1200.webp 1200w, /img/tiro-consola.webp 1656w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) calc(100vw - 48px), 1192px" width="1656" height="861" loading="lazy" alt="Real-time tracking console with launcher status, telescope, radar and exercise aircraft">
+              <figcaption>Real-time instructor console</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Contacto ===== -->
+      <section class="section cta cta--brand" id="contacto">
+        <div class="container">
+          <h2 class="display display--md">Want to see the anti-aircraft simulator in action?</h2>
+          <p>Schedule a demo or tell us what you need. We reply by WhatsApp or email.</p>
+          <div class="cta__actions">
+            <a href="https://wa.me/584120846332?text=Hi%20FDP%20Software%2C%20I%27d%20like%20information%20about%20the%20anti-aircraft%20shooting%20simulator." class="btn btn--light" target="_blank" rel="noopener">Message us on WhatsApp</a>
+            <a href="/docs/antiaereo-dossier.pdf" class="btn btn--ghost-light" download>Download the brochure (PDF, in Spanish)</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Otros proyectos ===== -->
+      <section class="section section--tight section--gray">
+        <div class="container">
+          <h2 class="more__title">Other projects</h2>
+          <div class="more">
+            <a href="/en/proyectos/sigma-mro/"><span class="badge badge--blue" aria-hidden="true">Σ</span>SIGMA MRO</a>
+            <a href="/en/proyectos/aeroescuela/"><span class="badge badge--violet" aria-hidden="true">A</span>AeroEscuela</a>
+            <a href="/en/proyectos/entrenamiento-tactico/"><span class="badge badge--teal" aria-hidden="true">S</span>Tactical and strategic training</a>
+            <a href="/en/proyectos/escenarios-3d/"><span class="badge badge--orange" aria-hidden="true">3D</span>3D Environments of Venezuela</a>
+            <a href="/en/proyectos/control-aereo/"><span class="badge badge--teal" aria-hidden="true">S</span>Air control and interception</a>
+            <a href="/en/proyectos/apps-moviles/"><span class="badge badge--green" aria-hidden="true">▶</span>Mobile apps</a>
+            <a href="/en/proyectos/simak/"><span class="badge badge--magenta" aria-hidden="true">SK</span>SIMAK · Laser shooting</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__grid">
+            <div class="footer__brand">
+              <a href="/en/" class="logo" aria-label="FDP Software, home">
+                <img src="/img/logo-fdp-dark.png" alt="" width="40" height="40" class="logo__img" loading="lazy">
+                <span class="logo__text">FDP Software</span>
+              </a>
+              <p>Development, maintenance and distribution of high-end digital software.</p>
+            </div>
+
+            <div>
+              <h2>Projects</h2>
+              <ul>
+                <li><a href="/en/proyectos/sigma-mro/">SIGMA MRO</a></li>
+                <li><a href="/en/proyectos/aeroescuela/">Flight simulator</a></li>
+                <li><a href="/en/proyectos/simak/">SIMAK: laser shooting</a></li>
+                <li><a href="/en/proyectos/simuladores-de-tiro/">Anti-aircraft shooting</a></li>
+                <li><a href="/en/proyectos/entrenamiento-tactico/">Tactical training</a></li>
+                <li><a href="/en/proyectos/escenarios-3d/">3D Environments</a></li>
+                <li><a href="/en/proyectos/control-aereo/">Air control</a></li>
+                <li><a href="/en/proyectos/apps-moviles/">Mobile apps</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Company</h2>
+              <ul>
+                <li><a href="/en/#soluciones">Solutions</a></li>
+                <li><a href="/en/servicios/">Services</a></li>
+                <li><a href="/en/#sectores">Industries</a></li>
+                <li><a href="/en/#nosotros">About us</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Contact</h2>
+              <ul>
+                <li><a href="mailto:contacto@fdpsoftware.org">contacto@fdpsoftware.org</a></li>
+                <li><a href="https://wa.me/584120846332?text=Hi%20FDP%20Software%2C%20I%27d%20like%20information%20about%20your%20solutions." target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/freethepress05/" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@freethepress5" target="_blank" rel="noopener">TikTok</a></li>
+                <li>Venezuela</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <p>© <span id="year">2026</span> FDP SOFTWARE. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="fab" href="https://wa.me/584120846332?text=Hi%20FDP%20Software%2C%20I%27d%20like%20information%20about%20your%20solutions." target="_blank" rel="noopener" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
+  </a>
+
+  <script src="/js/main.js?v=20261030"></script>
+</body>
+</html>

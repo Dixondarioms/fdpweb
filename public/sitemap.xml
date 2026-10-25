@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://fdpsoftware.org/</loc>
     <lastmod>2026-10-25</lastmod>
@@ -89,5 +89,65 @@
     <image:image><image:loc>https://fdpsoftware.org/img/app-marcelo-go.webp</image:loc></image:image>
     <image:image><image:loc>https://fdpsoftware.org/img/app-minijuegos.webp</image:loc></image:image>
     <image:image><image:loc>https://fdpsoftware.org/img/app-ritmo-diario.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/"/>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/servicios/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/servicios/"/>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/proyectos/simak/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/simak/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/simak/"/>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/proyectos/sigma-mro/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/sigma-mro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/sigma-mro/"/>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/proyectos/aeroescuela/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/aeroescuela/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/aeroescuela/"/>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/proyectos/simuladores-de-tiro/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/simuladores-de-tiro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/simuladores-de-tiro/"/>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/proyectos/entrenamiento-tactico/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/entrenamiento-tactico/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/entrenamiento-tactico/"/>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/proyectos/escenarios-3d/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/escenarios-3d/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/escenarios-3d/"/>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/proyectos/control-aereo/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/control-aereo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/control-aereo/"/>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/proyectos/apps-moviles/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/apps-moviles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/apps-moviles/"/>
   </url>
 </urlset>

@@ -1,5 +1,11 @@
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+// Textos que pone el JavaScript, en el idioma de la página (español o inglés en /en/)
+const EN = document.documentElement.lang === "en";
+const T = EN
+  ? { openMenu: "Open menu", closeMenu: "Close menu", playCarousel: "Play the carousel", pauseCarousel: "Pause the carousel", play: "Play ", pause: "Pause " }
+  : { openMenu: "Abrir menú", closeMenu: "Cerrar menú", playCarousel: "Reproducir el carrusel", pauseCarousel: "Pausar el carrusel", play: "Reproducir ", pause: "Pausar " };
+
 // Menú para celulares
 const toggle = document.getElementById("nav-toggle");
 const nav = document.getElementById("nav");
@@ -7,14 +13,14 @@ const nav = document.getElementById("nav");
 function closeMenu() {
   nav.classList.remove("is-open");
   toggle.setAttribute("aria-expanded", "false");
-  toggle.setAttribute("aria-label", "Abrir menú");
+  toggle.setAttribute("aria-label", T.openMenu);
   onScroll();
 }
 
 toggle.addEventListener("click", () => {
   const open = nav.classList.toggle("is-open");
   toggle.setAttribute("aria-expanded", String(open));
-  toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  toggle.setAttribute("aria-label", open ? T.closeMenu : T.openMenu);
   onScroll();
 });
 
@@ -121,7 +127,7 @@ if (hero && document.getElementById("hero-pause")) {
   function setPaused(value) {
     paused = value;
     hero.classList.toggle("is-paused", paused);
-    pauseBtn.setAttribute("aria-label", paused ? "Reproducir el carrusel" : "Pausar el carrusel");
+    pauseBtn.setAttribute("aria-label", paused ? T.playCarousel : T.pauseCarousel);
     if (paused) {
       clearTimeout(timer);
     } else {
@@ -210,7 +216,7 @@ autoVideos.forEach((v) => {
   const btn = box && box.querySelector("[data-video-toggle]");
   const sync = () => {
     if (box) box.classList.toggle("is-paused", v.paused);
-    if (btn) btn.setAttribute("aria-label", (v.paused ? "Reproducir " : "Pausar ") + btn.dataset.name);
+    if (btn) btn.setAttribute("aria-label", (v.paused ? T.play : T.pause) + btn.dataset.name);
   };
   v.addEventListener("play", sync);
   v.addEventListener("pause", sync);

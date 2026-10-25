@@ -23,6 +23,12 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
 - `wrangler.jsonc` publica `public/` en **Cloudflare Workers** (archivos estáticos) y conecta el dominio. No toques sus `routes`.
 - `sitio/worker.js` solo atiende `/video/*`: entrega los videos por partes ("Range"), que Safari en iPhone exige para
   reproducirlos. Todo lo demás lo sirven los archivos estáticos con las cabeceras de `_headers`.
+- **Versión en inglés** (`public/en/`): se genera desde el español con `python sitio/ingles/construir.py`; no edites
+  `public/en/` a mano. Las traducciones están en `sitio/ingles/traducciones.json` ("textos": español → inglés, y "whatsapp":
+  el mensaje ya escrito de cada página). Después de cambiar un texto en español, corre el programa: si avisa de "textos sin
+  traducir", agrégalos al JSON (en inglés estadounidense, mismo tono) y vuelve a correrlo. El programa también pone el botón
+  ES/EN del menú (`.nav__lang`) y las etiquetas `hreflang` en las dos versiones. `js/main.js` elige sus textos según `lang`.
+  Las imágenes, videos y dossiers PDF son los mismos (los PDF están en español y así se indica en inglés).
 - `LEEME.md` es la guía para personas. Mantenla al día si cambias la forma de trabajar.
 - `correo/` es un Email Worker aparte (`fdp-correo`) que reenvía `contacto@fdpsoftware.org` a las direcciones de
   `DESTINOS` en `correo/wrangler.jsonc`. Se publica desde esa carpeta con `npx.cmd wrangler deploy`. Esas direcciones
@@ -120,7 +126,8 @@ en lugar de `.phero` y tiene los clips de escenarios. Todas siguen el mismo orde
 ## Velocidad
 
 - **Versión de CSS y JS**: `styles.css` y `main.js` se cargan con `?v=AAAAMMDD` y se guardan 30 días en caché.
-  Cada vez que los cambies, actualiza ese número en `index.html`, `404.html`, las ocho páginas de `proyectos/` y `servicios/`,
+  Cada vez que los cambies, actualiza ese número en `index.html`, `404.html`, las ocho páginas de `proyectos/` y `servicios/`
+  (y luego regenera el inglés),
   o los visitantes seguirán viendo la versión vieja.
 - **Imágenes responsive**: cada imagen de contenido tiene versiones más pequeñas (`nombre-480.webp`, `nombre-800.webp`…)
   declaradas en `srcset`, con un `sizes` que describe su ancho real en pantalla. Si agregas o reemplazas una imagen,

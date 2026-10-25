@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Air control and interception simulator | FDP Simuladores</title>
+  <meta name="description" content="Simulator for training controllers, with radar tracks, flight identification and voice communications powered by local AI, an instructor station and evaluation. Works without internet.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://fdpsoftware.org/en/proyectos/control-aereo/">
+  <link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/control-aereo/">
+  <link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/control-aereo/">
+  <link rel="alternate" hreflang="x-default" href="https://fdpsoftware.org/proyectos/control-aereo/">
+  <meta name="theme-color" content="#0b0d1a">
+
+  <!-- Vista previa al compartir en redes (WhatsApp, Facebook, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FDP Software">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://fdpsoftware.org/en/proyectos/control-aereo/">
+  <meta property="og:title" content="Air control and interception simulator | FDP Simuladores">
+  <meta property="og:description" content="Simulator for training controllers, with radar tracks, flight identification and voice communications powered by local AI, an instructor station and evaluation. Works without internet.">
+  <meta property="og:image" content="https://fdpsoftware.org/img/og/control-aereo.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Air control and interception, by FDP Software">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Air control and interception simulator | FDP Simuladores">
+  <meta name="twitter:description" content="Simulator for training controllers, with radar tracks, flight identification and voice communications powered by local AI, an instructor station and evaluation. Works without internet.">
+  <meta name="twitter:image" content="https://fdpsoftware.org/img/og/control-aereo.jpg">
+
+  <!-- Datos del proyecto para Google (no se ejecuta: es solo información) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://fdpsoftware.org/#organizacion",
+        "name": "FDP Software",
+        "url": "https://fdpsoftware.org/en/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Air control and interception",
+        "url": "https://fdpsoftware.org/en/proyectos/control-aereo/",
+        "description": "Simulator for training controllers, with radar tracks, flight identification and voice communications powered by local AI, an instructor station and evaluation. Works without internet.",
+        "image": "https://fdpsoftware.org/img/og/control-aereo.jpg",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Windows",
+        "inLanguage": "en",
+        "author": {
+          "@id": "https://fdpsoftware.org/#organizacion"
+        },
+        "publisher": {
+          "@id": "https://fdpsoftware.org/#organizacion"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://fdpsoftware.org/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Air control and interception",
+            "item": "https://fdpsoftware.org/en/proyectos/control-aereo/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="/img/favicon-48.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=20261030">
+</head>
+<body>
+
+  <!-- ===== Encabezado flotante ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/en/" class="logo" aria-label="FDP Software, home">
+        <img src="/img/logo-fdp-dark.png" alt="" width="40" height="40" class="logo__img">
+        <span class="logo__text">FDP Software</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="/en/#soluciones">Solutions</a>
+        <a href="/en/#proyectos">Projects</a>
+        <a href="/en/proyectos/simak/">SIMAK</a>
+        <a href="/en/#apps">Apps</a>
+        <a href="/en/#sectores">Industries</a>
+        <a href="/en/#nosotros">About us</a>
+        <a href="/proyectos/control-aereo/" class="nav__lang" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+        <a href="#contacto" class="btn btn--dark btn--small">Contact us</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Portada del proyecto ===== -->
+    <section class="phero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/en/">Home</a></li>
+            <li><a href="/en/#proyectos">Projects</a></li>
+            <li aria-current="page">Air control and interception</li>
+          </ol>
+        </nav>
+        <div class="phero__text">
+          <p class="slide__label">FDP Simuladores · Air control</p>
+          <h1 class="slide__title">Air control and interception. Train your controllers.</h1>
+          <p class="slide__text">Simulator for training controllers, with radar tracks, flight identification and voice communications powered by local artificial intelligence. The instructor prepares each exercise and evaluates performance.</p>
+          <div class="slide__actions">
+            <a href="https://wa.me/584120846332?text=Hi%20FDP%20Software%2C%20I%27d%20like%20information%20about%20the%20air%20control%20and%20interception%20simulator." class="btn btn--light" target="_blank" rel="noopener">Request a demo</a>
+            <a href="#incluye" class="btn btn--ghost-light">What's included</a>
+          </div>
+        </div>
+        <div class="phero__art" aria-hidden="true">
+          <div class="radar"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page">
+      <div class="container">
+        <dl class="specs">
+          <div><dt>Users</dt><dd>Controllers in training</dd></div>
+          <div><dt>Voice</dt><dd>With local AI</dd></div>
+          <div><dt>Instructor</dt><dd>Dedicated station</dd></div>
+          <div><dt>Connection</dt><dd>No internet</dd></div>
+        </dl>
+      </div>
+
+      <!-- ===== Qué incluye ===== -->
+      <section class="section section--tight" id="incluye">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="display display--md">Intensive practice, without tying up the real system.</h2>
+            <p>Repeatable scenarios so every controller can practice until mastering the procedure.</p>
+          </div>
+          <div class="pfeatures">
+            <article class="pfeature">
+              <span class="badge badge--teal" aria-hidden="true">1</span>
+              <h3>Radar tracks</h3>
+              <p>Radar display with simulated tracks whose headings, altitudes and speeds change in real time.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--blue" aria-hidden="true">2</span>
+              <h3>Flight identification</h3>
+              <p>Aircraft identification and tracking practice in scenarios with varied traffic.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--magenta" aria-hidden="true">3</span>
+              <h3>Voice communications</h3>
+              <p>Students talk to simulated pilots; speech recognition and replies are processed on the computer itself.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--orange" aria-hidden="true">4</span>
+              <h3>Interception</h3>
+              <p>Guidance exercises toward a target, with headings and times calculated by the simulator.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--violet" aria-hidden="true">5</span>
+              <h3>Instructor station</h3>
+              <p>Creates the scenarios, controls the traffic and follows what each student does.</p>
+            </article>
+            <article class="pfeature">
+              <span class="badge badge--green" aria-hidden="true">6</span>
+              <h3>Evaluation</h3>
+              <p>Complete exercise log to review every decision with the student.</p>
+            </article>
+          </div>
+          <p class="note pnote">For confidentiality reasons, we do not publish screenshots of this project. We will gladly show it to you in an in-person demo.</p>
+        </div>
+      </section>
+
+      <!-- ===== Contacto ===== -->
+      <section class="section cta cta--brand" id="contacto">
+        <div class="container">
+          <h2 class="display display--md">Want to see air control and interception in action?</h2>
+          <p>Schedule a demo or tell us what you need. We reply by WhatsApp or email.</p>
+          <div class="cta__actions">
+            <a href="https://wa.me/584120846332?text=Hi%20FDP%20Software%2C%20I%27d%20like%20information%20about%20the%20air%20control%20and%20interception%20simulator." class="btn btn--light" target="_blank" rel="noopener">Message us on WhatsApp</a>
+            <a href="mailto:contacto@fdpsoftware.org?subject=Control%20e%20interceptaci%C3%B3n%20a%C3%A9rea" class="btn btn--ghost-light">contacto@fdpsoftware.org</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Otros proyectos ===== -->
+      <section class="section section--tight section--gray">
+        <div class="container">
+          <h2 class="more__title">Other projects</h2>
+          <div class="more">
+            <a href="/en/proyectos/sigma-mro/"><span class="badge badge--blue" aria-hidden="true">Σ</span>SIGMA MRO</a>
+            <a href="/en/proyectos/aeroescuela/"><span class="badge badge--violet" aria-hidden="true">A</span>AeroEscuela</a>
+            <a href="/en/proyectos/simuladores-de-tiro/"><span class="badge badge--magenta" aria-hidden="true">T</span>Anti-aircraft shooting</a>
+            <a href="/en/proyectos/entrenamiento-tactico/"><span class="badge badge--teal" aria-hidden="true">S</span>Tactical and strategic training</a>
+            <a href="/en/proyectos/escenarios-3d/"><span class="badge badge--orange" aria-hidden="true">3D</span>3D Environments of Venezuela</a>
+            <a href="/en/proyectos/apps-moviles/"><span class="badge badge--green" aria-hidden="true">▶</span>Mobile apps</a>
+            <a href="/en/proyectos/simak/"><span class="badge badge--magenta" aria-hidden="true">SK</span>SIMAK · Laser shooting</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__grid">
+            <div class="footer__brand">
+              <a href="/en/" class="logo" aria-label="FDP Software, home">
+                <img src="/img/logo-fdp-dark.png" alt="" width="40" height="40" class="logo__img" loading="lazy">
+                <span class="logo__text">FDP Software</span>
+              </a>
+              <p>Development, maintenance and distribution of high-end digital software.</p>
+            </div>
+
+            <div>
+              <h2>Projects</h2>
+              <ul>
+                <li><a href="/en/proyectos/sigma-mro/">SIGMA MRO</a></li>
+                <li><a href="/en/proyectos/aeroescuela/">Flight simulator</a></li>
+                <li><a href="/en/proyectos/simak/">SIMAK: laser shooting</a></li>
+                <li><a href="/en/proyectos/simuladores-de-tiro/">Anti-aircraft shooting</a></li>
+                <li><a href="/en/proyectos/entrenamiento-tactico/">Tactical training</a></li>
+                <li><a href="/en/proyectos/escenarios-3d/">3D Environments</a></li>
+                <li><a href="/en/proyectos/control-aereo/">Air control</a></li>
+                <li><a href="/en/proyectos/apps-moviles/">Mobile apps</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Company</h2>
+              <ul>
+                <li><a href="/en/#soluciones">Solutions</a></li>
+                <li><a href="/en/servicios/">Services</a></li>
+                <li><a href="/en/#sectores">Industries</a></li>
+                <li><a href="/en/#nosotros">About us</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Contact</h2>
+              <ul>
+                <li><a href="mailto:contacto@fdpsoftware.org">contacto@fdpsoftware.org</a></li>
+                <li><a href="https://wa.me/584120846332?text=Hi%20FDP%20Software%2C%20I%27d%20like%20information%20about%20your%20solutions." target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/freethepress05/" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@freethepress5" target="_blank" rel="noopener">TikTok</a></li>
+                <li>Venezuela</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <p>© <span id="year">2026</span> FDP SOFTWARE. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="fab" href="https://wa.me/584120846332?text=Hi%20FDP%20Software%2C%20I%27d%20like%20information%20about%20your%20solutions." target="_blank" rel="noopener" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M8 10h8M8 13.5h5"/></svg>
+  </a>
+
+  <script src="/js/main.js?v=20261030"></script>
+</body>
+</html>

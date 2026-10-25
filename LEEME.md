@@ -36,6 +36,17 @@ python -m http.server 8080 --directory public
 
 y abre <http://localhost:8080>.
 
+### Versión en inglés
+
+La web también está en inglés en <https://fdpsoftware.org/en/> (botón **EN** / **ES** en el menú). Esas páginas se crean
+solas a partir del español: después de cambiar un texto, ejecuta
+
+```
+python sitio/ingles/construir.py
+```
+
+Si el programa avisa de textos sin traducir, agrega su traducción en `sitio/ingles/traducciones.json` y ejecútalo de nuevo.
+
 ## 2. Publicar los cambios
 
 Desde la carpeta `WEB`, en PowerShell (usa `npx.cmd`, porque PowerShell bloquea `npx.ps1`):
