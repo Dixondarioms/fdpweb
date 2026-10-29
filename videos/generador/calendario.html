@@ -87,12 +87,12 @@ footer { font-size: 0.88rem; color: var(--muted); }
 
 <div class="wrap">
   <header>
-    <p class="eyebrow">FDP Software · Instagram y TikTok</p>
+    <p class="eyebrow">FDP Software · Instagram, Facebook y TikTok</p>
     <h1>Calendario de redes FDP</h1>
-    <p class="muted">Primer mes de publicaciones. Cada fila trae el video, la portada y el texto listo para copiar. Los archivos están en la carpeta <code>videos-redes\programar</code> del computador, una carpeta por publicación.</p>
+    <p class="muted">Cada fila trae el video, la portada y el texto listo para copiar. Los archivos están en la carpeta <code>videos-redes\programar</code> del computador, una carpeta por publicación. Si un video pesa más de 10 MB, al lado hay una copia <code>-liviano</code> para subirla desde Chrome.</p>
     <div class="facts">
-      <span class="fact"><b>12</b> publicaciones</span>
-      <span class="fact">26 oct – 20 nov 2026</span>
+      <span class="fact"><b id="total">0</b> publicaciones</span>
+      <span class="fact" id="rango"></span>
       <span class="fact">Lunes, miércoles y viernes</span>
       <span class="fact"><b>6:30 p. m.</b> hora de Venezuela</span>
     </div>
@@ -136,6 +136,13 @@ footer { font-size: 0.88rem; color: var(--muted); }
 <script>
 (function () {
   var posts = JSON.parse(document.getElementById('datos').textContent);
+  var MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+  function corta(f) { var p = f.split('-'); return Number(p[2]) + ' ' + MESES[Number(p[1]) - 1]; }
+  document.getElementById('total').textContent = posts.length;
+  if (posts.length) {
+    document.getElementById('rango').textContent =
+      corta(posts[0].fecha) + ' – ' + corta(posts[posts.length - 1].fecha) + ' ' + posts[posts.length - 1].fecha.slice(0, 4);
+  }
   var KEY = 'fdp-calendario-v1';
   var state = {};
   try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { state = {}; }
