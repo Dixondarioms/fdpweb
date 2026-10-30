@@ -31,6 +31,14 @@
     <image:image><image:loc>https://fdpsoftware.org/img/p/sigma-motor.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://fdpsoftware.org/proyectos/adminia/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image><image:loc>https://fdpsoftware.org/img/og/adminia.jpg</image:loc></image:image>
+    <image:image><image:loc>https://fdpsoftware.org/img/proyecto-adminia.webp</image:loc></image:image>
+    <image:image><image:loc>https://fdpsoftware.org/img/p/adminia-caja.webp</image:loc></image:image>
+    <image:image><image:loc>https://fdpsoftware.org/img/p/adminia-productos.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://fdpsoftware.org/proyectos/aeroescuela/</loc>
     <lastmod>2026-10-23</lastmod>
     <image:image><image:loc>https://fdpsoftware.org/img/og/aeroescuela.jpg</image:loc></image:image>
@@ -114,6 +122,12 @@
     <lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/sigma-mro/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/sigma-mro/"/>
+  </url>
+  <url>
+    <loc>https://fdpsoftware.org/en/proyectos/adminia/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://fdpsoftware.org/proyectos/adminia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fdpsoftware.org/en/proyectos/adminia/"/>
   </url>
   <url>
     <loc>https://fdpsoftware.org/en/proyectos/aeroescuela/</loc>

@@ -39,7 +39,7 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
 
 `inicio` (portada con carrusel: `slide-1` FDP Software, `slide-2` SIGMA MRO, `slide-3` Escenarios 3D,
 `slide-4` simulador de tiro antiaéreo, `slide-5` SIMAK) → `soluciones` (carril horizontal de tarjetas) → `proyectos` (SIGMA MRO destacado
-y una cuadrícula con AeroEscuela, entrenamiento táctico y Escenarios 3D) → `control` (control e interceptación aérea, `.vband--radar`) → `control-escenas` (tres clips) → `tiro` (simulador antiaéreo: franja con video de fondo, `.vband--franja`) → `tiro-escenarios` (seis clips) →
+y una cuadrícula con AeroEscuela, entrenamiento táctico, Escenarios 3D y AdminIA) → `control` (control e interceptación aérea, `.vband--radar`) → `control-escenas` (tres clips) → `tiro` (simulador antiaéreo: franja con video de fondo, `.vband--franja`) → `tiro-escenarios` (seis clips) →
 `simak` (franja con video de fondo, `.vband`) → `simak-escenarios` (seis clips, `.clips`) → `apps` (Marcelo Go, Minijuegos de Marcelo Go y Ritmo Diario en Google Play) → `sectores` (pestañas) →
 cita de la misión → `metodo` → `nosotros` (misión, visión, marcas y equipo por áreas) → `contacto` → pie de página.
 
@@ -48,7 +48,7 @@ Cada diapositiva tiene enlace directo, por ejemplo `https://fdpsoftware.org/#sli
 ### Páginas de proyecto (`public/proyectos/`)
 
 `sigma-mro`, `aeroescuela`, `simuladores-de-tiro` (solo el simulador antiaéreo), `simak` (simulador de tiro con láser),
-`entrenamiento-tactico`, `escenarios-3d`, `control-aereo` y `apps-moviles`. La de `simak` empieza con video de fondo (`.vband`)
+`entrenamiento-tactico`, `escenarios-3d`, `control-aereo`, `apps-moviles` y `adminia` (gestión comercial). La de `simak` empieza con video de fondo (`.vband`)
 en lugar de `.phero` y tiene los clips de escenarios. Todas siguen el mismo orden: portada oscura (`.phero`, con ruta de navegación `.crumbs`) → ficha rápida
 (`.specs`) → "Qué incluye" (`#incluye`, tarjetas `.pfeature`; en apps, filas `.prow`) → galería (`#galeria`,
 `.pgallery`, con `.is-full` para las capturas a lo ancho) → contacto (`#contacto`) → otros proyectos (`.more`) → pie.
@@ -57,7 +57,7 @@ en lugar de `.phero` y tiene los clips de escenarios. Todas siguen el mismo orde
 - Cada una tiene su propio `<title>`, descripción, `canonical`, imagen para redes (`img/og/<nombre>.jpg`) y datos
   para Google (`application/ld+json`). Si cambias el nombre o la descripción de un proyecto, cámbialos en esos lugares.
 - El mensaje de WhatsApp de cada página ya nombra el proyecto (`...quiero%20informaci%C3%B3n%20sobre%20SIGMA%20MRO.`).
-- El encabezado, el pie de página y la lista "Otros proyectos" se repiten en las ocho páginas de proyecto y en `servicios/`: si cambias uno, cambia todos.
+- El encabezado, el pie de página y la lista "Otros proyectos" se repiten en las nueve páginas de proyecto y en `servicios/`: si cambias uno, cambia todos.
 - Si agregas un proyecto: copia una página parecida, agrégala a `sitemap.xml`, enlázala desde la tarjeta del proyecto en
   `index.html`, desde el pie de página y desde "Otros proyectos" de las demás páginas.
 
@@ -100,12 +100,15 @@ en lugar de `.phero` y tiene los clips de escenarios. Todas siguen el mismo orde
 - `videos/generador/calendario.py` arma `videos-redes/programar/` (video, portada y textos por publicación, más `calendario.html`) para programar en Meta Business Suite y TikTok Studio. La página publicada del calendario es https://claude.ai/artifact/YPZ1Yr9gQjsajYNHJTxaAk.
 - Revisa cada video antes de entregarlo (`... <nombre> previa 1,4.5,24`, o una hoja de cuadros con ffmpeg).
 - Redes de FDP: Instagram `@freethepress05` y TikTok `@freethepress5`. Están en `REDES` (en `engine.py`), en el pie
-  de página de las diez páginas y en `sameAs` de los datos para Google de `index.html`; si cambian, cámbialas en todos.
+  de página de las once páginas y en `sameAs` de los datos para Google de `index.html`; si cambian, cámbialas en todos.
 
 ## Reglas de contenido (obligatorias)
 
 1. **Nombre de la empresa y marcas**: siempre **FDP Software**, **FDP Simuladores** y **FDP Aplicaciones**.
    Nunca escribas "FD" a secas.
+   **AdminIA** (gestión comercial, `proyectos/adminia/`): no nombres al comercio para el que nació ni a otros clientes. Sus capturas se
+   sacan de una copia aparte con datos de demostración ("Ferretería Demo"), nunca del sistema instalado en la tienda. El nombre lleva "IA",
+   pero el sistema no usa inteligencia artificial: no se la atribuyas.
 2. **Sin nombres de personas**: no publiques nombres de directivos ni de miembros del equipo, ni usuarios de GitHub u
    otros datos que identifiquen a alguien. El equipo se muestra solo por áreas.
 3. **Proyectos de defensa**: pueden mostrarse capturas, pero hay que recortar o tapar escudos, emblemas y logos
@@ -129,7 +132,7 @@ en lugar de `.phero` y tiene los clips de escenarios. Todas siguen el mismo orde
 ## Velocidad
 
 - **Versión de CSS y JS**: `styles.css` y `main.js` se cargan con `?v=AAAAMMDD` y se guardan 30 días en caché.
-  Cada vez que los cambies, actualiza ese número en `index.html`, `404.html`, las ocho páginas de `proyectos/` y `servicios/`
+  Cada vez que los cambies, actualiza ese número en `index.html`, `404.html`, las nueve páginas de `proyectos/` y `servicios/`
   (y luego regenera el inglés),
   o los visitantes seguirán viendo la versión vieja.
 - **Imágenes responsive**: cada imagen de contenido tiene versiones más pequeñas (`nombre-480.webp`, `nombre-800.webp`…)
