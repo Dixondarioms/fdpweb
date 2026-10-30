@@ -39,7 +39,7 @@ secciones y diseño, explicando cada paso en español sencillo, sin jerga técni
 
 `inicio` (portada con carrusel: `slide-1` FDP Software, `slide-2` SIGMA MRO, `slide-3` Escenarios 3D,
 `slide-4` simulador de tiro antiaéreo, `slide-5` SIMAK) → `soluciones` (carril horizontal de tarjetas) → `proyectos` (SIGMA MRO destacado
-y una cuadrícula con AeroEscuela, entrenamiento táctico, Escenarios 3D y AdminIA) → `control` (control e interceptación aérea, `.vband--radar`) → `control-escenas` (tres clips) → `tiro` (simulador antiaéreo: franja con video de fondo, `.vband--franja`) → `tiro-escenarios` (seis clips) →
+y una cuadrícula con AeroEscuela, entrenamiento táctico, Escenarios 3D y Adminia) → `control` (control e interceptación aérea, `.vband--radar`) → `control-escenas` (tres clips) → `tiro` (simulador antiaéreo: franja con video de fondo, `.vband--franja`) → `tiro-escenarios` (seis clips) →
 `simak` (franja con video de fondo, `.vband`) → `simak-escenarios` (seis clips, `.clips`) → `apps` (Marcelo Go, Minijuegos de Marcelo Go y Ritmo Diario en Google Play) → `sectores` (pestañas) →
 cita de la misión → `metodo` → `nosotros` (misión, visión, marcas y equipo por áreas) → `contacto` → pie de página.
 
@@ -106,9 +106,10 @@ en lugar de `.phero` y tiene los clips de escenarios. Todas siguen el mismo orde
 
 1. **Nombre de la empresa y marcas**: siempre **FDP Software**, **FDP Simuladores** y **FDP Aplicaciones**.
    Nunca escribas "FD" a secas.
-   **AdminIA** (gestión comercial, `proyectos/adminia/`): no nombres al comercio para el que nació ni a otros clientes. Sus capturas se
-   sacan de una copia aparte con datos de demostración ("Ferretería Demo"), nunca del sistema instalado en la tienda. El nombre lleva "IA",
-   pero el sistema no usa inteligencia artificial: no se la atribuyas.
+   **Adminia** (gestión comercial, `proyectos/adminia/`): no nombres al comercio para el que nació ni a otros clientes. Sus capturas se
+   sacan de una copia aparte con datos de demostración ("Ferretería Demo"), nunca del sistema instalado en la tienda. En la web se escribe
+   **Adminia** (no "AdminIA"), aunque la aplicación muestre "AdminIA" en sus pantallas; el sistema no usa inteligencia
+   artificial: no se la atribuyas.
 2. **Sin nombres de personas**: no publiques nombres de directivos ni de miembros del equipo, ni usuarios de GitHub u
    otros datos que identifiquen a alguien. El equipo se muestra solo por áreas.
 3. **Proyectos de defensa**: pueden mostrarse capturas, pero hay que recortar o tapar escudos, emblemas y logos

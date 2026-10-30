@@ -78,7 +78,7 @@ Y cada proyecto tiene su página propia, ideal para enviar por WhatsApp (se ve c
 - `https://fdpsoftware.org/proyectos/escenarios-3d/`
 - `https://fdpsoftware.org/proyectos/control-aereo/`
 - `https://fdpsoftware.org/proyectos/apps-moviles/`
-- `https://fdpsoftware.org/proyectos/adminia/` (AdminIA: ventas, inventario y facturación para comercios)
+- `https://fdpsoftware.org/proyectos/adminia/` (Adminia: ventas, inventario y facturación para comercios)
 
 ## 4. Correo contacto@fdpsoftware.org (gratis)
 
